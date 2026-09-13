@@ -1,16 +1,18 @@
 import Header from '../components/Header'
 import About from '../components/About'
 import Skills from '../components/Skills'
+import Experience from '../components/Experience';
 
 const Home = () => {
   return (
-    <div className='h-screen bg-neutral-900 text-white '>
-        <Header/>
+    <div className='text-white '>
+      <Header />
 
-        <main className='space-y-10'>
-            <About/>
-            <Skills/>
-        </main>
+      <main className='space-y-10'>
+        <About />
+        <Skills />
+        <Experience />
+      </main>
     </div>
   )
 }
