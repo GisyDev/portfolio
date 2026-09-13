@@ -1,4 +1,3 @@
-import React from 'react'
 import { about_me, social_media } from '../data/about'
 import cara from "../../assets/images/yo.jpeg"
 
@@ -16,7 +15,7 @@ const About = () => {
 
                     <div className='flex flex-col justify-between'>
                         <div className='space-y-3'>
-                            <h1 className='text-5xl'>{name}</h1>
+                            <h1 className='text-5xl'>¡Hola! Soy {name}</h1>
                             <h3 className='text-2xl flex gap-5'>
                                 <p>{"<"}</p>
                                 {profile}
