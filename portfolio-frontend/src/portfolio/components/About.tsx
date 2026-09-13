@@ -8,7 +8,7 @@ const About = () => {
 
     return (
         <section className='pt-30 w-full'>
-            <article className='flex w-4xl gap-10 mx-auto'>
+            <article className='flex w-7xl gap-10 mx-auto'>
                 <div>
                     <img src={cara} alt="Yo" className='w-120 rounded-2xl' />
                 </div>

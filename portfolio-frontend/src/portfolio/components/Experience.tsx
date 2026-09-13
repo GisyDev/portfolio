@@ -2,13 +2,12 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../data/experience';
 import { getImage } from '../../lib/getImage';
-import { li } from 'motion/react-client';
 
 const Experience = () => {
 
     const folderImage = "company_icons"
     return (
-        <section className='w-5xl m-auto mt-20'>
+        <section className='w-7xl m-auto mt-30 space-y-10'>
             <div className='space-y-3'>
                 <h1 className='font-bold text-4xl'>Experiencia</h1>
                 <p>Trayectoria profesional</p>
