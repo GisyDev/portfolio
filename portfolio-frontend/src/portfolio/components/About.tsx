@@ -7,52 +7,59 @@ const About = () => {
 
     return (
         <section className='pt-30 w-full'>
-            <article className='flex w-7xl gap-10 mx-auto'>
-                <div>
-                    <img src={cara} alt="Yo" className='w-120 rounded-2xl' />
-                </div>
+            <article className='flex w-7xl gap-30 mx-auto'>
+
                 <div className='flex gap-10 justify-between '>
 
                     <div className='flex flex-col justify-between'>
-                        <div className='space-y-3'>
-                            <h1 className='text-5xl'>¡Hola! Soy {name}</h1>
-                            <h3 className='text-2xl flex gap-5'>
-                                <p>{"<"}</p>
-                                {profile}
-                                <p>{">"}</p>
-
+                        <div className='space-y-8 '>
+                            <div className='space-y-2'>
+                                <h1 className='text-7xl text-primary text-primary-button'><strong>{name}</strong></h1>
+                            </div>
+                            <h3 className='flex gap-5 text-3xl'>
+                                <p className='text-secondary-text font-bold '>{"<"}</p>
+                                <p className='font-semibold '>{profile}</p>
+                                <p className='text-secondary-text font-bold '>{">"}</p>
                             </h3>
-                            <p>{description}</p>
+                            <p className='text-mute tracking-wide font-semibold text-xl w-3xl'>{description}</p>
+
+                            <div className='space-x-5'>
+                                <button className='bg-primary rounded-lg font-semibold py-3 px-3 '>
+                                    <a className="flex items-center gap-1" href={""} target="blank">
+                                        <i className="fa-solid fa-circle-info"></i>
+                                        <p>Más información</p>
+                                    </a>
+                                </button>
+
+                                <button className='rounded-lg font-semibold py-3 px-3 border-4 border-primary'>
+                                    <a className="flex items-center gap-1" href={""} target="blank">
+                                        <i className="fa-solid fa-download"></i>
+                                        <p>Descargar CV</p>
+                                    </a>
+
+                                </button>
+                            </div>
+
+                            <div className='space-x-5'>
+                                {social_media.map((social) => {
+                                    return (
+                                        <button key={social.name} className='border-4 p-3 rounded-full border-primary'>
+                                            <a className="flex items-center gap-1" href={social.link} target="blank">
+                                                <i className={`text-2xl ${social.icon}`}></i>
+                                            </a>
+                                        </button>
+
+                                    );
+                                })}
+                            </div>
                         </div>
 
-                        <div className='space-x-5'>
-                            <button className='border p-2'>
-                                <a className="flex items-center gap-1" href={""} target="blank">
-                                    <i className="fa-solid fa-circle-info"></i>
-                                    <p>Más información</p>
-                                </a>
-                            </button>
 
-                            <button className='border p-2'>
-                                <a className="flex items-center gap-1" href={""} target="blank">
-                                    <i className="fa-solid fa-download"></i>
-                                    <p>Descargar CV</p>
-                                </a>
-
-                            </button>
-
-                            {social_media.map((social) => {
-                                return (
-                                    <button key={social.name} className='border p-2 rounded-lg'>
-                                        <a className="flex items-center gap-1" href={social.link} target="blank">
-                                            <i className={social.icon}></i>
-                                            <p>{social.name}</p>
-                                        </a>
-                                    </button>
-
-                                );
-                            })}
-                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src={cara} alt="Yo" className='w-lg rounded-2xl border-6 text-primary-button shadow-lg shadow-secondary-text-acent' />
                     </div>
                 </div>
             </article>

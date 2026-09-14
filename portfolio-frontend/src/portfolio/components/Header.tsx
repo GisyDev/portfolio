@@ -1,14 +1,13 @@
 import { nav } from '../data/nav';
-import logo from "../../assets/images/logo.jpg"
+
 
 const Header = () => {
   return (
-    <header className='fixed top-3 w-full'>
+    <header className='fixed  w-full'>
 
-      <nav className="mx-auto w-7xl py-4 px-8 rounded-2xl flex justify-between items-center bg-purple-400 ">
+      <nav className="mx-auto w-full py-5 px-8 flex justify-between items-center border-b-2">
         <div className='flex gap-10'>
-          <img src={logo} alt="Logo" className='w-10'/>
-          <h1>Gisela Estévez Moleiro</h1>
+          <h1 className='font-semibold text-lg'>Gisela Estévez Moleiro</h1>
         </div>
 
         <div>
@@ -21,6 +20,10 @@ const Header = () => {
               })
             }
           </ul>
+        </div>
+
+        <div>
+
         </div>
       </nav>
 

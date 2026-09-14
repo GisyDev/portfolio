@@ -1,5 +1,2 @@
-@reference "tailwindcss";
 
-html, body, #root {
-  @apply bg-neutral-900 h-full;
-}
+
