@@ -2,16 +2,24 @@
 
 @theme {
 
+
     --color-primary-background: #0F0810;
     --color-secondary-background: #1F1220;
 
     --color-primary: #B5178C;
     --color-secondary: #1F1220;
     --color-mute: #FAF2F7;
+
+
+    --color-bg-app: #09090b;
+    --color-bg-card: #18181b;
+    --color-bg-card-hover: #27272a;
 }
 
 
 
-html, body, #root {
-  @apply bg-primary-background h-full;
+html,
+body,
+#root {
+    @apply bg-bg-app h-full;
 }
