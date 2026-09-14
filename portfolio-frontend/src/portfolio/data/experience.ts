@@ -11,7 +11,21 @@ export const experiences = [
         company: "Gobierno de Canarias",
         date: "2023 mar - jun 2023",
         description: "Desarrollo de aplicaciones con JavaScript. -Despliegue, configuración y gestión de entornos utilizando Docker y Kubernetes. -Configuración y administración de servicios DNS para el despliegue de aplicaciones.",
-        icon: "gobierno_de_canarias_logo.jpg"
+        icon: "gobierno_de_canarias_logo.jpg",
+        tec: [
+            {
+                name: "JavaScript",
+                icon: "javascript.svg"
+            },
+            {
+                name: "Kubernetes",
+                icon: "kubernetes.svg"
+            },
+            {
+                name: "Docker",
+                icon: "docker.svg"
+            },
+        ]
     },
     {
         profile: "Técnica microinformática",
