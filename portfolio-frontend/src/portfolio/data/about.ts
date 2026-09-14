@@ -14,5 +14,10 @@ export const social_media = [
         name: "Github",
         icon: "fa-brands fa-github",
         link: "https://www.linkedin.com/in/gisela-estévez-moleiro-57a509306"
+    },
+    {
+        name: "gisyestevez@gmail.com",
+        icon: "fa-solid fa-at",
+        link: "mailto:gisyestevez@gmail.com"
     }
 ]

@@ -66,7 +66,6 @@ const Experience = () => {
                                     {
                                         descriptions.map((desc) => {
                                             return <li className='text-xl '>{desc}</li>
-
                                         })
                                     }
                                 </ul>

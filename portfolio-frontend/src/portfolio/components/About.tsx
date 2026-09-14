@@ -36,7 +36,6 @@ const About = () => {
                                         <i className="fa-solid fa-download"></i>
                                         <p>Descargar CV</p>
                                     </a>
-
                                 </button>
                             </div>
 
@@ -44,8 +43,9 @@ const About = () => {
                                 {social_media.map((social) => {
                                     return (
                                         <button key={social.name} className='border-4 p-3 rounded-full border-primary'>
-                                            <a className="flex items-center gap-1" href={social.link} target="blank">
+                                            <a className="flex items-center gap-2" href={social.link} target="blank">
                                                 <i className={`text-2xl ${social.icon}`}></i>
+                                                {social.name && <p className='font-semibold'>{social.name}</p>}
                                             </a>
                                         </button>
 
@@ -53,13 +53,11 @@ const About = () => {
                                 })}
                             </div>
                         </div>
-
-
                     </div>
                 </div>
                 <div>
                     <div>
-                        <img src={cara} alt="Yo" className='w-lg rounded-2xl border-6 text-primary-button shadow-lg shadow-secondary-text-acent' />
+                        <img src={cara} alt="Yo" className='w-lg rounded-2xl border-8 text-primary-button border-primary '/>
                     </div>
                 </div>
             </article>
