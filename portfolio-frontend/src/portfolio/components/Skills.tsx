@@ -11,14 +11,14 @@ const Skills = () => {
     const [emblaRef] = useEmblaCarousel({
         loop: true,
         dragFree: true
-    }, [AutoScroll({ playOnInit: true, speed: 1 })])
+    }, [AutoScroll({ playOnInit: true, speed: 2 })])
 
     return (
         <section className='w-7xl m-auto space-y-7'>
             <h1 className='font-bold text-4xl text-primary'>Tecnologías</h1>
             <div className="overflow-hidden">
                 <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex touch-pan-y touch-pinch-zoom gap-5 ">
+                    <div className="flex touch-pan-y touch-pinch-zoom gap-5">
                         {
                             skillsSlider.map((skill) => {
                                 return <div className="flex-none basis-1/5 last:mr-3 items-center rounded-lg p-3 bg-bg-card border-t-4 border-primary" key={skill.name}>

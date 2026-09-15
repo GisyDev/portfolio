@@ -9,21 +9,25 @@ const About = () => {
         <section className='w-full h-screen flex items-center'>
             <article className='flex w-7xl gap-30 mx-auto'>
 
-                <div className='flex gap-10 justify-between '>
+                <div className='flex gap-10 justify-between'>
 
                     <div className='flex flex-col justify-between'>
-                        <div className='space-y-3'>
-                            <div className='flex flex-col space-y-3'>
-                                <h1 className='text-8xl font-semibold'>Hola, Soy <strong className='text-primary'>{name}</strong></h1>
-                                <h3 className='flex gap-5 text-3xl'>
+                        <div className='space-y-3 z-10'>
+                            <div className='flex flex-col space-y-5 '>
+                                <div className='space-y-2'>
+                                    <p className='text-5xl font-bold text-shadow-white '>Hola, Soy</p>
+                                    <h1 className='text-7xl font-bold text-primary'>{name}</h1>
+                                </div>
+
+                                <h3 className='flex gap-5 text-3xl text-secondary'>
                                     <p className='text-secondary-text font-bold '>{"<"}</p>
                                     <p className='font-semibold '>{profile}</p>
                                     <p className='text-secondary-text font-bold '>{">"}</p>
                                 </h3>
                             </div>
                             <div className='mt-8 space-y-8'>
-                                
-                                <p className='text-mute tracking-wide font-semibold text-xl w-3xl'>{description}</p>
+
+                                <p className='text-mute tracking-wide font-semibold text-xl/9 w-3xl '>{description}</p>
 
                                 <div className='space-x-5'>
                                     <button className='bg-primary rounded-lg font-semibold py-3 px-3 '>

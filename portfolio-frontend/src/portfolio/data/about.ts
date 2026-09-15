@@ -1,5 +1,5 @@
 export const about_me = {
-    name: "Gisela",
+    name: "Gisela Estévez Moleiro",
     profile: "Desarrolladora Web",
     description: "Soy Desarrolladora Web y especialista en Appian. Mi pasión por la tecnología comenzó desde pequeña, por lo que soy una persona autodidacta, curiosa y preparada para resolver problemas."
 }

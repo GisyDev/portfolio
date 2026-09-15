@@ -4,19 +4,24 @@ import Skills from '../components/Skills'
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Footer from '../components/Footer';
+import { Background } from './Background';
 
 const Home = () => {
   return (
-    <div className='text-white'>
-      <Header />
-      <main className='space-y-10'>
-        <About />
-        <Skills />
-        <Experience />
-        <Education/>
-        <Footer/>
-      </main>
-    </div>
+    <>
+    <Background/>
+      <div className='text-white'>
+        <Header />
+        <main className='space-y-10'>
+          <About />
+          <Skills />
+          <Experience />
+          <Education />
+          <Footer />
+        </main>
+      </div>
+    </>
+
   )
 }
 
