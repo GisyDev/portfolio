@@ -1,9 +1,7 @@
-import React from 'react'
-
 const Footer = () => {
   return (
-    <footer>
-            
+    <footer className='w-full bg-bg-card h-20'>
+
 
 
     </footer>
