@@ -13,7 +13,7 @@ export const education = [
     },
     {
         name: "Hogar Escuela Axiliadora",
-        title: "Técnico de sistemas Microinformáticos y Redes",
+        title: "Sistemas Microinformáticos y Redes",
         date: "2019 - 2021",
         icon: "Hogar_Escuela.png"
     },
