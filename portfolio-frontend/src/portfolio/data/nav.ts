@@ -1,9 +1,5 @@
 export const nav = [
     {
-        text: "Inicio",
-        enlace: "/"
-    },
-    {
         text: "Sobre mí",
         enlace: "/About"
     },

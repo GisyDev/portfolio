@@ -7,9 +7,8 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className='text-white '>
+    <div className='text-white'>
       <Header />
-
       <main className='space-y-10'>
         <About />
         <Skills />
