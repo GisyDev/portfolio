@@ -6,7 +6,7 @@ const Experience = () => {
 
     const folderImage = "company_icons"
     return (
-        <section className='w-7xl m-auto  space-y-10'>
+        <section className='w-7xl m-auto  space-y-10 scroll-mt-32' id='Experiencia'>
             <div className='flex gap-3 items-center'>
                 <i className="fa-solid fa-briefcase text-primary text-5xl"></i>
                 <h1 className='font-bold text-5xl'>Experiencia</h1>

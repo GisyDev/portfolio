@@ -25,4 +25,5 @@ html,
 body,
 #root {
     @apply bg-slate-950 h-full;
+    @apply scroll-smooth;
 }

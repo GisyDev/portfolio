@@ -6,7 +6,7 @@ const Education = () => {
     const folderImage = "school_icons"
 
     return (
-        <section className='w-7xl m-auto mt-20'>
+        <section className='w-7xl m-auto mt-20' id='Educacion'>
             <div className='flex items-center gap-3 text-5xl'>
                 <i className="fa-solid fa-graduation-cap text-primary"></i>
                 <h1 className='text-4xl font-bold'>Educación</h1>

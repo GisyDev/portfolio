@@ -1,18 +1,14 @@
 export const nav = [
     {
         text: "Sobre mí",
-        enlace: "/About"
-    },
-    {
-        text: "Tecnologías",
-        enlace: "/Tec"
+        enlace: "#SobreMi"
     },
     {
         text: "Experiencia",
-        enlace: "/Experience"
+        enlace: "#Experiencia"
     },
     {
         text: "Educación",
-        enlace: "/Education"
+        enlace: "#Educacion"
     },
 ]

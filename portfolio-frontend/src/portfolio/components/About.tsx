@@ -8,7 +8,7 @@ const About = () => {
     const { name, profile, description } = about_me
 
     return (
-        <section className='w-full h-screen flex items-center'>
+        <section className='w-full h-screen flex items-center' id='SobreMi'>
             <article className='flex w-7xl gap-30 mx-auto'>
 
                 <div className='flex gap-10 justify-between w-full'>
