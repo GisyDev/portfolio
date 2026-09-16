@@ -13,16 +13,15 @@ const About = () => {
 
                     <div className='flex flex-col justify-between'>
                         <div className='space-y-3 z-10'>
-                            <div className='flex flex-col space-y-5 '>
+                            <div className='flex flex-col space-y-3 '>
                                 <div className='space-y-2'>
-                                    <p className='text-5xl font-bold text-shadow-white '>Hola, Soy</p>
-                                    <h1 className='text-7xl font-bold text-primary'>{name}</h1>
+                                    <h1 className='text-7xl font-bold '>{name}</h1>
                                 </div>
 
-                                <h3 className='flex gap-5 text-3xl text-secondary'>
-                                    <p className='text-secondary-text font-bold '>{"<"}</p>
-                                    <p className='font-semibold '>{profile}</p>
-                                    <p className='text-secondary-text font-bold '>{">"}</p>
+                                <h3 className='flex gap-5 text-4xl text-primary '>
+                                  
+                                    <p className='font-semibold'>{profile}</p>
+                                   
                                 </h3>
                             </div>
                             <div className='mt-8 space-y-8'>
@@ -30,25 +29,24 @@ const About = () => {
                                 <p className='text-mute tracking-wide font-semibold text-xl/9 w-3xl '>{description}</p>
 
                                 <div className='space-x-5'>
-                                    <button className='bg-primary rounded-lg font-semibold py-3 px-3 '>
-                                        <a className="flex items-center gap-1" href={""} target="blank">
-                                            <i className="fa-solid fa-circle-info"></i>
-                                            <p>Más información</p>
-                                        </a>
-                                    </button>
-
-                                    <button className='rounded-lg font-semibold py-3 px-3 border-4 border-primary'>
+                                    <button className='rounded-lg font-semibold py-3 px-3  bg-primary'>
                                         <a className="flex items-center gap-1" href={""} target="blank">
                                             <i className="fa-solid fa-download"></i>
                                             <p>Descargar CV</p>
                                         </a>
                                     </button>
+                                    <button className=' rounded-lg font-semibold py-3 px-3 bg-gray-600'>
+                                        <a className="flex items-center gap-1" href={""} target="blank">
+                                            <i className="fa-solid fa-circle-info"></i>
+                                            <p>Más información</p>
+                                        </a>
+                                    </button>                                
                                 </div>
 
                                 <div className='space-x-5'>
                                     {social_media.map((social) => {
                                         return (
-                                            <button key={social.name} className='border-4 p-3 rounded-full border-primary'>
+                                            <button key={social.name} className=' p-3 rounded-full border-2 border-primary'>
                                                 <a className="flex items-center gap-2" href={social.link} target="blank">
                                                     <i className={`text-2xl ${social.icon}`}></i>
                                                     {social.name && <p className='font-semibold'>{social.name}</p>}

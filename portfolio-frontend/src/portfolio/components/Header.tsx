@@ -3,9 +3,9 @@ import { nav } from '../data/nav';
 
 const Header = () => {
   return (
-    <header className='fixed w-full'>
+    <header className='fixed w-full z-50'>
 
-      <nav className="mx-auto w-full py-8 px-8 flex justify-between items-center border-b-2 text-xl">
+      <nav className="mx-auto w-full py-8 px-8 flex justify-between items-center  text-xl">
         <div className='flex gap-10'>
           <h1 className='font-semibold'>GisyDev</h1>
         </div>
