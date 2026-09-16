@@ -3,7 +3,7 @@ export const experiences = [
         profile: "Desarrolladora Web",
         company: "PwC España",
         date: "2026 mar - sept 2026",
-        description: "Desarrollo, evoluciones y mantenimiento de nuevas funcionalidades (como la optimización del buscador o la integración de APIs), entendiendo los requisitos del cliente y creando documentación técnica de dichos evolutivos. -Diseño y desarrollo de interfaces responsivas. -Realización de pruebas y validaciones para el despliegue a producción. -Análisis, gestión y resolución de incidencias de usuarios.",
+        description: "Desarrollo, evoluciones y mantenimiento de nuevas funcionalidades, entendiendo los requisitos del cliente y creando documentación técnica de dichos evolutivos. -Diseño y desarrollo de interfaces responsivas. -Realización de pruebas y validaciones para el despliegue a producción. -Análisis, gestión y resolución de incidencias de usuarios.",
         icon: "pwc_espana_logo.jpg",
     },
     {

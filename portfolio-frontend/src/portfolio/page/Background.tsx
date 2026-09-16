@@ -17,6 +17,10 @@ export const Background = () => {
                 <div
                     className=" relative top-0 left-160 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/15 rounded-full blur-[120px] pointer-events-non"
                 />
+
+                <div
+                    className=" relative top-0 left-50 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/15 rounded-full blur-[120px] pointer-events-non"
+                />
             </main>
         </>
     );

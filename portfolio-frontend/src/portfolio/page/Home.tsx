@@ -14,7 +14,7 @@ const Home = () => {
         <Header />
         <main className='space-y-10'>
           <About />
-          <Skills />
+          {/* <Skills /> */}
           <Experience />
           <Education />
           <Footer />

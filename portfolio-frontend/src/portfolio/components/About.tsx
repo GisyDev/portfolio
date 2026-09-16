@@ -1,5 +1,7 @@
 import { about_me, social_media } from '../data/about'
 import cara from "../../assets/images/yo.jpeg"
+import { skillsSlider } from '../data/skills'
+import { getImage } from '../../lib/getImage'
 
 const About = () => {
 
@@ -9,19 +11,17 @@ const About = () => {
         <section className='w-full h-screen flex items-center'>
             <article className='flex w-7xl gap-30 mx-auto'>
 
-                <div className='flex gap-10 justify-between'>
+                <div className='flex gap-10 justify-between w-full'>
 
-                    <div className='flex flex-col justify-between'>
-                        <div className='space-y-3 z-10'>
+                    <div className='flex flex-col justify-between '>
+                        <div className='space-y-3'>
                             <div className='flex flex-col space-y-3 '>
                                 <div className='space-y-2'>
-                                    <h1 className='text-7xl font-bold '>{name}</h1>
+                                    <h1 className='text-7xl font-bold'>{name}</h1>
                                 </div>
 
                                 <h3 className='flex gap-5 text-4xl text-primary '>
-                                  
                                     <p className='font-semibold'>{profile}</p>
-                                   
                                 </h3>
                             </div>
                             <div className='mt-8 space-y-8'>
@@ -56,15 +56,24 @@ const About = () => {
                                         );
                                     })}
                                 </div>
+
+                                <div className='flex gap-3 flex-wrap'>
+                                    {
+                                        skillsSlider.map((skill) => {
+                                            return <div className='bg-white/15 py-1 px-2 rounded-lg backdrop-blur-2xl flex gap-3'>
+                                                <img className='w-5' src={getImage("language_icons", skill.image)} alt="" />
+                                                <p className='text-lg'>{skill.name}</p>
+                                            </div>
+                                        })
+                                    }
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <img src={cara} alt="Yo" className='w-lg rounded-2xl border-8 text-primary-button border-primary ' />
-                    </div>
+                <div className='flex items-center'>
+                    <img src={cara} alt="Yo" className='w-full rounded-2xl border-8 text-primary-button border-primary ' />
                 </div>
             </article>
 

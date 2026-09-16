@@ -63,14 +63,14 @@ export const skillsSlider = [
         image: "postman.svg",
         description: "Lo que se sobre Postman"
     },
-    {
-        name: "Docker",
-        image: "docker.svg",
-        description: "Lo que se sobre Docker"
-    },
-    {
-        name: "Kubernetes",
-        image: "kubernetes.svg",
-        description: "Lo que se sobre Kubernetes"
-    }
+    // {
+    //     name: "Docker",
+    //     image: "docker.svg",
+    //     description: "Lo que se sobre Docker"
+    // },
+    // {
+    //     name: "Kubernetes",
+    //     image: "kubernetes.svg",
+    //     description: "Lo que se sobre Kubernetes"
+    // }
 ];

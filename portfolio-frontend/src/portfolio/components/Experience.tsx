@@ -6,10 +6,10 @@ const Experience = () => {
 
     const folderImage = "company_icons"
     return (
-        <section className='w-7xl m-auto mt-30 space-y-10'>
-            <div className='space-y-3'>
-                <h1 className='font-bold text-4xl text-primary'>Experiencia</h1>
-                <p className="text-mute">Trayectoria profesional</p>
+        <section className='w-7xl m-auto  space-y-10'>
+            <div className='flex gap-3 items-center'>
+                <i className="fa-solid fa-briefcase text-primary text-5xl"></i>
+                <h1 className='font-bold text-5xl'>Experiencia</h1>
             </div>
 
             <article className='w-full flex gap-8'>
@@ -43,21 +43,23 @@ const Experience = () => {
                 </VerticalTimeline> */}
 
 
-                <span className='max-h-full border-l-2 bg-white border-primary'></span>
+                <span className='max-h-full border-l-2 bg-white border-primary '></span>
                 <div className='space-y-10'>
                     {
                         experiences.map((exp) => {
                             const descriptions = exp.description.split("-")
-                            return <div className='bg-bg-card p-8 rounded-2xl border-t-4 border-primary space-y-8'>
-                                <div className='absolute '>
-                                    <div className='relative right-17 bg-mute w-2 h-2 rounded-full'></div>
+                            return <div className='bg-white/10 p-8 rounded-2xl border-t-4 border-primary space-y-8'>
+                                <div className='absolute'>
+                                    <div className='relative right-18 bg-primary w-3 h-3 rounded-full'></div>
                                 </div>
-                                <p className="text-mute font-medium">{exp.date}</p>
                                 <div className='flex gap-7 items-center w-full'>
-                                    <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg'/>
+                                    <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-20' />
                                     <div className='flex items-center space-y-2 justify-between  w-full'>
-                                        <div className='space-y-2'>
-                                            <h1 className='text-3xl font-semibold'>{exp.profile}</h1>
+                                        <div className='space-y-2 w-full'>
+                                            <div className='flex justify-between '>
+                                                <h1 className='text-3xl font-semibold'>{exp.profile}</h1>
+                                                <p className='font-semibold'>{exp.date}</p>
+                                            </div>
                                             <h3 className='text-lg text-mute'>{exp.company}</h3>
                                         </div>
                                     </div>
@@ -65,7 +67,7 @@ const Experience = () => {
                                 <ul className='list-disc px-3 flex flex-col gap-3 mt-4 text-mute'>
                                     {
                                         descriptions.map((desc) => {
-                                            return <li className='text-xl '>{desc}</li>
+                                            return <li className='text-xl'>{desc}</li>
                                         })
                                     }
                                 </ul>
