@@ -3,7 +3,7 @@ import { nav } from '../data/nav';
 
 const Header = () => {
   return (
-    <header className='fixed w-full z-50 top-3 shadow-2xl'>
+    <header className='fixed w-full top-3 z-50'>
 
       <nav className="mx-auto w-7xl rounded-4xl py-6 px-8 flex justify-between items-center text-xl bg-black/5 backdrop-blur-3xl">
         <div className='flex gap-10'>
