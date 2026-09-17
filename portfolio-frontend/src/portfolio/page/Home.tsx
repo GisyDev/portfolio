@@ -1,9 +1,9 @@
-import Header from '../components/Header'
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Experience from '../components/Experience';
-import Education from '../components/Education';
-import Footer from '../components/Footer';
+import Header from '../ui/Header'
+import About from '../ui/About'
+import Skills from '../ui/Skills'
+import Experience from '../ui/Experience';
+import Education from '../ui/Education';
+import Footer from '../ui/Footer';
 import { Background } from './Background';
 
 const Home = () => {

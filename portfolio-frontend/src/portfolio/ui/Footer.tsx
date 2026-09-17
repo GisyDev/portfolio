@@ -1,12 +1,13 @@
 import { nav } from '../data/nav';
 import { social_media } from '../data/about';
+import TitleName from '../components/TitleName';
 const Footer = () => {
   return (
     <footer className=' bg-white/10 h-100 flex'>
       <div className="flex flex-col w-7xl m-auto gap-30">
         <div className="flex justify-between w-full">
-          <div className='space-y-8'>
-            <p className="text-3xl">Gisy</p>
+          <div className='space-y-8 text-xl'>
+            <TitleName/>
             <p className='text-lg text-mute'>Desarrolladora Fullstack</p>
           </div>
           <div className=''>
