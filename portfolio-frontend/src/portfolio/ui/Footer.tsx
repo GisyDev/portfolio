@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col w-3/4 m-auto gap-30">
         <div className="flex justify-between w-full">
           <div className='space-y-8 text-xl'>
-            <TitleName/>
+            <TitleName />
             <p className='text-lg text-mute'>Desarrolladora Fullstack</p>
           </div>
           <div className=''>
@@ -15,7 +15,11 @@ const Footer = () => {
             <ul className='flex flex-col gap-2'>
               {
                 nav.map((nav) => {
-                  return <li className='text-mute'>{nav.text}</li>
+                  return <li className='text-mute'>
+                    <a href={nav.enlace} className='hover:text-primary transition-all'>
+                      {nav.text}
+                    </a>
+                  </li>
                 })
               }
             </ul>
@@ -25,9 +29,12 @@ const Footer = () => {
             <ul className='flex flex-col gap-2'>
               {
                 social_media.map((social) => {
-                  return <li className='flex items-center  gap-2'>
-                    <i className={`${social.icon}`}></i>
-                    {social.name}
+                  return <li className=''>
+                    <a href={social.link} className='flex items-center gap-2 hover:text-primary transition-all' target="blank">
+                      <i className={`${social.icon}`}></i>
+                      {social.name}
+                    </a>
+
                   </li>
                 })
               }
