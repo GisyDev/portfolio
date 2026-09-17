@@ -3,7 +3,12 @@ import cara from "../../assets/images/yo.jpeg"
 import { skillsSlider } from '../data/skills'
 import { getImage } from '../../lib/getImage'
 
-const About = () => {
+type AboutType = {
+    moreInfoEnable: boolean,
+    setMoreInfoEnable: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
 
     const { name, profile, description } = about_me
 
@@ -27,19 +32,17 @@ const About = () => {
 
                                 <p className='text-mute tracking-wide font-semibold text-xl/9 w-3xl '>{description}</p>
 
-                                <div className='space-x-5'>
-                                    <button className='rounded-lg font-semibold py-3 px-3  bg-primary'>
-                                        <a className="flex items-center gap-1" href={""} target="blank">
+                                <div className='flex gap-5'>
+                                    <button className='flex items-center gap-1 rounded-lg font-semibold py-3 px-3 bg-primary hover:bg-primary-hover transition-all cursor-pointer'>
                                             <i className="fa-solid fa-download"></i>
                                             <p>Descargar CV</p>
-                                        </a>
                                     </button>
-                                    <button className=' rounded-lg font-semibold py-3 px-3 bg-gray-600 cursor-pointer'>
-                                        <a className="flex items-center gap-1" href={""} target="blank">
-                                            <i className="fa-solid fa-circle-info"></i>
-                                            <p>Más información</p>
-                                        </a>
-                                    </button>                                
+                                    <button
+                                        className=' flex rounded-lg font-semibold py-3 px-3 bg-gray-500 cursor-pointer items-center gap-1 hover:bg-gray-600 transition-all'
+                                        onClick={() => setMoreInfoEnable(!moreInfoEnable)}>
+                                        <i className="fa-solid fa-circle-info"></i>
+                                        <p>Más información</p>
+                                    </button>
                                 </div>
 
                                 <div className='space-x-5'>
