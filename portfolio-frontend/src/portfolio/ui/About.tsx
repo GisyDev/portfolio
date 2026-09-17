@@ -10,7 +10,6 @@ const About = () => {
     return (
         <section className='w-full flex items-center h-screen' id='SobreMi'>
             <article className='flex w-7xl gap-30 mx-auto'>
-
                 <div className='flex gap-10 justify-between w-full'>
 
                     <div className='flex flex-col justify-between '>
@@ -35,7 +34,7 @@ const About = () => {
                                             <p>Descargar CV</p>
                                         </a>
                                     </button>
-                                    <button className=' rounded-lg font-semibold py-3 px-3 bg-gray-600'>
+                                    <button className=' rounded-lg font-semibold py-3 px-3 bg-gray-600 cursor-pointer'>
                                         <a className="flex items-center gap-1" href={""} target="blank">
                                             <i className="fa-solid fa-circle-info"></i>
                                             <p>Más información</p>

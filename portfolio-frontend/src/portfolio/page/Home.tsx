@@ -11,12 +11,12 @@ const Home = () => {
   return (
     <>
       <Background />
-      <div className='text-white'>
+      <div className='text-white relative z-10'>
         <Header />
-        <main className='z-50'>
+        <main className=''>
           <About />
           {/* <Skills /> */}
-          <div className='flex flex-col gap-12'>
+          <div className='flex flex-col gap-12 z-50'>
             <Experience />
             {/* <Projects/> */}
             <Education />

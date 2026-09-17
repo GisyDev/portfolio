@@ -5,21 +5,21 @@ export const Background = () => {
 
     return (
         <>
-            <main className=" absolute min-h-screen w-full">
+            <main className="absolute inset-0 pointer-events-none">
                 <div
-                    className="relative top-30 left-50 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none"
+                    className="relative top-30 left-50 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/15 rounded-full blur-[120px] "
                 />
 
                  <div
-                    className="relative top-10 left-400 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"
+                    className="relative top-10 left-400 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px] "
                 />
 
                 <div
-                    className=" relative top-0 left-160 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[120px] pointer-events-non"
+                    className=" relative top-0 left-160 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/15 rounded-full blur-[120px] "
                 />
 
                 <div
-                    className=" relative top-0 left-50 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[120px] pointer-events-non"
+                    className=" relative top-0 left-50 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/15 rounded-full blur-[120px] "
                 />
             </main>
         </>
