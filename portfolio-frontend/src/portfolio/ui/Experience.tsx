@@ -11,7 +11,7 @@ const Experience = () => {
     const [experieceState, setExperieceState] = useState(experiences)
 
     const setHidden = (id: number) => {
-  
+
         const experieceModif = experieceState.map((exp) => {
             if (exp.id === id) {
                 return {
@@ -24,12 +24,12 @@ const Experience = () => {
 
         setExperieceState(experieceModif)
     }
-    
+
 
     const folderImage = "company_icons"
     return (
         <section className='w-7xl m-auto scroll-mt-32' id='Experiencia'>
-            <TitleSection title={"Experiencia"} icon={"fa-briefcase"}/>
+            <TitleSection title={"Experiencia"} icon={"fa-briefcase"} />
 
             <article className='w-full flex gap-8'>
 
@@ -71,7 +71,10 @@ const Experience = () => {
 
                         experieceState.map((exp) => {
                             const descriptions = exp.description.split("-")
-                            return <div className='bg-white/10 p-8 rounded-2xl border-t-4 border-primary space-y-8 w-full'>
+                            return <div
+                                className='bg-white/10 p-8 rounded-2xl border-t-4 border-primary/50 space-y-8 w-full cursor-pointer hover:bg-white/15 hover:border-primary transition-all'
+                                onClick={() => setHidden(exp.id)}
+                            >
                                 <div className='absolute'>
                                     <div className='relative right-18 bg-primary w-3 h-3 rounded-full'></div>
                                 </div>
@@ -97,7 +100,7 @@ const Experience = () => {
                                     </ul>
                                 }
 
-                                <a className='cursor-pointer flex items-center gap-3' onClick={() => setHidden(exp.id)}>
+                                <a className='cursor-pointer flex items-center gap-1' onClick={() => setHidden(exp.id)}>
                                     <p className='font-semibold'>{exp.hidden ? "Ver más" : "Ver menos"}</p>
                                     <i className={`fa-solid ${exp.hidden ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
                                 </a>
