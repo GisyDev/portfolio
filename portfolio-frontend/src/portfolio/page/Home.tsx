@@ -5,6 +5,7 @@ import Experience from '../ui/Experience';
 import Education from '../ui/Education';
 import Footer from '../ui/Footer';
 import { Background } from './Background';
+import Projects from '../ui/Projects';
 
 const Home = () => {
   return (
@@ -12,11 +13,12 @@ const Home = () => {
       <Background />
       <div className='text-white'>
         <Header />
-        <main className=''>
+        <main className='z-50'>
           <About />
           {/* <Skills /> */}
           <div className='flex flex-col gap-12'>
             <Experience />
+            {/* <Projects/> */}
             <Education />
             <Footer />
           </div>

@@ -2,6 +2,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../data/experience';
 import { getImage } from '../../lib/getImage';
 import { useState } from 'react';
+import TitleSection from '../components/TitleSection';
 
 
 
@@ -23,14 +24,12 @@ const Experience = () => {
 
         setExperieceState(experieceModif)
     }
+    
 
     const folderImage = "company_icons"
     return (
         <section className='w-7xl m-auto scroll-mt-32 z-20' id='Experiencia'>
-            <div className='flex gap-3 items-center mb-12'>
-                <i className="fa-solid fa-briefcase text-primary text-5xl"></i>
-                <h1 className='font-bold text-5xl'>Experiencia</h1>
-            </div>
+            <TitleSection title={"Experiencia"} icon={"fa-briefcase"}/>
 
             <article className='w-full flex gap-8'>
 

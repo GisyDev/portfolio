@@ -8,7 +8,12 @@ export const nav = [
         enlace: "#Experiencia"
     },
     {
+        text: "Proyectos",
+        enlace: "#Proyectos"
+    },
+    {
         text: "Educación",
         enlace: "#Educacion"
     },
+    
 ]

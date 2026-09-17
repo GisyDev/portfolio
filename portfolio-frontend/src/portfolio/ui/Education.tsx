@@ -1,4 +1,5 @@
 import { getImage } from '../../lib/getImage';
+import TitleSection from '../components/TitleSection';
 import { education } from '../data/education';
 
 const Education = () => {
@@ -7,10 +8,7 @@ const Education = () => {
 
     return (
         <section className='w-7xl m-auto mt-20' id='Educacion'>
-            <div className='flex items-center gap-3 text-5xl mb-12'>
-                <i className="fa-solid fa-graduation-cap text-primary"></i>
-                <h1 className='text-5xl font-bold'>Educación</h1>
-            </div>
+            <TitleSection title={"Educación"} icon={"fa-graduation-cap"}/>
             <article className='mt-8 flex gap-6'>
                 {
                     education.map((educ) => {
