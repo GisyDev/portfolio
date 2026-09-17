@@ -9,15 +9,18 @@ import { Background } from './Background';
 const Home = () => {
   return (
     <>
-    <Background/>
+      <Background />
       <div className='text-white'>
         <Header />
-        <main className='space-y-10'>
+        <main className=''>
           <About />
           {/* <Skills /> */}
-          <Experience />
-          <Education />
-          <Footer />
+          <div className='flex flex-col gap-12'>
+            <Experience />
+            <Education />
+            <Footer />
+          </div>
+
         </main>
       </div>
     </>

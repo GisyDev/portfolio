@@ -7,11 +7,11 @@ const Education = () => {
 
     return (
         <section className='w-7xl m-auto mt-20' id='Educacion'>
-            <div className='flex items-center gap-3 text-5xl'>
+            <div className='flex items-center gap-3 text-5xl mb-12'>
                 <i className="fa-solid fa-graduation-cap text-primary"></i>
-                <h1 className='text-4xl font-bold'>Educación</h1>
+                <h1 className='text-5xl font-bold'>Educación</h1>
             </div>
-            <article className='mt-5 flex gap-6'>
+            <article className='mt-8 flex gap-6'>
                 {
                     education.map((educ) => {
                         return <div className='flex w-full items-center bg-white/10 rounded-lg p-5 mb-10'>

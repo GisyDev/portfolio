@@ -1,18 +1,39 @@
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../data/experience';
 import { getImage } from '../../lib/getImage';
+import { useState } from 'react';
+
+
 
 const Experience = () => {
 
+    const [experieceState, setExperieceState] = useState(experiences)
+
+    const setHidden = (id: number) => {
+  
+        const experieceModif = experieceState.map((exp) => {
+            if (exp.id === id) {
+                return {
+                    ...exp,
+                    hidden: !exp.hidden
+                }
+            }
+            return exp
+        })
+
+        setExperieceState(experieceModif)
+    }
+
     const folderImage = "company_icons"
     return (
-        <section className='w-7xl m-auto  space-y-10 scroll-mt-32' id='Experiencia'>
-            <div className='flex gap-3 items-center'>
+        <section className='w-7xl m-auto scroll-mt-32 z-20' id='Experiencia'>
+            <div className='flex gap-3 items-center mb-12'>
                 <i className="fa-solid fa-briefcase text-primary text-5xl"></i>
                 <h1 className='font-bold text-5xl'>Experiencia</h1>
             </div>
 
             <article className='w-full flex gap-8'>
+
                 {/* <VerticalTimeline layout="1-column-left">
                     {
                         experiences.map((experience) => {
@@ -44,11 +65,14 @@ const Experience = () => {
 
 
                 <span className='max-h-full border-l-2 bg-white border-primary '></span>
-                <div className='space-y-10'>
+
+                <div className='space-y-10 w-full'>
+
                     {
-                        experiences.map((exp) => {
+
+                        experieceState.map((exp) => {
                             const descriptions = exp.description.split("-")
-                            return <div className='bg-white/10 p-8 rounded-2xl border-t-4 border-primary space-y-8'>
+                            return <div className='bg-white/10 p-8 rounded-2xl border-t-4 border-primary space-y-8 w-full'>
                                 <div className='absolute'>
                                     <div className='relative right-18 bg-primary w-3 h-3 rounded-full'></div>
                                 </div>
@@ -64,13 +88,20 @@ const Experience = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <ul className='list-disc px-3 flex flex-col gap-3 mt-4 text-mute'>
-                                    {
-                                        descriptions.map((desc) => {
-                                            return <li className='text-xl'>{desc}</li>
-                                        })
-                                    }
-                                </ul>
+                                {
+                                    !exp.hidden && <ul className='list-disc px-3 flex flex-col gap-3 mt-4 text-mute'>
+                                        {
+                                            descriptions.map((desc) => {
+                                                return <li key={desc} className='text-xl'>{desc}</li>
+                                            })
+                                        }
+                                    </ul>
+                                }
+
+                                <a className='cursor-pointer flex items-center gap-3' onClick={() => setHidden(exp.id)}>
+                                    <p className='font-semibold'>{exp.hidden ? "Ver más" : "Ver menos"}</p>
+                                    <i className={`fa-solid ${exp.hidden ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
+                                </a>
                             </div>
                         })
                     }
