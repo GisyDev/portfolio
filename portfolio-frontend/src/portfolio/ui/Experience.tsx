@@ -100,10 +100,10 @@ const Experience = () => {
                                     </ul>
                                 }
 
-                                <a className='cursor-pointer flex items-center gap-1' onClick={() => setHidden(exp.id)}>
+                                {/* <a className='cursor-pointer flex items-center gap-1' onClick={() => setHidden(exp.id)}>
                                     <p className='font-semibold'>{exp.hidden ? "Ver más" : "Ver menos"}</p>
                                     <i className={`fa-solid ${exp.hidden ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
-                                </a>
+                                </a> */}
                             </div>
                         })
                     }
