@@ -14,7 +14,7 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
 
     return (
         <section className='w-full flex items-center h-screen' id='SobreMi'>
-            <article className='flex w-7xl gap-30 mx-auto'>
+            <article className='flex w-3/4 gap-30 mx-auto'>
                 <div className='flex gap-10 justify-between w-full'>
 
                     <div className='flex flex-col justify-between '>
@@ -62,10 +62,10 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                                 <div className='flex gap-3 flex-wrap'>
                                     {
                                         skillsSlider.map((skill) => {
-                                            return <div className='bg-white/15 py-1 px-2 rounded-lg backdrop-blur-2xl flex gap-3'>
+                                            return <button className='bg-white/15 py-2 px-3 rounded-lg backdrop-blur-2xl flex gap-3 cursor-pointer hover:bg-white/20 transition-all'>
                                                 <img className='w-5' src={getImage("language_icons", skill.image)} alt="" />
                                                 <p className='text-lg'>{skill.name}</p>
-                                            </div>
+                                            </button>
                                         })
                                     }
                                 </div>

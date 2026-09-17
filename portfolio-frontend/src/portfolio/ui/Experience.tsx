@@ -28,7 +28,7 @@ const Experience = () => {
 
     const folderImage = "company_icons"
     return (
-        <section className='w-7xl m-auto scroll-mt-32' id='Experiencia'>
+        <section className='w-3/4 m-auto scroll-mt-32' id='Experiencia'>
             <TitleSection title={"Experiencia"} icon={"fa-briefcase"} />
 
             <article className='w-full flex gap-8'>

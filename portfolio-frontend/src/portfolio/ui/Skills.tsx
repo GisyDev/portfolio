@@ -14,7 +14,7 @@ const Skills = () => {
     }, [AutoScroll({ playOnInit: true, speed: 2 })])
 
     return (
-        <section className='w-7xl m-auto space-y-7'>
+        <section className='w-3/4 m-auto space-y-7'>
             <h1 className='font-bold text-4xl text-primary'>Tecnologías</h1>
             <div className="overflow-hidden">
                 <div className="overflow-hidden" ref={emblaRef}>

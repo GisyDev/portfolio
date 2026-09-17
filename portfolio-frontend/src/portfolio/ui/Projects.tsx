@@ -3,7 +3,7 @@ import TitleSection from '../components/TitleSection'
 
 const Projects = () => {
     return (
-        <section className='w-7xl m-auto mt-20 scroll-m-32' id="Proyectos">
+        <section className='w-3/4 m-auto mt-20 scroll-m-32' id="Proyectos">
             <article>
                 <TitleSection title={"Proyectos"} icon={"fa-code"}/>
             </article>
