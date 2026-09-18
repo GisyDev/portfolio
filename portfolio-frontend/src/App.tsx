@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './portfolio/page/Home'
+import LanguageModal from './portfolio/modals/LanguajeModal'
 
 function App() {
 
@@ -8,8 +9,16 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/portfolio"  element={<Home />} />
+        
         <Route path="/" element={<Navigate to="/portfolio" replace />}/>
+
+         {/* Portafolio */}
+        <Route path="/portfolio" element={<Home/>}>
+          <Route path='lenguaje/:lang' element={<LanguageModal/>}/>
+        </Route>
+
+
+
         {/* <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<Register />} />

@@ -1,7 +1,8 @@
 import { about_me, social_media } from '../data/about'
 import cara from "../../assets/images/yo.jpeg"
-import { skillsSlider } from '../data/skills'
+import { languages } from '../data/skills'
 import { getImage } from '../../lib/getImage'
+import { Link } from 'react-router-dom'
 
 type AboutType = {
     moreInfoEnable: boolean,
@@ -34,8 +35,8 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
 
                                 <div className='flex gap-5'>
                                     <button className='flex items-center gap-1 rounded-lg font-semibold py-3 px-3 bg-primary hover:bg-primary-hover transition-all cursor-pointer'>
-                                            <i className="fa-solid fa-download"></i>
-                                            <p>Descargar CV</p>
+                                        <i className="fa-solid fa-download"></i>
+                                        <p>Descargar CV</p>
                                     </button>
                                     <button
                                         className=' flex rounded-lg font-semibold py-3 px-3 bg-gray-500 cursor-pointer items-center gap-1 hover:bg-gray-600 transition-all'
@@ -61,11 +62,19 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
 
                                 <div className='flex gap-3 flex-wrap'>
                                     {
-                                        skillsSlider.map((skill) => {
-                                            return <button className='bg-white/15 py-2 px-3 rounded-lg backdrop-blur-2xl flex gap-3 cursor-pointer hover:bg-white/20 transition-all'>
-                                                <img className='w-5' src={getImage("language_icons", skill.image)} alt="" />
-                                                <p className='text-lg'>{skill.name}</p>
-                                            </button>
+                                        languages.map((skill) => {
+                                            return <Link
+                                                to={{
+                                                    pathname: `lenguaje/${skill.name}`,
+                                                }}
+                                            >
+                                                <button className='bg-white/15 py-2 px-3 rounded-lg backdrop-blur-2xl flex gap-3 cursor-pointer hover:bg-white/20 transition-all'>
+                                                    <img className='w-5' src={getImage("language_icons", skill.image)} alt="" />
+                                                    <p className='text-lg'>{skill.name}</p>
+                                                </button>
+                                            </Link>
+
+
                                         })
                                     }
                                 </div>
