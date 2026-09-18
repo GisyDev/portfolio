@@ -28,7 +28,7 @@ const Experience = () => {
 
     const folderImage = "company_icons"
     return (
-        <Section title="Experience" icon="fa-briefcase">
+        <Section title="Experiencia" icon="fa-briefcase" ref={"Experiencia"}>
             <span className='max-h-full border-l-2 bg-white border-primary '></span>
 
             <div className='space-y-10 w-full'>

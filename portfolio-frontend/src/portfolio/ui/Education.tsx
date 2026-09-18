@@ -8,7 +8,7 @@ const Education = () => {
 
     return (
 
-        <Section title={"Educación"} icon={"fa-graduation-cap"}>
+        <Section title={"Educación"} icon={"fa-graduation-cap"} ref={"Educacion"}>
             <article className='flex gap-6 w-full'>
                 {
                     education.map((educ) => {
