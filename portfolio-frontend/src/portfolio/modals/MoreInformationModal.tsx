@@ -1,5 +1,7 @@
 import { div } from 'motion/react-client'
 import { about_me } from '../data/about'
+import Paragraph from '../components/Paragraph'
+import MiniButton from '../components/MiniButton'
 
 
 type MoreInformationModalType = {
@@ -13,8 +15,8 @@ const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) =
     const fulldescSplit = full_description.split("_")
 
     return (
-        <div className='fixed top-0 w-screen h-screen bg-black/30'>
-            <div className='fixed bg-slate-950/60 w-1/2  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 p-20 rounded-lg space-y-10 backdrop-blur-2xl shadow-2xl'>
+        <div className='fixed top-0 w-screen h-screen bg-black/30 z-50'>
+            <div className='fixed bg-slate-950/60 w-5xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 p-20 rounded-lg space-y-10 backdrop-blur-2xl shadow-2xl'>
                 <div className='space-y-2'>
                     <div className='flex justify-between'>
                         <h1 className='text-4xl font-bold'>Más información sobre mí</h1>
@@ -28,7 +30,7 @@ const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) =
                 <div className='mt-5 space-y-5'>
                     {
                         fulldescSplit.map((paragraph) => {
-                            return <p className='text-mute text-xl '>{paragraph}</p>
+                            return <Paragraph>{paragraph}</Paragraph>
                         })
                     }
                 </div>
@@ -37,9 +39,12 @@ const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) =
                     <ul className='flex gap-5 mt-5 flex-wrap'>
                         {
                             soft_skills.map((skill) => {
-                                return <li className='flex items-center gap-2 bg-white/25 px-3 py-2 rounded-lg'>
-                                    <i className={`${skill.icon}`}></i>
-                                    <p>{skill.name}</p>
+
+                                return <li>
+                                    <MiniButton>
+                                        <i className={`${skill.icon}`}></i>
+                                        <p>{skill.name}</p>
+                                    </MiniButton>
                                 </li>
                             })
                         }
@@ -52,6 +57,8 @@ const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) =
                         {
                             more_information.map((skill) => {
                                 return <li className='flex items-center gap-2 bg-white/25 px-3 py-2 rounded-lg'>
+
+
                                     <i className={`${skill.icon}`}></i>
                                     <div className='flex gap-2'>
                                         <p>{skill.label}</p>

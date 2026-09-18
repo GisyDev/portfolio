@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <>
-      <Background />
+      {/* <Background /> */}
       <div className='text-white relative z-10'>
         <Header />
         <main className=''>

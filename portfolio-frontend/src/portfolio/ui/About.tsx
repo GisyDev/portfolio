@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton'
 import MiniButton from '../components/MiniButton'
+import Paragraph from '../components/Paragraph'
 
 type AboutType = {
     moreInfoEnable: boolean,
@@ -18,14 +19,14 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
 
     return (
         <section className='w-full flex items-center h-screen ' id='SobreMi'>
-            <article className='flex w-3/4 gap-10 mx-auto'>
+            <article className='flex w-5/6 gap-15 mx-auto'>
                 <div className='flex gap-5 justify-between w-3/4'>
 
                     <div className='flex flex-col justify-between '>
                         <div className='space-y-3'>
                             <div className='flex flex-col space-y-3 '>
                                 <div className='space-y-2'>
-                                    <h1 className='text-6xl font-bold'>{name}</h1>
+                                    <h1 className='text-5xl font-bold'>{name}</h1>
                                 </div>
 
                                 <h3 className='flex gap-5 text-3xl text-primary '>
@@ -33,8 +34,8 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                                 </h3>
                             </div>
                             <div className='mt-8 space-y-8'>
-
-                                <p className='text-mute tracking-wide font-semibold text-xl/9  '>{description}</p>
+                                
+                                <Paragraph> {description} </Paragraph>
 
                                 <div className='flex gap-5'>
                                     <PrimaryButton className='bg-primary hover:bg-primary-hover'>
@@ -49,7 +50,7 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
 
                                 </div>
 
-                                <div className='space-x-5'>
+                                <div className='space-x-3'>
                                     {social_media.map((social) => {
                                         return (
                                             <SecondaryButton className='border-primary' key={social.name}>
@@ -63,18 +64,18 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                                     })}
                                 </div>
 
-                                <div className='flex gap-4 flex-wrap'>
+                                {/* <div className='flex gap-4 flex-wrap'>
                                     {
                                         languages.map((skill) => {
                                             return <Link to={{pathname: `lenguaje/${skill.name}`}}>
                                                 <MiniButton>
                                                     <img className='w-6' src={getImage("language_icons", skill.image)} alt="" />
-                                                    <p className=''>{skill.name}</p>
+                                                    <p>{skill.name}</p>
                                                 </MiniButton>
                                             </Link>
                                         })
                                     }
-                                </div>
+                                </div> */}
                             </div>
 
                         </div>
