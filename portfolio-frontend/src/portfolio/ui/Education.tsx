@@ -1,5 +1,5 @@
 import { getImage } from '../../lib/getImage';
-import TitleSection from '../components/TitleSection';
+import Section from '../components/Section';
 import { education } from '../data/education';
 
 const Education = () => {
@@ -7,9 +7,9 @@ const Education = () => {
     const folderImage = "school_icons"
 
     return (
-        <section className='w-3/4 m-auto mt-20' id='Educacion'>
-            <TitleSection title={"Educación"} icon={"fa-graduation-cap"}/>
-            <article className='mt-8 flex gap-6'>
+
+        <Section title={"Educación"} icon={"fa-graduation-cap"}>
+            <article className='flex gap-6 w-full'>
                 {
                     education.map((educ) => {
                         return <div className='flex w-full items-center bg-white/10 rounded-lg p-5 mb-10'>
@@ -28,7 +28,7 @@ const Education = () => {
                 }
 
             </article>
-        </section>
+        </Section>
     )
 }
 

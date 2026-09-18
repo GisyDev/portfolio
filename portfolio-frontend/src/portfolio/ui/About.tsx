@@ -3,6 +3,9 @@ import cara from "../../assets/images/yo.jpeg"
 import { languages } from '../data/skills'
 import { getImage } from '../../lib/getImage'
 import { Link } from 'react-router-dom'
+import PrimaryButton from '../components/PrimaryButton';
+import SecondaryButton from '../components/SecondaryButton'
+import MiniButton from '../components/MiniButton'
 
 type AboutType = {
     moreInfoEnable: boolean,
@@ -14,67 +17,61 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
     const { name, profile, description } = about_me
 
     return (
-        <section className='w-full flex items-center h-screen' id='SobreMi'>
-            <article className='flex w-3/4 gap-30 mx-auto'>
-                <div className='flex gap-10 justify-between w-full'>
+        <section className='w-full flex items-center h-screen ' id='SobreMi'>
+            <article className='flex w-3/4 gap-10 mx-auto'>
+                <div className='flex gap-5 justify-between w-3/4'>
 
                     <div className='flex flex-col justify-between '>
                         <div className='space-y-3'>
                             <div className='flex flex-col space-y-3 '>
                                 <div className='space-y-2'>
-                                    <h1 className='text-7xl font-bold'>{name}</h1>
+                                    <h1 className='text-6xl font-bold'>{name}</h1>
                                 </div>
 
-                                <h3 className='flex gap-5 text-4xl text-primary '>
+                                <h3 className='flex gap-5 text-3xl text-primary '>
                                     <p className='font-semibold'>{profile}</p>
                                 </h3>
                             </div>
                             <div className='mt-8 space-y-8'>
 
-                                <p className='text-mute tracking-wide font-semibold text-xl/9 w-3xl '>{description}</p>
+                                <p className='text-mute tracking-wide font-semibold text-xl/9  '>{description}</p>
 
                                 <div className='flex gap-5'>
-                                    <button className='flex items-center gap-1 rounded-lg font-semibold py-3 px-3 bg-primary hover:bg-primary-hover transition-all cursor-pointer'>
+                                    <PrimaryButton className='bg-primary hover:bg-primary-hover'>
                                         <i className="fa-solid fa-download"></i>
                                         <p>Descargar CV</p>
-                                    </button>
-                                    <button
-                                        className=' flex rounded-lg font-semibold py-3 px-3 bg-gray-500 cursor-pointer items-center gap-1 hover:bg-gray-600 transition-all'
-                                        onClick={() => setMoreInfoEnable(!moreInfoEnable)}>
+                                    </PrimaryButton>
+
+                                    <PrimaryButton className='bg-gray-500 hover:bg-gray-500/90' onClick={() => setMoreInfoEnable(!moreInfoEnable)}>
                                         <i className="fa-solid fa-circle-info"></i>
                                         <p>Más información</p>
-                                    </button>
+                                    </PrimaryButton>
+
                                 </div>
 
                                 <div className='space-x-5'>
                                     {social_media.map((social) => {
                                         return (
-                                            <button key={social.name} className=' p-3 rounded-full border-2 border-primary'>
+                                            <SecondaryButton className='border-primary' key={social.name}>
                                                 <a className="flex items-center gap-2" href={social.link} target="blank">
-                                                    <i className={`text-2xl ${social.icon}`}></i>
+                                                    <i className={`${social.icon}`}></i>
                                                     {social.name && <p className='font-semibold'>{social.name}</p>}
                                                 </a>
-                                            </button>
+                                            </SecondaryButton>
 
                                         );
                                     })}
                                 </div>
 
-                                <div className='flex gap-3 flex-wrap'>
+                                <div className='flex gap-4 flex-wrap'>
                                     {
                                         languages.map((skill) => {
-                                            return <Link
-                                                to={{
-                                                    pathname: `lenguaje/${skill.name}`,
-                                                }}
-                                            >
-                                                <button className='bg-white/15 py-2 px-3 rounded-lg backdrop-blur-2xl flex gap-3 cursor-pointer hover:bg-white/20 transition-all'>
-                                                    <img className='w-5' src={getImage("language_icons", skill.image)} alt="" />
-                                                    <p className='text-lg'>{skill.name}</p>
-                                                </button>
+                                            return <Link to={{pathname: `lenguaje/${skill.name}`}}>
+                                                <MiniButton>
+                                                    <img className='w-6' src={getImage("language_icons", skill.image)} alt="" />
+                                                    <p className=''>{skill.name}</p>
+                                                </MiniButton>
                                             </Link>
-
-
                                         })
                                     }
                                 </div>
@@ -83,7 +80,7 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                         </div>
                     </div>
                 </div>
-                <div className='flex items-center'>
+                <div className='flex items-center w-1/3'>
                     <img src={cara} alt="Yo" className='w-full rounded-2xl border-8 text-primary-button border-primary ' />
                 </div>
             </article>
