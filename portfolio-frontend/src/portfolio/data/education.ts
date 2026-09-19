@@ -61,7 +61,7 @@ export const education = [
         name: "Hogar Escuela Axiliadora",
         title: "Sistemas Microinformáticos y Redes",
         date: "2019 - 2021",
-        icon: "Hogar_Escuela.png",
+        icon: "Hogar_Escuela.jpg",
         description: "Aprendizaje en el montaje, reparación y mantenimiento de equipos informáticos y periféricos, instalación y configuración de sistemas operativos monofila y en red, administración de servicios de red básicos y resolución de incidencias de hardware y software",
         skills: [
             {

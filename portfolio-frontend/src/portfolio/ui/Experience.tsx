@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Section from '../components/Section';
 import Paragraph from '../components/Paragraph';
 import { sectionsNav } from '../data/nav';
+import HorizontalCard from '../components/HorizontalCard';
 
 const experiences = [
     {
@@ -86,45 +87,50 @@ const Experience = () => {
 
                         {
                             experieceState.map((exp, index) => {
-                                return <div
-                                    className='bg-white/10 p-5 rounded-2xl border-t-4 border-primary/50 space-y-4 w-full cursor-pointer hover:bg-white/15 hover:border-primary transition-all'
-                                    onClick={() => setHidden(exp.id)}
-                                >
+                                return <div>
                                     <div className='absolute'>
-                                        <div className={`${index === 0 && "ring-4 ring-fuchsia-800"} relative right-[76px] first:bg-primary w-4 h-4 rounded-full`}></div>
+                                        <div className={`${index === 0 && "ring-2 ring-fuchsia-800"} relative right-[48px] top-[50px] first:bg-primary w-3 h-3 rounded-full`}></div>
                                     </div>
-                                    <div className='flex gap-7 items-center w-full'>
-                                        <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-20' />
-                                        <div className='flex items-center space-y-1 justify-between  w-full'>
-                                            <div className='space-y-1 w-full'>
-                                                <div className='flex justify-between '>
-                                                    <h1 className='text-xl font-semibold'>{exp.profile}</h1>
-                                                    <p className='text-sm text-mute font-semibold'>{exp.date}</p>
+                                    <HorizontalCard onClick={() => setHidden(exp.id)}>
+
+                                        <div className='flex gap-5 items-center w-full'>
+                                            <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-12' />
+                                            <div className='flex items-center space-y-1 justify-between  w-full'>
+                                                <div className='space-y-1 w-full'>
+                                                    <div className='flex justify-between '>
+                                                        <h1 className='text-lg font-semibold '>{exp.profile}</h1>
+                                                        <p className='text-sm text-mute font-semibold'>{exp.date}</p>
+                                                    </div>
+                                                    <h3 className=' text-mute '>{exp.company}</h3>
                                                 </div>
-                                                <h3 className='text-lg text-mute '>{exp.company}</h3>
                                             </div>
                                         </div>
-                                    </div>
-                                    <Paragraph>{exp.resume}</Paragraph>
+                                        <Paragraph>{exp.resume}</Paragraph>
 
-                                    {
-                                        !exp.hidden && <ul className='list-disc px-3 flex flex-col gap-3 mt-4 text-mute'>
-                                            {
-                                                exp.description.map((desc) => {
-                                                    return <li key={desc}>
-                                                        <Paragraph>{desc}</Paragraph>
-                                                    </li>
-                                                })
-                                            }
-                                        </ul>
-                                    }
 
-                                    {/* <a className='cursor-pointer flex items-center gap-1' onClick={() => setHidden(exp.id)}>
-                                    <p className='font-semibold'>{exp.hidden ? "Ver más" : "Ver menos"}</p>
-                                    <i className={`fa-solid ${exp.hidden ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
-                                </a> */}
 
+                                        {
+                                            !exp.hidden && <ul className='list-disc px-3 flex flex-col gap-2 text-mute'>
+                                                {
+                                                    exp.description.map((desc) => {
+                                                        return <li key={desc}>
+                                                            <p className='text-sm'>{desc}</p>
+                                                        </li>
+                                                    })
+                                                }
+                                            </ul>
+                                        }
+
+                                        <a className='cursor-pointer flex items-center gap-1 text-[15px] text-mute/80' onClick={() => setHidden(exp.id)}>
+                                            <p className=''>{exp.hidden ? "Ver más" : "Ver menos"}</p>
+                                            <i className={`fa-solid ${exp.hidden ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
+                                        </a>
+
+
+                                    </HorizontalCard>
                                 </div>
+
+
                             })
                         }
                     </div>

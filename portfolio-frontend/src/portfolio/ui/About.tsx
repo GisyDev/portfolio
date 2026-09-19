@@ -16,12 +16,12 @@ const About = () => {
 
     return (
         <section className='flex items-center scroll-m-30' id={sectionsNav.about.id} data-section={sectionsNav.about.id}>
-            <article className='flex gap-15'>
+            <article className='flex gap-12'>
                 <div className='flex gap-5 justify-between w-3/4'>
-                    <div className='flex flex-col space-y-5 '>
+                    <div className='flex flex-col space-y-6 '>
                         <div className='space-y-3'>
-                            <AccentButton className='bg-secondary-sucess/30 text-primary-sucess/90 border-secondary-sucess/30'>
-                                <span className='bg-primary-sucess/90 w-1 h-1 p-1 rounded-full'/>
+                            <AccentButton className='bg-secondary-background text-primary/90 border-primary/50'>
+                                <span className='bg-primary/90 w-1 h-1 p-1 rounded-full'/>
                                 <p>Disponible para trabajar - Santa Cruz de Tenerife</p>
                             </AccentButton>
 
