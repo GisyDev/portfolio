@@ -1,4 +1,5 @@
 import React from 'react'
+import TitleSection from './TitleSection'
 
 
 type SectionType = {
@@ -8,18 +9,11 @@ type SectionType = {
     ref: string,
 }
 
-const Section = ({ children, title, icon, ref } : SectionType) => {
+const Section = ({ children, title, icon, ref }: SectionType) => {
     return (
-        <section className='w-6xl m-auto scroll-mt-32 mb-10 mt-15' id={ref}>
-
-            <div className='flex gap-3 items-center mb-12'>
-                <i className={`fa-solid ${icon} text-primary text-4xl`}></i>
-                <h1 className='font-bold text-4xl'>{title}</h1>
-            </div>
-
-            
-                {children}
-          
+        <section className='w-page m-auto scroll-mt-32' id={ref}>
+            <TitleSection title={title} icon={icon}/>
+            {children}
         </section>
     )
 }

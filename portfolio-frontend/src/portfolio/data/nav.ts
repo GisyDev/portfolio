@@ -7,10 +7,10 @@ export const nav = [
         text: "Experiencia",
         enlace: "#Experiencia"
     },
-    {
-        text: "Proyectos",
-        enlace: "#Proyectos"
-    },
+    // {
+    //     text: "Proyectos",
+    //     enlace: "#Proyectos"
+    // },
     {
         text: "Educación",
         enlace: "#Educacion"

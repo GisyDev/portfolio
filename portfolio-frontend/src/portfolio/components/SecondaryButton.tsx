@@ -9,7 +9,7 @@ type SecondaryButtonType = {
 
 const SecondaryButton = ({ className, children, onClick }: SecondaryButtonType) => {
     return (
-        <button className='px-3 py-2 rounded-full border-2 border-primary/60 hover:border-primary cursor-pointer transition-all'>
+        <button className='px-3 py-2 rounded-full border-2 text-sm border-primary/60 hover:border-primary cursor-pointer transition-all'>
             {children}
         </button>
     )

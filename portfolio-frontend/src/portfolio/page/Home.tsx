@@ -15,22 +15,22 @@ const Home = () => {
 
   return (
     <>
-       <Background /> 
+      {/* <Background />  */}
       <div className='text-white relative z-10'>
         <Header />
-        <main className=''>
-          <About moreInfoEnable={moreInfoEnable} setMoreInfoEnable={setMoreInfoEnable}/>
-          {/* <Skills />  */}
-          <div className='flex flex-col gap-12 z-50'>
+        <main className='max-w-page m-auto mt-34'>
+          <About moreInfoEnable={moreInfoEnable} setMoreInfoEnable={setMoreInfoEnable} />
+          <div className='flex flex-col gap-30 z-50'>
             <Experience />
             {/* <Projects/> */}
-            {/* <Education /> */}
+            <Skills />
+            <Education />
 
-            <Footer />
           </div>
           <Outlet />
-          {moreInfoEnable && <MoreInformationModal setMoreInfoEnable={setMoreInfoEnable}/>}
+          {moreInfoEnable && <MoreInformationModal setMoreInfoEnable={setMoreInfoEnable} />}
         </main>
+        <Footer />
       </div>
     </>
 

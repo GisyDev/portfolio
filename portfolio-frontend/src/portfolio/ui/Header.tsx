@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className='fixed w-full top-3 z-40'>
 
-      <nav className="mx-auto w-5/6 rounded-4xl py-6 px-8 flex justify-between items-center bg-black/5 backdrop-blur-xl">
+      <nav className="mx-auto max-w-page rounded-4xl py-6 px-8 flex justify-between items-center bg-black/5 backdrop-blur-xl">
         <div className='flex gap-10 '>
           <TitleName/>
         </div>

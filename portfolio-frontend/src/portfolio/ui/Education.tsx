@@ -1,6 +1,7 @@
 import { getImage } from '../../lib/getImage';
 import Section from '../components/Section';
-import { education } from '../data/education';
+import TitleSection from '../components/TitleSection';
+import { education, languajes } from '../data/education';
 
 const Education = () => {
 
@@ -8,27 +9,53 @@ const Education = () => {
 
     return (
 
-        <Section title={"Educación"} icon={"fa-graduation-cap"} ref={"Educacion"}>
-            <article className='flex gap-6 w-full'>
-                {
-                    education.map((educ) => {
-                        return <div className='flex w-full items-center bg-white/10 rounded-lg p-5 mb-10'>
-                            <div className='flex flex-col gap-3 '>
-                                <img className='rounded-lg w-18' src={getImage(folderImage, educ.icon)} alt={educ.name} />
-                                <div className='space-y-2 mt-3'>
-                                    <h1 className='text-lg font-bold'>{educ.title}</h1>
-                                    <h3>{educ.name}</h3>
+        <section className="scroll-m-30" id='Educacion'>
+            <div className='flex gap-10'>
+
+                <article className='w-full flex flex-col'>
+                    <TitleSection title={"Educación"} icon={"fa-graduation-cap"} />
+
+                    <div className='flex flex-col gap-3'>
+                        {
+                            education.map((educ) => {
+                                return <div className='flex w-full items-center bg-white/10 rounded-lg p-5'>
+                                    <div className='flex gap-5 items-center '>
+                                        <img className='rounded-lg w-15' src={getImage(folderImage, educ.icon)} alt={educ.name} />
+                                        <div className='space-y-2'>
+                                            <h1 className='font-semibold'>{educ.title}</h1>
+                                            <h3 className='text-sm text-mute'>{educ.name}</h3>
+                                        </div>
+                                    </div>
+
+                                    {/* <p className='text-mute w-full text-end'>{educ.date}</p> */}
                                 </div>
-                            </div>
 
-                            {/* <p className='text-mute w-full text-end'>{educ.date}</p> */}
-                        </div>
+                            })
+                        }
+                    </div>
 
-                    })
-                }
 
-            </article>
-        </Section>
+                </article>
+
+                <article className='w-full flex flex-col'>
+
+                    <TitleSection title={"Idiomas"} icon={"fa-language"} />
+
+                    <div className='flex flex-col gap-3'>
+                        {
+                            languajes.map((lang) => {
+                                return <div className='p-3 bg-white/10 rounded-2xl'>
+                                    <h1>{lang.lang}</h1>
+                                </div>
+                            })
+                        }
+                    </div>
+
+                </article>
+            </div>
+
+
+        </section>
     )
 }
 

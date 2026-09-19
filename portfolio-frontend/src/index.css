@@ -8,7 +8,7 @@
 
     --color-primary: #d15af2;
     --color-primary-hover: #c255e0;
-    --color-secondary: #bfa3c7;
+    --color-secondary: #8c39a3;
     --color-mute: #FAF2F7;
 
 
@@ -16,8 +16,10 @@
     --color-bg-card: #18181b;
     --color-bg-card-hover: #27272a;
 
+    --container-page: 58rem;
+
     --color-primary-sucess: #9DE09D;
-    --color-secondary-sucess: #2D912D;
+    --color-secondary-sucess: #2D912D
 }
 
 

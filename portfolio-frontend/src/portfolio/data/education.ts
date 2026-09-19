@@ -87,3 +87,15 @@ export const education = [
         ]
     },
 ]
+
+
+export const languajes = [
+    {
+        lang: "Español",
+        nivel: "Nativo"
+    },
+    {
+        lang: "Inglés",
+        nivel: "B1"
+    }
+]
