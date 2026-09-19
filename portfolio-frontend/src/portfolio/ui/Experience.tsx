@@ -4,6 +4,7 @@ import { getImage } from '../../lib/getImage';
 import { useState } from 'react';
 import Section from '../components/Section';
 import Paragraph from '../components/Paragraph';
+import { sectionsNav } from '../data/nav';
 
 
 const Experience = () => {
@@ -28,7 +29,7 @@ const Experience = () => {
 
     const folderImage = "company_icons"
     return (
-        <Section title="Experiencia" icon="fa-briefcase" ref={"Experiencia"}>
+        <Section title={sectionsNav.experience.text} icon="fa-briefcase" reference={sectionsNav.experience.id}>
             <div className='flex gap-6'>
                 <article className='flex gap-8 w-full '>
                     <span className='max-h-full border-l-2 bg-white border-secondary'></span>
@@ -36,7 +37,6 @@ const Experience = () => {
 
                         {
                             experieceState.map((exp, index) => {
-                                const descriptions = exp.description.split("-")
                                 return <div
                                     className='bg-white/10 p-8 rounded-2xl border-t-4 border-primary/50 space-y-8 w-full cursor-pointer hover:bg-white/15 hover:border-primary transition-all'
                                     onClick={() => setHidden(exp.id)}
@@ -61,7 +61,7 @@ const Experience = () => {
                                     {
                                         !exp.hidden && <ul className='list-disc px-3 flex flex-col gap-3 mt-4 text-mute'>
                                             {
-                                                descriptions.map((desc) => {
+                                                exp.description.map((desc) => {
                                                     return <li key={desc}>
                                                         <Paragraph>{desc}</Paragraph>
                                                     </li>

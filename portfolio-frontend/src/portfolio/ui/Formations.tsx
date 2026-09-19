@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
 import { getImage } from '../../lib/getImage';
+import MiniButton from '../components/MiniButton';
 import Section from '../components/Section';
 import TitleSection from '../components/TitleSection';
 import { education, languajes } from '../data/education';
+import { sectionsNav } from '../data/nav';
+import { program_languages } from '../data/skills';
 
 const Education = () => {
 
@@ -9,11 +13,30 @@ const Education = () => {
 
     return (
 
-        <section className="scroll-m-30" id='Educacion'>
+        <section className="scroll-m-30 flex flex-col gap-20" id={sectionsNav.education.id} data-section={sectionsNav.education.id}>
+            <Section title={"Tecnologías"} icon={"fa-code"}>
+
+                <div className='flex gap-4 flex-wrap'>
+                    {
+                        program_languages.map((skill) => {
+                            return <Link to={{ pathname: `lenguaje/${skill.name}` }}>
+                                <MiniButton>
+                                    <img className='w-6' src={getImage("language_icons", skill.image)} alt="" />
+                                    <p>{skill.name}</p>
+                                </MiniButton>
+                            </Link>
+                        })
+                    }
+                </div>
+
+            </Section>
+
+
+
             <div className='flex gap-10'>
 
-                <article className='w-full flex flex-col'>
-                    <TitleSection title={"Educación"} icon={"fa-graduation-cap"} />
+                <article className='w-full flex flex-col' >
+                    <TitleSection title={"Educación"} icon={"fa-briefcase"} />
 
                     <div className='flex flex-col gap-3'>
                         {
@@ -53,8 +76,6 @@ const Education = () => {
 
                 </article>
             </div>
-
-
         </section>
     )
 }

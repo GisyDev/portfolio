@@ -1,9 +1,14 @@
 export const about_me = {
     name: "Gisela Estévez Moleiro",
     profile: "Desarrolladora Web",
-    description: "Apasionada en la creción de páginas webs",
+    description: "Especializada en la creación y mantenimiento de aplicaciones web, programando tanto en la parte Frotnend como en Backend",
+    full_description: [
+        "Soy Gisela (o simplemente Gisy, como me llaman desde niña). A esa misma edad mis padres me regalaron mi primer ordenador y, jugando con él, me dio curiosidad por saber cómo funcionaban por dentro las aplicaciones que usaba a diario. Por eso decidí elegir la programación y cursar dos ciclos superiores para especializarme.",
+        "En mi experiencia profesional he aprendido que desarrollar es solo una parte: la otra es gestionar grandes proyectos, tratar con clientes y traducir sus necesidades reales en código.",
+        "Más allá de mi jornada diaria, sigo aprendiendo de forma autodidacta y creando proyectos propios en GitHub para aprender nuevas tecnologías.",
+    ],
 
-    full_description: "Soy Desarrolladora Web y especialista en Appian. Mi pasión por la tecnología comenzó desde pequeña, por lo que soy una persona autodidacta, curiosa y preparada para resolver problemas. _Tengo experiencia en PwC España, donde participo en el desarrollo de la aplicación de Mapfre y en la resolución de incidencias. Trabajo tanto con la plataforma low-code Appian como con React, HTML, CSS y Java, buscando siempre crear código limpio, eficiente y fácil de mantener. _Me considero alguien comprometida y con gran capacidad de adaptación. Me gusta trabajar en equipo y seguir aprendiendo para aportar valor en los proyectos.",
+
 
 soft_skills: [
     { name: "Resolución de problemas", icon: "fa-solid fa-puzzle-piece" },

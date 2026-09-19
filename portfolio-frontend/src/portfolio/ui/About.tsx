@@ -1,13 +1,10 @@
 import { about_me, social_media } from '../data/about'
 import cara from "../../assets/images/yo.jpeg"
-import { program_languages } from '../data/skills'
-import { getImage } from '../../lib/getImage'
-import { Link } from 'react-router-dom'
 import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton'
-import MiniButton from '../components/MiniButton'
 import Paragraph from '../components/Paragraph'
 import AccentButton from '../components/AccentButton'
+import { sectionsNav } from '../data/nav'
 
 type AboutType = {
     moreInfoEnable: boolean,
@@ -19,7 +16,7 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
     const { name, profile, description } = about_me
 
     return (
-        <section className='flex items-center scroll-m-30 mb-15' id='SobreMi'>
+        <section className='flex items-center scroll-m-30' id={sectionsNav.about.id} data-section={sectionsNav.about.id}>
             <article className='flex gap-15'>
                 <div className='flex gap-5 justify-between w-3/4'>
                     <div className='flex flex-col space-y-5 '>

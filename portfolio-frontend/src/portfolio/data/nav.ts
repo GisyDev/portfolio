@@ -1,19 +1,30 @@
-export const nav = [
-    {
-        text: "Sobre mí",
+export const sectionsNav = {
+    about: {
+        id: 'SobreMi',
+        text: 'Sobre mí',
         enlace: "#SobreMi"
     },
-    {
-        text: "Experiencia",
+    experience: {
+        id: 'Experiencia',
+        text: 'Experiencia',
+        icon: "fa-briefcase",
         enlace: "#Experiencia"
     },
-    // {
-    //     text: "Proyectos",
-    //     enlace: "#Proyectos"
-    // },
-    {
-        text: "Educación",
-        enlace: "#Educacion"
-    },
-    
-]
+    education: {
+        id: 'Formacion',
+        text: 'Formacion',
+        icon: "fa-graduation-cap",
+        enlace: "#Formacion"
+    }
+} as const
+
+
+const sectionsNavObject = Object.entries(sectionsNav)
+
+export const sectionsNavArray = Object.values(sectionsNavObject).map(([key, { id, text, enlace }]) => {
+    return {
+        id,
+        text,
+        enlace
+    }
+})

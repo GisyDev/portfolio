@@ -1,4 +1,4 @@
-import { nav } from '../data/nav';
+import { sectionsNavArray } from '../data/nav';
 import { social_media } from '../data/about';
 import TitleName from '../components/TitleName';
 const Footer = () => {
@@ -11,10 +11,10 @@ const Footer = () => {
             <p className='text-lg text-mute'>Desarrolladora Fullstack</p>
           </div>
           <div className=''>
-            <h1 className='text-xl font-bold mb-5'>Navegaciión</h1>
+            <h1 className='text-xl font-bold mb-5'>Navegación</h1>
             <ul className='flex flex-col gap-2'>
               {
-                nav.map((nav) => {
+                sectionsNavArray.map((nav) => {
                   return <li className='text-mute'>
                     <a href={nav.enlace} className='hover:text-primary transition-all'>
                       {nav.text}

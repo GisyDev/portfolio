@@ -12,8 +12,6 @@ const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) =
 
     const { profile, full_description, soft_skills, languajes, more_information } = about_me
 
-    const fulldescSplit = full_description.split("_")
-
     return (
         <div className='fixed top-0 w-screen h-screen bg-black/30 z-50'>
             <div className='fixed bg-slate-950/60 w-5xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 p-20 rounded-lg space-y-10 backdrop-blur-2xl shadow-2xl'>
@@ -29,7 +27,7 @@ const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) =
 
                 <div className='mt-5 space-y-5'>
                     {
-                        fulldescSplit.map((paragraph) => {
+                        full_description.map((paragraph) => {
                             return <Paragraph>{paragraph}</Paragraph>
                         })
                     }
