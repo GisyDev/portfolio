@@ -5,15 +5,14 @@ import SecondaryButton from '../components/SecondaryButton'
 import Paragraph from '../components/Paragraph'
 import AccentButton from '../components/AccentButton'
 import { sectionsNav } from '../data/nav'
+import { useNavigate } from 'react-router-dom';
 
-type AboutType = {
-    moreInfoEnable: boolean,
-    setMoreInfoEnable: React.Dispatch<React.SetStateAction<boolean>>
-}
 
-const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
+const About = () => {
 
     const { name, profile, description } = about_me
+
+    const navigate = useNavigate()
 
     return (
         <section className='flex items-center scroll-m-30' id={sectionsNav.about.id} data-section={sectionsNav.about.id}>
@@ -37,7 +36,7 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                                 <p>Descargar CV</p>
                             </PrimaryButton>
 
-                            <PrimaryButton className='bg-gray-500 hover:bg-gray-500/90' onClick={() => setMoreInfoEnable(!moreInfoEnable)}>
+                            <PrimaryButton className='bg-gray-500 hover:bg-gray-500/90' onClick={() => navigate("SobreMi")}>
                                 <i className="fa-solid fa-circle-info"></i>
                                 <p>Más información</p>
                             </PrimaryButton>

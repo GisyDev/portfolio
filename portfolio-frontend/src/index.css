@@ -9,6 +9,8 @@
     --color-primary: #d15af2;
     --color-primary-hover: #c255e0;
     --color-secondary: #8c39a3;
+    --color-terceary: #cd9cdb;
+
     --color-mute: #FAF2F7;
 
 
@@ -16,7 +18,7 @@
     --color-bg-card: #18181b;
     --color-bg-card-hover: #27272a;
 
-    --container-page: 58rem;
+    --container-page: 55rem;
 
     --color-primary-sucess: #9DE09D;
     --color-secondary-sucess: #2D912D
@@ -29,4 +31,5 @@ body,
 #root {
     @apply bg-slate-950 h-full;
     @apply scroll-smooth;
+    @apply text-white;
 }

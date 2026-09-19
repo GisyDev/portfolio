@@ -7,19 +7,17 @@ export const about_me = {
         "En mi experiencia profesional he aprendido que desarrollar es solo una parte: la otra es gestionar grandes proyectos, tratar con clientes y traducir sus necesidades reales en código.",
         "Más allá de mi jornada diaria, sigo aprendiendo de forma autodidacta y creando proyectos propios en GitHub para aprender nuevas tecnologías.",
     ],
-
-
-
-soft_skills: [
-    { name: "Resolución de problemas", icon: "fa-solid fa-puzzle-piece" },
-    { name: "Trabajo en equipo", icon: "fa-solid fa-people-group" },
-    { name: "Comunicación", icon: "fa-solid fa-comments" },
-    { name: "Adaptabilidad", icon: "fa-solid fa-arrows-rotate" },
-    { name: "Autodidacta", icon: "fa-solid fa-book-open" },
-],
+    soft_skills: [
+        { name: "Resolución de problemas", icon: "fa-solid fa-puzzle-piece" },
+        { name: "Trabajo en equipo", icon: "fa-solid fa-people-group" },
+        { name: "Comunicación", icon: "fa-solid fa-comments" },
+        { name: "Adaptabilidad", icon: "fa-solid fa-arrows-rotate" },
+        { name: "Autodidacta", icon: "fa-solid fa-book-open" },
+    ],
     more_information: [
-        { label: "Disponibilidad:", value: "Inmediata", icon: "fa-solid fa-car" },
-        { label: "Ubicación:", value: " Santa Cruz de Tenerife", icon: "fa-solid fa-location-dot"},
+        { label: "Disponibilidad Inmediata", icon: "fa-solid fa-car" },
+        { label: "Ubicación:", value: " Santa Cruz de Tenerife", icon: "fa-solid fa-location-dot" },
+        { label: "Carnet de conducir:", value: "B", icon: "fa-solid fa-car" },
     ],
 
 }

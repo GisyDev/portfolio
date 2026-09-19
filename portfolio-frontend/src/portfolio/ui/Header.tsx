@@ -1,3 +1,4 @@
+import { redirect, useLocation, useNavigate } from 'react-router-dom';
 import TitleName from '../components/TitleName';
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
@@ -5,6 +6,14 @@ import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
 const Header = () => {
 
   const activeNav = useNavInterceptionObserver()
+
+  const location = useLocation()
+  const navigate = useNavigate()
+
+
+  const reDirection = () => {
+    if (location.pathname != "/portfolio") navigate('/portfolio', { replace: true })
+  }
 
   return (
     <header className='fixed w-full top-3 z-40'>
@@ -17,10 +26,11 @@ const Header = () => {
           <ul className='flex flex-row gap-10'>
             {
               sectionsNavArray.map((element) => {
-                return <li className='font-semibold '>
+                return <li className='font-semibold' onClick={() => reDirection()} >
                   <a
                     className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""}`} href={`${element.enlace} `}
                     id={element.enlace}
+
                   >
                     {element.text}
                   </a>

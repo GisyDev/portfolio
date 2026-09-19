@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 import { sectionsNav, sectionsNavArray } from '../data/nav';
+import { useLocation } from 'react-router-dom';
 
 const useNavInterceptionObserver = () => {
     const [activeNav, setActiveNav] = useState<string | "sobre-mi">(sectionsNav.about.id);
+
+    const location = useLocation()
+
 
     useEffect(() => {
 
@@ -22,7 +26,7 @@ const useNavInterceptionObserver = () => {
         });
 
         return () => observer.disconnect()
-    }, []);
+    }, [location.pathname]);
 
     return activeNav
 }
