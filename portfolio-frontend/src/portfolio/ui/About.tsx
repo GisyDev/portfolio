@@ -1,6 +1,6 @@
 import { about_me, social_media } from '../data/about'
 import cara from "../../assets/images/yo.jpeg"
-import { languages } from '../data/skills'
+import { program_languages } from '../data/skills'
 import { getImage } from '../../lib/getImage'
 import { Link } from 'react-router-dom'
 import PrimaryButton from '../components/PrimaryButton';
@@ -18,8 +18,8 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
     const { name, profile, description } = about_me
 
     return (
-        <section className='w-full flex items-center h-screen ' id='SobreMi'>
-            <article className='flex w-5/6 gap-15 mx-auto'>
+        <section className='w-full flex items-center h-screen mt-8 scroll-m-12' id='SobreMi'>
+            <article className='flex w-6xl gap-15 mx-auto'>
                 <div className='flex gap-5 justify-between w-3/4'>
 
                     <div className='flex flex-col justify-between '>
@@ -64,9 +64,9 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                                     })}
                                 </div>
 
-                                {/* <div className='flex gap-4 flex-wrap'>
+                                 <div className='flex gap-4 flex-wrap'>
                                     {
-                                        languages.map((skill) => {
+                                        program_languages.map((skill) => {
                                             return <Link to={{pathname: `lenguaje/${skill.name}`}}>
                                                 <MiniButton>
                                                     <img className='w-6' src={getImage("language_icons", skill.image)} alt="" />
@@ -75,14 +75,14 @@ const About = ({ moreInfoEnable, setMoreInfoEnable }: AboutType) => {
                                             </Link>
                                         })
                                     }
-                                </div> */}
+                                </div> 
                             </div>
 
                         </div>
                     </div>
                 </div>
                 <div className='flex items-center w-1/3'>
-                    <img src={cara} alt="Yo" className='w-full rounded-2xl border-8 text-primary-button border-primary ' />
+                    <img src={cara} alt="Yo" className='w-full rounded-2xl text-primary-button border-4 border-primary ' />
                 </div>
             </article>
 

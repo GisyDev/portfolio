@@ -7,7 +7,7 @@ type MiniButtonType = {
 
 const MiniButton = ({ children, onClick }: MiniButtonType) => {
     return (
-        <button className='bg-white/15 py-1 px-3 font-semibold text-mute rounded-lg backdrop-blur-2xl flex items-center gap-4 cursor-pointer hover:bg-white/20 transition-all '>
+        <button className='bg-white/10 py-1 px-3 font-semibold text-mute rounded-lg backdrop-blur-2xl flex items-center gap-4 cursor-pointer hover:bg-white/20 transition-all '>
             {children}
         </button>
     )

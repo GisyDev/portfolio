@@ -7,6 +7,7 @@ import { Background } from './Background';
 import MoreInformationModal from '../modals/MoreInformationModal';
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import Skills from '../ui/Skills';
 
 const Home = () => {
 
@@ -14,16 +15,17 @@ const Home = () => {
 
   return (
     <>
-      {/* <Background /> */}
+       <Background /> 
       <div className='text-white relative z-10'>
         <Header />
         <main className=''>
           <About moreInfoEnable={moreInfoEnable} setMoreInfoEnable={setMoreInfoEnable}/>
-          {/* <Skills /> */}
+          {/* <Skills />  */}
           <div className='flex flex-col gap-12 z-50'>
             <Experience />
             {/* <Projects/> */}
-            <Education />
+            {/* <Education /> */}
+
             <Footer />
           </div>
           <Outlet />

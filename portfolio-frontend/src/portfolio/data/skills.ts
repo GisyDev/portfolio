@@ -1,5 +1,5 @@
 
-export const languages = [
+export const program_languages = [
     {
         name: "HTML5",
         image: "html.svg",

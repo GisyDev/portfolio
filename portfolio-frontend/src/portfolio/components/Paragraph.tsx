@@ -6,7 +6,7 @@ type ParagraphType = {
 
 const Paragraph = ({ children }: ParagraphType) => {
     return (
-        <p className='text-mute font-medium text-lg/7 '>{children}</p>
+        <p className='text-mute font-medium text-lg/7 font-medium'>{children}</p>
     )
 }
 
