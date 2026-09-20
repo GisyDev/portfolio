@@ -11,7 +11,7 @@ type SectionType = {
 
 const Section = ({ children, title, icon, reference }: SectionType) => {
     return (
-        <section className='w-page m-auto scroll-mt-32' id={reference} data-section={reference}>
+        <section className='w-page m-auto scroll-mt-32 opacity-0' id={reference} data-section={reference}>
             <TitleSection title={title} icon={icon}/>
             {children}
         </section>

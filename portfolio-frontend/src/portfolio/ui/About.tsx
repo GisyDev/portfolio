@@ -6,7 +6,7 @@ import Paragraph from '../components/Paragraph'
 import AccentButton from '../components/AccentButton'
 import { sectionsNav } from '../data/nav'
 import { useNavigate } from 'react-router-dom';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
 
@@ -20,37 +20,40 @@ const About = () => {
                 <div className='flex gap-5 justify-between w-3/4'>
                     <div className='flex flex-col space-y-6 '>
                         <div className='space-y-3'>
-                            <AccentButton className='bg-secondary-background text-primary/90 border-primary/50'>
-                                <span className='bg-primary/90 w-1 h-1 p-1 rounded-full'/>
+                            {/* <AccentButton className='bg-secondary-background text-primary/90 border-primary/50'>
+                                <span className="relative flex size-2">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                                    <span className="relative inline-flex size-2 rounded-full bg-primary"></span>
+                                </span>
                                 <p>Disponible para trabajar - Santa Cruz de Tenerife</p>
-                            </AccentButton>
+                            </AccentButton> */}
 
-                            <h1 className='text-5xl font-bold'>{name}</h1>
-                            <h3 className='flex gap-5 text-3xl text-primary font-semibold'>{profile}</h3>
+                            <h1 className='animate-fade-in animate-delay-25 text-5xl font-bold'>{name}</h1>
+                            <h3 className='animate-fade-in animate-delay-85 flex gap-5 text-3xl text-primary font-semibold'>{profile}</h3>
                         </div>
-                        <Paragraph> {description} </Paragraph>
+                        <Paragraph className='animate-fade-in animate-delay-120'> {description} </Paragraph>
 
-                        <div className='flex space-x-3'>
+                        <div className='animate-fade-in animate-delay-200 flex space-x-3'>
                             <PrimaryButton className='bg-primary hover:bg-primary-hover'>
-                                <i className="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download fa-lg"></i>
                                 <p>Descargar CV</p>
                             </PrimaryButton>
 
                             <PrimaryButton className='bg-gray-500 hover:bg-gray-500/90' onClick={() => navigate("SobreMi")}>
-                                <i className="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info fa-lg"></i>
                                 <p>Más información</p>
                             </PrimaryButton>
                         </div>
 
 
 
-                        <div className='space-x-3'>
+                        <div className='space-x-3 animate-fade-in animate-delay-300'>
                             {social_media.map((social) => {
                                 return (
                                     <SecondaryButton className='border-primary' key={social.name}>
                                         <a className="flex items-center gap-2" href={social.link} target="blank">
-                                            <i className={`${social.icon}`}></i>
-                                            {social.name && <p className='font-semibold'>{social.name}</p>}
+                                            <i className={`${social.icon} fa-xl`}></i>
+                                            {social.name && <p className=''>{social.name}</p>}
                                         </a>
                                     </SecondaryButton>
 
@@ -60,7 +63,7 @@ const About = () => {
 
                     </div>
                 </div>
-                <div className='flex items-center w-1/3'>
+                <div className='flex items-center w-1/3 animate-fade-in animate-delay-150'>
                     <img src={cara} alt="Yo" className='w-full rounded-2xl text-primary-button border-4 border-primary ' />
                 </div>
             </article>

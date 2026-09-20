@@ -13,6 +13,7 @@
 
     --color-mute: #FAF2F7;
 
+    --color-gray: #374151;
 
     --color-bg-app: #09090b;
     --color-bg-card: #18181b;
@@ -21,9 +22,31 @@
     --container-page: 55rem;
 
     --color-primary-sucess: #9DE09D;
-    --color-secondary-sucess: #2D912D
+    --color-secondary-sucess: #2D912D;
+
+
+    --animate-fade-in: anim-fade-in 0.5s ease-out both;
+
+    @keyframes anim-fade-in {
+        0% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 100;
+        }
+    }
+
+
 }
 
+@utility animate-delay-* {
+    --animate-delay: --value(integer)ms;
+    --animate-delay: --value([time]);
+    animation-delay: var(--animate-delay);
+}
 
 
 html,

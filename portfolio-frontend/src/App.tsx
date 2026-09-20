@@ -15,11 +15,10 @@ function App() {
         <Route path="/" element={<Navigate to="/portfolio" replace />} />
 
         <Route element={<PortfolioLayout />}>
-          <Route path='/portfolio' element={<Home />}>
-            <Route path='lenguaje/:lang' element={<LanguageModal />} />
-          </Route >
-            <Route path='/portfolio/SobreMi' element={<AboutMe />} />
-            
+          <Route path='/portfolio' element={<Home />}/>
+            {/* <Route path='lenguaje/:lang' element={<LanguageModal />} /> */}
+       
+            <Route path='/portfolio/SobreMi' element={<AboutMe />} /> 
         </Route>
 
 

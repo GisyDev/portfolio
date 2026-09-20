@@ -8,7 +8,7 @@ type PrimaryButtonType = {
 
 const PrimaryButton = ({ className, children, onClick }: PrimaryButtonType) => {
     return (
-        <button className={`flex items-center gap-1 rounded-lg font-semibold text-sm py-2 px-3 transition-all cursor-pointer 
+        <button className={`flex items-center gap-1 rounded-lg text-sm py-2 px-3 transition-all cursor-pointer 
             ${className}`}
             onClick={onClick}
         >

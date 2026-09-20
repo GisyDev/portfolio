@@ -1,7 +1,8 @@
 import { about_me } from '../data/about'
 import Paragraph from '../components/Paragraph'
 import MiniButton from '../components/MiniButton';
-import { useNavigate } from 'react-router-dom'
+import { useMatch, useNavigate } from 'react-router-dom'
+import { p } from 'motion/react-client';
 
 
 const AboutMe = () => {
@@ -10,8 +11,9 @@ const AboutMe = () => {
 
     const navigate = useNavigate()
 
+
     return (
-        <section className='w-page m-auto'>
+        <section className='w-page m-auto animate-fade-in'>
             <div className='space-y-10'>
                 <div className='space-y-2'>
                     <div className='flex flex-col justify-between gap-3'>
@@ -19,6 +21,8 @@ const AboutMe = () => {
                             <i className="fa-solid fa-arrow-left"></i>
                             <a className=''>Volver al inicio</a>
                         </button>
+
+                 
 
                         <h1 className='text-4xl font-bold'>Más información sobre mí</h1>
                     </div>

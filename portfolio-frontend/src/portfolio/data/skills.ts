@@ -1,3 +1,9 @@
+export type programLanguagesType = {
+    name: string,
+    image: string,
+    description: []
+}
+
 
 export const program_languages = [
     {
@@ -141,4 +147,3 @@ export const program_languages = [
         ]
     },
 ];
- 
