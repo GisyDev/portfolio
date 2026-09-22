@@ -13,7 +13,7 @@ const AboutMe = () => {
 
 
     return (
-        <section className='w-page m-auto animate-fade-in'>
+        <section className='max-w-page m-auto animate-fade-in'>
             <div className='space-y-10'>
                 <div className='space-y-2'>
                     <div className='flex flex-col justify-between gap-3'>

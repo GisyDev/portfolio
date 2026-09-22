@@ -81,7 +81,7 @@ const Experience = () => {
     return (
         <Section title={sectionsNav.experience.text} icon="fa-briefcase" reference={sectionsNav.experience.id}>
             <div className='flex gap-6'>
-                <article className='flex gap-8 w-full '>
+                <article className='flex gap-6 w-full '>
                     <span className='max-h-full border-l-2 bg-white border-gray'></span>
                     <div className='space-y-8 w-full'>
 
@@ -89,20 +89,20 @@ const Experience = () => {
                             experieceState.map((exp, index) => {
                                 return <div>
                                     <div className='absolute'>
-                                        <div className={`${index === 0 && "animate-ping"} relative right-[38px] top-[45px] bg-primary w-3 h-3 rounded-full`}></div>
-                                        <div className={`absolute right-[38px] top-[45px] bg-primary w-3 h-3 rounded-full`}></div>
+                                        <div className={`${index === 0 && "animate-ping"} relative right-[31px] top-[40px] bg-primary w-3 h-3 rounded-full`}></div>
+                                        <div className={`absolute right-[31px] top-[40px] bg-primary w-3 h-3 rounded-full`}></div>
                                     </div>
                                     <HorizontalCard onClick={() => setHidden(exp.id)}>
 
                                         <div className='flex gap-5 items-center w-full'>
-                                            <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-12' />
+                                            <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-14' />
                                             <div className='flex items-center space-y-1 justify-between  w-full'>
-                                                <div className='space-y-1 w-full'>
-                                                    <div className='flex justify-between '>
-                                                        <h1 className='text-lg font-semibold '>{exp.profile}</h1>
-                                                        <p className='text-sm text-mute font-semibold'>{exp.date}</p>
+                                                <div className='w-full space-y-1'>
+                                                    <div className='flex gap-1 flex-col-reverse justify-between '>
+                                                        <h1 className='font-semibold '>{exp.profile}</h1>
+                                                        <p className='text-xs text-mute font-semibold'>{exp.date}</p>
                                                     </div>
-                                                    <h3 className=' text-mute '>{exp.company}</h3>
+                                                    <h3 className='text-sm text-mute '>{exp.company}</h3>
                                                 </div>
                                             </div>
                                         </div>

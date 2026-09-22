@@ -33,15 +33,15 @@ const Education = () => {
 
     return (
         <>
-            <section className="scroll-m-30 flex flex-col gap-20 opacity-0" id={sectionsNav.education.id} data-section={sectionsNav.education.id}>
-                <article className='w-page m-auto scroll-mt-32'>
+            <section className="max-w-max scroll-m-30 flex flex-col gap-20 opacity-0" id={sectionsNav.education.id} data-section={sectionsNav.education.id}>
+                <article className='m-auto scroll-mt-32'>
                     <TitleSection title={"Tecnologías"} icon={"fa-code"} />
                     <div className='flex gap-4 flex-wrap'>
                         {
                             program_languages.map((skill) => {
                                 return <MiniButton onClick={() => setModalLanguage(skill)}>
                                     <img className='w-6' src={getImage("language_icons", skill.image)} alt="" />
-                                    <p>{skill.name}</p>
+                                    <p className='text-sm'>{skill.name}</p>
                                 </MiniButton>
 
                             })
@@ -50,7 +50,7 @@ const Education = () => {
 
                 </article>
 
-                <article className='flex gap-10 w-full '>
+                <article className='flex flex-col gap-10 w-full '>
                     <div className=' flex flex-col w-full' >
                         <TitleSection title={"Educación"} icon={"fa-briefcase"} />
                         <div className='flex flex-col gap-3'>
@@ -59,10 +59,10 @@ const Education = () => {
                                     return <HorizontalCard>
                                         <div className='flex gap-5 items-center w-full'>
                                             <img className='rounded-lg w-15' src={getImage(folderImage, educ.icon)} alt={educ.name} />
-                                            <div className='space-y-2 w-full'>
-                                                <div className='flex justify-between w-full items-center'>
-                                                    <h1 className='font-semibold'>{educ.title}</h1>
-                                                    <p className='text-mute text-sm'>{educ.date}</p>
+                                            <div className='space-y-1 w-full'>
+                                                <div className='flex flex-col-reverse w-full'>
+                                                    <h1 className=' text-sm font-semibold'>{educ.title}</h1>
+                                                    <p className='text-mute text-xs'>{educ.date}</p>
                                                 </div>
                                                 <h3 className='text-sm text-mute'>{educ.name}</h3>
                                             </div>

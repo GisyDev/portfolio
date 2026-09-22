@@ -3,15 +3,15 @@ import { social_media } from '../data/about';
 import TitleName from '../components/TitleName';
 const Footer = () => {
   return (
-    <footer className='w-full bg-white/5 h-80 flex flex-col mt-30'>
-      <div className="w-page m-auto">
+    <footer className=' bg-white/5 h-80 flex flex-col mt-25 text-sm'>
+      <div className="w-3/4 m-auto">
         <div className="flex justify-between w-full">
-          <div className='space-y-8 text-xl'>
+          <div className='space-y-8'>
             <TitleName />
-            <p className='text-lg text-mute'>Desarrolladora Fullstack</p>
+            <p className=' text-mute'>Desarrolladora Fullstack</p>
           </div>
-          <div className=''>
-            <h1 className='text-xl font-bold mb-5'>Navegación</h1>
+          <div className='hidden'>
+            <h1 className='font-bold mb-5'>Navegación</h1>
             <ul className='flex flex-col gap-2'>
               {
                 sectionsNavArray.map((nav) => {
@@ -24,7 +24,7 @@ const Footer = () => {
               }
             </ul>
           </div>
-          <div>
+          <div className='hidden'>
             <h1 className='text-xl font-bold mb-5'>Contactos</h1>
             <ul className='flex flex-col gap-2'>
               {
@@ -43,8 +43,8 @@ const Footer = () => {
         </div>
         
       </div>
-      <div className='text-mute flex justify-between w-page m-auto text-sm'>
-          <p>© 2026 Gisela Estévez Moleiro. Todos los derechos reservados</p>
+      <div className='text-mute flex flex-col gap-3 justify-between  m-auto text-sm px-2 items-center'>
+          <p>© 2026 Gisela Estévez Moleiro</p>
           <p>Hecho con Vite + React + Tailwind</p>
         </div>
     </footer>

@@ -6,7 +6,7 @@ const PortfolioLayout = () => {
     return (
         <>
             <Header />
-            <main className='max-w-page m-auto mt-34 flex flex-col gap-30'>
+            <main className='max-w-page m-auto mt-34 flex flex-col gap-30 px-3'>
                 <Outlet />
             </main>
             <Footer />

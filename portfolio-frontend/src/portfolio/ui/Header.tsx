@@ -2,6 +2,8 @@ import { redirect, useLocation, useNavigate } from 'react-router-dom';
 import TitleName from '../components/TitleName';
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
+import NavModalMobile from '../modals/NavModalMobile';
+import { useState } from 'react';
 
 const Header = () => {
 
@@ -10,20 +12,31 @@ const Header = () => {
   const location = useLocation()
   const navigate = useNavigate()
 
-
   const reDirection = () => {
     if (location.pathname != "/portfolio") navigate('/portfolio', { replace: true })
   }
 
+
+  const [hiddenNavMovile, setHiddenNavMovile] = useState(false);
+
   return (
-    <header className='fixed w-full top-3 z-40'>
+    <header className='fixed w-full top-3 z-40 px-2'>
 
       <nav className="mx-auto max-w-page rounded-4xl py-6 px-8 flex justify-between items-center bg-black/5 backdrop-blur-xl">
         <div className='flex gap-10 '>
           <TitleName />
         </div>
         <div>
-          <ul className='flex flex-row gap-10'>
+          <button onClick={() => setHiddenNavMovile(!hiddenNavMovile)}>
+            {
+              hiddenNavMovile
+                ? <i className="fa-solid fa-x"></i>
+                : <i className="fa-solid fa-bars"></i>
+            }
+          </button>
+        </div>
+        <div className='hidden'>
+          <ul className='flex flex-row gap-10 '>
             {
               sectionsNavArray.map((element) => {
                 return <li className='font-semibold' onClick={() => reDirection()} >
@@ -39,12 +52,9 @@ const Header = () => {
             }
           </ul>
         </div>
+        <NavModalMobile hiddenNavMovile={hiddenNavMovile} reDirection={reDirection} />
 
-        <div>
-
-        </div>
       </nav>
-
 
     </header>
   )
