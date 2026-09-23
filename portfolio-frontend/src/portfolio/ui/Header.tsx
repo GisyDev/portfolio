@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className='fixed w-full top-3 z-40 px-x'>
 
-      <nav className="mx-auto max-w-page rounded-4xl py-4 px-8 flex justify-between items-center bg-black/30 backdrop-blur-xl border-2 border-primary/30">
+      <nav className="mx-auto max-w-page rounded-2xl py-4 px-8 flex justify-between items-center bg-black/30 backdrop-blur-xl border-2 border-primary/30">
         <div className='flex gap-10 '>
           <TitleName />
         </div>

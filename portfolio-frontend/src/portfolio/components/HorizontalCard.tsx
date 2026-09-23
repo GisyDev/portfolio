@@ -6,11 +6,17 @@ type HorizontalCardType = {
 }
 
 const HorizontalCard = ({ children, onClick }: HorizontalCardType) => {
-
-    const classHover = onClick && "hover:border-primary cursor-pointer"
     return (
         <div
-            className={`bg-gray/30 p-5 rounded-2xl border-2 border-gray/50 space-y-4 w-full hover:bg-white/15 ${classHover} transition-all`}
+            className={`
+                group relative w-full p-5 space-y-4 rounded-2xl
+                bg-slate-800/30 backdrop-blur-sm
+                border border-white/10
+                transition-all duration-300 ease-out
+                hover:bg-white/[0.07] hover:border-primary/50
+                hover:shadow-[0_0_25px_-8px] hover:shadow-primary/40
+                ${onClick ? 'cursor-pointer active:scale-[0.99]' : ''}
+            `}
             onClick={onClick}
         >
             {children}
