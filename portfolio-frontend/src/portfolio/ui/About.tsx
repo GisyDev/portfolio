@@ -75,9 +75,9 @@ const About = () => {
                     <div className='flex md:flex-col justify-center gap-8 items-center'>
                         <img src={cara} alt="Yo" className='rounded-full text-primary-button ring-offset-2 ring-offset-black ring-2 ring-primary object-cover size-30 sm:size-35 md:size-56' />
                         <div>
-                            <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/10 backdrop-blur-sm  hover:border-primary transition-all duration-300">
+                            <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/20 backdrop-blur-sm  hover:border-primary transition-all duration-300 ">
                                 <span className="relative flex size-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-95"></span>
                                     <span className="relative inline-flex rounded-full size-2 bg-primary"></span>
                                 </span>
                                 <p className="font-medium tracking-wide">Disponible para trabajar</p>
