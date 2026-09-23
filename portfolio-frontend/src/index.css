@@ -8,8 +8,8 @@
     --color-primary-background: #0F0810;
     --color-secondary-background: #1F1220;
 
-    --color-primary: #d15af2;
-    --color-primary-hover: #c255e0;
+    --color-primary: #E22F80;
+    --color-primary-hover: #ba2569;
     --color-secondary: #8c39a3;
     --color-terceary: #cd9cdb;
 
@@ -54,8 +54,8 @@
 html,
 body,
 #root {
-    @apply bg-bg-app h-full;
+    @apply bg-zinc-900 h-full;
+    /* @apply bg-black h-full; */
     @apply scroll-smooth;
     @apply text-white;
-    @apply font-sans;
 }

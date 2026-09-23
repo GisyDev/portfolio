@@ -3,7 +3,7 @@ import { social_media } from '../data/about';
 import TitleName from '../components/TitleName';
 const Footer = () => {
   return (
-    <footer className='bg-white/5  flex flex-col items-center mt-25 text-sm py-10 w-full'>
+    <footer className='bg-black  flex flex-col items-center mt-25 text-sm py-10 w-full'>
       <div className="px-x sm:max-w-page w-full">
         <div className="flex justify-between w-full flex-col gap-10 sm:flex-row">
           <div className='space-y-8'>
@@ -12,7 +12,7 @@ const Footer = () => {
           </div>
           <div className='flex justify-between sm:w-3/5'>
             <div className=''>
-              <h1 className='font-bold mb-4 text-sm'>Navegación</h1>
+              <h1 className='font-semibold mb-4 text-sm'>Navegación</h1>
               <ul className='flex flex-col gap-2 text-xs'>
                 {
                   sectionsNavArray.map((nav) => {
@@ -26,7 +26,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className=''>
-              <h1 className='font-bold mb-4'>Contactos</h1>
+              <h1 className='font-semibold mb-4'>Contactos</h1>
               <ul className='flex flex-col gap-2 text-xs'>
                 {
                   social_media.map((social) => {
@@ -44,9 +44,8 @@ const Footer = () => {
           </div>
 
         </div>
-
       </div>
-      <div className='text-primary-text flex flex-col sm:flex-row gap-3 justify-between m-auto text-sm px-x items-center mt-10 sm:max-w-page w-full'>
+      <div className='text-primary-text flex flex-col sm:flex-row gap-3 justify-between m-auto text-xs px-x items-center mt-10 sm:max-w-page w-full'>
         <p>© 2026 Gisela Estévez Moleiro</p>
         <p>Hecho con Vite + React + Tailwind</p>
       </div>

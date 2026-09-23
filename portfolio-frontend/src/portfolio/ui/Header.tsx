@@ -3,9 +3,25 @@ import TitleName from '../components/TitleName';
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
 import NavModalMobile from '../modals/NavModalMobile';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+
+  // useEffect(() => {
+  //   document.addEventListener("scroll", (event) => {
+  //     const lastKnownScrollPosition = Math.round(window.scrollY)
+  //     const navId = document.getElementById("nav")
+
+  //     if (navId) {
+  //       if (lastKnownScrollPosition > 80) {
+  //         navId.classList.add("border-2")
+  //       } else {
+  //         navId.classList.remove("border-2")
+  //       }
+  //     }
+  //   });
+  // }, []);
+
 
   const activeNav = useNavInterceptionObserver()
 
@@ -16,13 +32,14 @@ const Header = () => {
     if (location.pathname != "/portfolio") navigate('/portfolio', { replace: true })
   }
 
-
   const [hiddenNavMovile, setHiddenNavMovile] = useState(false);
+
+
 
   return (
     <header className='fixed w-full top-3 z-40 px-x'>
 
-      <nav className="mx-auto max-w-page rounded-2xl py-4 px-8 flex justify-between items-center bg-black/30 backdrop-blur-xl border-2 border-primary/30">
+      <nav id="nav" className={`border-[1px] border-zinc-700/60 mx-auto max-w-page rounded-2xl py-4 px-8 flex justify-between items-center bg-black/30 backdrop-blur-xl transition-all`}>
         <div className='flex gap-10 '>
           <TitleName />
         </div>

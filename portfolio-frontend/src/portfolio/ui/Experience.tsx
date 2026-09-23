@@ -82,7 +82,7 @@ const Experience = () => {
         <Section title={sectionsNav.experience.text} icon="fa-briefcase" reference={sectionsNav.experience.id}>
             <div className='flex gap-6'>
                 <article className='flex gap-6 w-full '>
-                    <span className='max-h-full border-l-2 bg-white border-gray'></span>
+                    <span className='max-h-full border-l-2 bg-white border-zinc-800'></span>
                     <div className='space-y-8 w-full'>
 
                         {

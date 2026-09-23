@@ -6,7 +6,6 @@ import Paragraph from '../components/Paragraph'
 import AccentButton from '../components/AccentButton'
 import { sectionsNav } from '../data/nav'
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
 
@@ -48,7 +47,7 @@ const About = () => {
                                 <p className=''>Descargar CV</p>
                             </PrimaryButton>
 
-                            <PrimaryButton className='bg-gray-500 hover:bg-gray-500/90' onClick={() => navigate("SobreMi")}>
+                            <PrimaryButton className='border-[1px] border-primary/50 hover:border-primary' onClick={() => navigate("SobreMi")}>
                                 <p className=''>Más información</p>
                                 <i className="fa-solid fa-arrow-right-long"></i>
                             </PrimaryButton>
@@ -56,10 +55,10 @@ const About = () => {
 
 
 
-                        <div className='flex gap-3 flex-wrap animate-fade-in animate-delay-300 '>
+                        <div className='flex gap-3 flex-wrap animate-fade-in animate-delay-300 text-sm'>
                             {social_media.map((social) => {
                                 return (
-                                    <a className="flex gap-2 items-center p-2 rounded-full text-sm border-2 border-primary/60 hover:border-primary cursor-pointer transition-all " href={social.link} target="blank">
+                                    <a className="flex gap-2 items-center p-2 rounded-full  border-2 border-gray/90 hover:border-primary/60 cursor-pointer transition-all " href={social.link} target="blank">
                                         <i className={`${social.icon} fa-lg`}></i>
                                         {/* fa-xl */}
                                         {social.name}
@@ -72,10 +71,10 @@ const About = () => {
                     </div>
                 </div>
                 <div className='flex animate-fade-in animate-delay-150 '>
-                    <div className='flex md:flex-col justify-center gap-4 items-center'>
+                    <div className='flex md:flex-col justify-center gap-4 items-center sm:gap-8'>
                         <img src={cara} alt="Yo" className='rounded-full text-primary-button ring-offset-2 ring-offset-black ring-2 ring-primary object-cover size-28 sm:size-35 md:size-56' />
                         <div>
-                            <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/20 backdrop-blur-sm  hover:border-primary transition-all duration-300 ">
+                            <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/10 backdrop-blur-sm  hover:border-primary transition-all duration-300 ">
                                 <span className="relative flex size-2">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-95"></span>
                                     <span className="relative inline-flex rounded-full size-2 bg-primary"></span>
