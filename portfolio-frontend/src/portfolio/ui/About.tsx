@@ -16,10 +16,10 @@ const About = () => {
 
     return (
         <section className='flex items-center scroll-m-30' id={sectionsNav.about.id} data-section={sectionsNav.about.id}>
-            <article className='flex flex-col-reverse gap-12 '>
-                <div className='flex gap-5 justify-between'>
-                    <div className='flex flex-col space-y-6 '>
-                        <div className='space-y-3 '>
+            <article className='flex flex-col-reverse gap-12 md:flex-row'>
+                <div className='flex justify-between md:w-3/5 flex-row'>
+                    <div className='flex flex-col space-y-5 '>
+                        <div className=' space-y-2'>
                             {/* <AccentButton className='bg-secondary-background text-primary/90 border-primary/50'>
                                 <span className="relative flex size-2">
                                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
@@ -27,37 +27,43 @@ const About = () => {
                                 </span>
                                 <p>Disponible para trabajar - Santa Cruz de Tenerife</p>
                             </AccentButton> */}
+                            <div className='space-y-2'>
+                                <h1 className='text-mute animate-fade-in animate-delay-25 text-sm flex flex-col space-y-2'>
+                                    <div className='flex gap-1 text-sm sm:text-base'>
+                                        <p className='text-primary'>{">"}</p>
+                                        <p className='text-mute sm:text-md'>{"Hola, soy "}</p>
+                                    </div>
+                                    <span className='text-white font-bold text-3xl sm:text-4xl md:text-4xl'> {name}</span>
+                                </h1>
+                                <h3 className='animate-fade-in animate-delay-85 flex gap-5 text-lg text-primary font-semibold sm:text-xl'>{profile}</h3>
+                            </div>
 
-                            <h1 className='animate-fade-in animate-delay-25 text-2xl font-bold '>{name}</h1>
-                            <h3 className='animate-fade-in animate-delay-85 flex gap-5 text-xl text-primary font-semibold'>{profile}</h3>
+                            <Paragraph className='animate-fade-in animate-delay-120'> {description} </Paragraph>
                         </div>
-                        <Paragraph className='animate-fade-in animate-delay-120'> {description} </Paragraph>
 
-                        <div className='flex text-xs items-center gap-3 animate-fade-in animate-delay-200 space-x-3'>
-                            <PrimaryButton className='bg-primary hover:bg-primary-hover'>
-                                <i className="fa-solid fa-download text-xs"></i>
+                        <div className='flex items-center gap-3 animate-fade-in animate-delay-200 mt-4'>
+                            <PrimaryButton className='bg-primary hover:bg-primary-hover '>
+                                <i className="fa-solid fa-download"></i>
                                 {/* fa-lg */}
-                                <p className='text-xs'>Descargar CV</p>
+                                <p className=''>Descargar CV</p>
                             </PrimaryButton>
 
                             <PrimaryButton className='bg-gray-500 hover:bg-gray-500/90' onClick={() => navigate("SobreMi")}>
                                 <i className="fa-solid fa-circle-info fa-lg"></i>
-                                <p className='text-xs'>Más información</p>
+                                <p className=''>Más información</p>
                             </PrimaryButton>
                         </div>
 
 
 
-                        <div className='flex space-x-3 animate-fade-in animate-delay-300'>
+                        <div className='flex gap-3 flex-wrap animate-fade-in animate-delay-300 '>
                             {social_media.map((social) => {
                                 return (
-                                    <SecondaryButton className='border-primary' key={social.name}>
-                                        <a className="flex items-center gap-2" href={social.link} target="blank">
-                                            <i className={`${social.icon} fa-lg`}></i>
-                                            {/* fa-xl */}
-                                            {social.name && <p className='hidden'>{social.name}</p>}
-                                        </a>
-                                    </SecondaryButton>
+                                    <a className="flex gap-2 items-center p-2 rounded-full text-sm border-2 border-primary/60 hover:border-primary cursor-pointer transition-all " href={social.link} target="blank">
+                                        <i className={`${social.icon} fa-lg`}></i>
+                                        {/* fa-xl */}
+                                        {social.name}
+                                    </a>
 
                                 );
                             })}
@@ -65,8 +71,16 @@ const About = () => {
 
                     </div>
                 </div>
-                <div className='flex w-1/3 animate-fade-in animate-delay-150'>
-                    <img src={cara} alt="Yo" className='w-full rounded-2xl text-primary-button border-4 border-primary ' />
+                <div className='flex animate-fade-in animate-delay-150 '>
+                    <div className='flex gap-8 items-center'>
+                        <img src={cara} alt="Yo" className='rounded-full text-primary-button ring-offset-2 ring-offset-black ring-2 ring-primary object-cover size-30 sm:size-35 md:size-56' />
+                        <div>
+                            <button className='text-sm bg-primary self-start p-2 rounded-lg md:hidden'>
+                                <p>Disponible para trabajar</p>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
             </article>
 

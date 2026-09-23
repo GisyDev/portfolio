@@ -20,14 +20,14 @@ const Header = () => {
   const [hiddenNavMovile, setHiddenNavMovile] = useState(false);
 
   return (
-    <header className='fixed w-full top-3 z-40 px-2'>
+    <header className='fixed w-full top-3 z-40 px-x'>
 
-      <nav className="mx-auto max-w-page rounded-4xl py-6 px-8 flex justify-between items-center bg-black/5 backdrop-blur-xl">
+      <nav className="mx-auto max-w-page rounded-4xl py-4 px-8 flex justify-between items-center bg-black/30 backdrop-blur-2xl border-2 border-primary/30">
         <div className='flex gap-10 '>
           <TitleName />
         </div>
         <div>
-          <button onClick={() => setHiddenNavMovile(!hiddenNavMovile)}>
+          <button onClick={() => setHiddenNavMovile(!hiddenNavMovile)} className='sm:hidden'>
             {
               hiddenNavMovile
                 ? <i className="fa-solid fa-x"></i>
@@ -35,7 +35,7 @@ const Header = () => {
             }
           </button>
         </div>
-        <div className='hidden'>
+        <div className='hidden sm:block'>
           <ul className='flex flex-row gap-10 '>
             {
               sectionsNavArray.map((element) => {

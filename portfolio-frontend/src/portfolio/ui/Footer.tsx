@@ -3,50 +3,53 @@ import { social_media } from '../data/about';
 import TitleName from '../components/TitleName';
 const Footer = () => {
   return (
-    <footer className=' bg-white/5 h-80 flex flex-col mt-25 text-sm'>
-      <div className="w-3/4 m-auto">
-        <div className="flex justify-between w-full">
+    <footer className='bg-white/5  flex flex-col items-center mt-25 text-sm py-10 w-full'>
+      <div className="px-x sm:max-w-page w-full">
+        <div className="flex justify-between w-full flex-col gap-10 sm:flex-row">
           <div className='space-y-8'>
             <TitleName />
             <p className=' text-mute'>Desarrolladora Fullstack</p>
           </div>
-          <div className='hidden'>
-            <h1 className='font-bold mb-5'>Navegación</h1>
-            <ul className='flex flex-col gap-2'>
-              {
-                sectionsNavArray.map((nav) => {
-                  return <li className='text-mute'>
-                    <a href={nav.enlace} className='hover:text-primary transition-all'>
-                      {nav.text}
-                    </a>
-                  </li>
-                })
-              }
-            </ul>
-          </div>
-          <div className='hidden'>
-            <h1 className='text-xl font-bold mb-5'>Contactos</h1>
-            <ul className='flex flex-col gap-2'>
-              {
-                social_media.map((social) => {
-                  return <li className=''>
-                    <a href={social.link} className='flex items-center gap-2 hover:text-primary transition-all' target="blank">
-                      <i className={`${social.icon}`}></i>
-                      {social.name}
-                    </a>
+          <div className='flex justify-between sm:w-3/5'>
+            <div className=''>
+              <h1 className='font-bold mb-4 text-sm'>Navegación</h1>
+              <ul className='flex flex-col gap-2 text-xs'>
+                {
+                  sectionsNavArray.map((nav) => {
+                    return <li className='text-mute'>
+                      <a href={nav.enlace} className='hover:text-primary transition-all'>
+                        {nav.text}
+                      </a>
+                    </li>
+                  })
+                }
+              </ul>
+            </div>
+            <div className=''>
+              <h1 className='font-bold mb-4'>Contactos</h1>
+              <ul className='flex flex-col gap-2 text-xs'>
+                {
+                  social_media.map((social) => {
+                    return <li className=''>
+                      <a href={social.link} className='flex items-center gap-2 hover:text-primary transition-all' target="blank">
+                        <i className={`${social.icon}`}></i>
+                        {social.name}
+                      </a>
 
-                  </li>
-                })
-              }
-            </ul>
+                    </li>
+                  })
+                }
+              </ul>
+            </div>
           </div>
+
         </div>
-        
+
       </div>
-      <div className='text-mute flex flex-col gap-3 justify-between  m-auto text-sm px-2 items-center'>
-          <p>© 2026 Gisela Estévez Moleiro</p>
-          <p>Hecho con Vite + React + Tailwind</p>
-        </div>
+      <div className='text-mute flex flex-col sm:flex-row gap-3 justify-between m-auto text-sm px-x items-center mt-10 sm:max-w-page w-full'>
+        <p>© 2026 Gisela Estévez Moleiro</p>
+        <p>Hecho con Vite + React + Tailwind</p>
+      </div>
     </footer>
   )
 }

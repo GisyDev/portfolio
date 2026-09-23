@@ -98,11 +98,11 @@ const Experience = () => {
                                             <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-14' />
                                             <div className='flex items-center space-y-1 justify-between  w-full'>
                                                 <div className='w-full space-y-1'>
-                                                    <div className='flex gap-1 flex-col-reverse justify-between '>
-                                                        <h1 className='font-semibold '>{exp.profile}</h1>
+                                                    <div className='flex gap-1 flex-col-reverse justify-between sm:flex-row'>
+                                                        <h1 className='text-sm font-semibold sm:text-base'>{exp.profile}</h1>
                                                         <p className='text-xs text-mute font-semibold'>{exp.date}</p>
                                                     </div>
-                                                    <h3 className='text-sm text-mute '>{exp.company}</h3>
+                                                    <h3 className='text-xs sm:text-sm text-mute '>{exp.company}</h3>
                                                 </div>
                                             </div>
                                         </div>
