@@ -62,9 +62,9 @@ const Education = () => {
                                             <div className='space-y-1 w-full'>
                                                 <div className='flex flex-col-reverse w-full md:flex-row sm:justify-between '>
                                                     <h1 className=' text-sm font-semibold'>{educ.title}</h1>
-                                                    <p className='text-mute text-xs'>{educ.date}</p>
+                                                    <p className='text-primary-text text-xs'>{educ.date}</p>
                                                 </div>
-                                                <h3 className='text-sm text-mute'>{educ.name}</h3>
+                                                <h3 className='text-sm text-primary-text'>{educ.name}</h3>
                                             </div>
                                         </div>
                                     </HorizontalCard>
@@ -82,7 +82,7 @@ const Education = () => {
                                     return <HorizontalCard>
                                         <div className='space-y-2'>
                                             <h1 className='text-lg font-semibold'>{lang.lang}</h1>
-                                            <p className='text-mute'>{lang.nivel}</p>
+                                            <p className='text-primary-text'>{lang.nivel}</p>
                                         </div>
                                     </HorizontalCard>
                                 })

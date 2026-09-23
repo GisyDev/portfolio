@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex justify-between w-full flex-col gap-10 sm:flex-row">
           <div className='space-y-8'>
             <TitleName />
-            <p className=' text-mute'>Desarrolladora Fullstack</p>
+            <p className=' text-primary-text'>Desarrolladora Fullstack</p>
           </div>
           <div className='flex justify-between sm:w-3/5'>
             <div className=''>
@@ -16,7 +16,7 @@ const Footer = () => {
               <ul className='flex flex-col gap-2 text-xs'>
                 {
                   sectionsNavArray.map((nav) => {
-                    return <li className='text-mute'>
+                    return <li className='text-primary-text'>
                       <a href={nav.enlace} className='hover:text-primary transition-all'>
                         {nav.text}
                       </a>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
       </div>
-      <div className='text-mute flex flex-col sm:flex-row gap-3 justify-between m-auto text-sm px-x items-center mt-10 sm:max-w-page w-full'>
+      <div className='text-primary-text flex flex-col sm:flex-row gap-3 justify-between m-auto text-sm px-x items-center mt-10 sm:max-w-page w-full'>
         <p>© 2026 Gisela Estévez Moleiro</p>
         <p>Hecho con Vite + React + Tailwind</p>
       </div>

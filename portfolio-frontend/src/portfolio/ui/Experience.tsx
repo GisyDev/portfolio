@@ -100,9 +100,9 @@ const Experience = () => {
                                                 <div className='w-full space-y-1'>
                                                     <div className='flex gap-1 flex-col-reverse justify-between sm:flex-row'>
                                                         <h1 className='text-sm font-semibold sm:text-base'>{exp.profile}</h1>
-                                                        <p className='text-xs text-mute font-semibold'>{exp.date}</p>
+                                                        <p className='text-xs text-primary-text font-semibold'>{exp.date}</p>
                                                     </div>
-                                                    <h3 className='text-xs sm:text-sm text-mute '>{exp.company}</h3>
+                                                    <h3 className='text-xs sm:text-sm text-primary-text '>{exp.company}</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,7 +113,7 @@ const Experience = () => {
                                         >
 
                                             <div className="overflow-hidden pl-5 ">
-                                                <ul className="list-disc px-3 text-mute space-y-2 mb-2">
+                                                <ul className="list-disc px-3 text-primary-text space-y-2 mb-2">
                                                     {exp.description.map((desc) => (
                                                         <li key={desc} className=''> 
                                                             <p className="text-sm">{desc}</p>
@@ -121,7 +121,7 @@ const Experience = () => {
                                                     ))} 
                                                 </ul>
                                             </div>
-                                            <a className='cursor-pointer flex items-center  gap-1 text-xs text-mute/80' onClick={() => setHidden(exp.id)}>
+                                            <a className='cursor-pointer flex items-center  gap-1 text-xs text-primary-text/80' onClick={() => setHidden(exp.id)}>
                                                 <p className=''>{exp.hidden ? "Ver más" : "Ver menos"}</p>
                                                 <i className={`fa-solid fa-chevron-down duration-300 ${exp.hidden ? "rotate-0" : " -rotate-180"}`}></i>
                                             </a>

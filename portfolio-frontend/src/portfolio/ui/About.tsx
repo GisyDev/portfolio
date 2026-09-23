@@ -28,10 +28,10 @@ const About = () => {
                                 <p>Disponible para trabajar - Santa Cruz de Tenerife</p>
                             </AccentButton> */}
                             <div className='space-y-2'>
-                                <h1 className='text-mute animate-fade-in animate-delay-25 text-sm flex flex-col space-y-2'>
+                                <h1 className='text-primary-text animate-fade-in animate-delay-25 text-sm flex flex-col space-y-2'>
                                     <div className='flex gap-1 text-sm sm:text-base'>
                                         <p className='text-primary'>{">"}</p>
-                                        <p className='text-mute sm:text-md'>{"Hola, soy "}</p>
+                                        <p className='text-primary-text sm:text-md'>{"Hola, soy "}</p>
                                     </div>
                                     <span className='text-white font-bold text-3xl sm:text-4xl md:text-4xl'> {name}</span>
                                 </h1>

@@ -36,7 +36,7 @@ const LanguageModal = ({ modal, setModal }: LanguageModalType) => {
                             </div>
 
                             <div>
-                                <ul className='flex flex-col gap-2 text-mute list-disc '>
+                                <ul className='flex flex-col gap-2 text-primary-text list-disc '>
                                     {
                                         language?.description != null && language?.description.map((desc) => {
                                             return <li key={desc}>
