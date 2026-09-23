@@ -112,8 +112,8 @@ const Experience = () => {
                                             ${exp.hidden ? "grid-rows-[0fr]" : "grid-rows-[1fr]"}`}
                                         >
 
-                                            <div className="overflow-hidden pl-5 mb-2">
-                                                <ul className="list-disc px-3 text-mute space-y-2">
+                                            <div className="overflow-hidden pl-5 ">
+                                                <ul className="list-disc px-3 text-mute space-y-2 mb-2">
                                                     {exp.description.map((desc) => (
                                                         <li key={desc} className=''> 
                                                             <p className="text-sm">{desc}</p>
@@ -121,8 +121,8 @@ const Experience = () => {
                                                     ))} 
                                                 </ul>
                                             </div>
-                                            <a className='cursor-pointer flex items-center justify-center gap-1 text-xs text-mute/80' onClick={() => setHidden(exp.id)}>
-                                                {/* <p className=''>{exp.hidden ? "Ver más" : "Ver menos"}</p> */}
+                                            <a className='cursor-pointer flex items-center  gap-1 text-xs text-mute/80' onClick={() => setHidden(exp.id)}>
+                                                <p className=''>{exp.hidden ? "Ver más" : "Ver menos"}</p>
                                                 <i className={`fa-solid fa-chevron-down duration-300 ${exp.hidden ? "rotate-0" : " -rotate-180"}`}></i>
                                             </a>
                                         </div>

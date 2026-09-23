@@ -11,7 +11,7 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection }: NavModalMobileTypeHidd
 
     const activeNav = useNavInterceptionObserver()
     const classIsHidden = hiddenNavMovile ? "opacity-100" : "opacity-0 pointer-events-none"
-    return (
+    return ( 
         <div className={`${classIsHidden} fixed right-0 top-16 p-5 bg-black/80 backdrop-blur-3xl rounded-lg  transition-all duration-80 z-50 border-2 border-primary/30`}>
             <ul className='flex flex-col gap-5 '>
                 {
