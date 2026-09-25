@@ -34,15 +34,15 @@ const Education = () => {
     return (
         <>
             <section className="max-w-max scroll-m-30 flex flex-col gap-20 opacity-0 " id={sectionsNav.education.id} data-section={sectionsNav.education.id}>
-                <article className='m-auto scroll-mt-32'>
+                <article className='m-auto w-full scroll-mt-32'>
                     <TitleSection title={"Tecnologías"} icon={"fa-code"} />
-                    <div className='flex gap-4 flex-wrap'>
+                    <div className='flex justify-between items-center gap-4 flex-wrap w-full'>
                         {
                             program_languages.map((skill) => {
-                                return <MiniButton>
-                                    <img className='w-6' src={getImage("language_icons", skill.image)} alt="" />
-                                    <p className='text-sm'>{skill.name}</p>
-                                </MiniButton>
+                                return <div className=' p-3 flex items-center flex-col gap-3  bg-gray-600/20 basis-[12%] rounded-2xl hover:bg-gray-600/40'>
+                                    <img className='w-8' src={getImage("language_icons", skill.image)} alt="" />
+                                    <p className='text-xs text-mute'>{skill.name}</p>
+                                </div>
 
                             })
                         }

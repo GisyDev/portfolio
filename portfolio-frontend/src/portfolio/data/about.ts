@@ -25,7 +25,7 @@ export const about_me = {
 export const social_media = [
     {
         name: "Linkedin",
-        icon: "fa-brands fa-square-linkedin",
+        icon: "fa-brands fa-linkedin-in",
         link: "https://www.linkedin.com/in/gisela-estévez-moleiro-57a509306"
     },
     {

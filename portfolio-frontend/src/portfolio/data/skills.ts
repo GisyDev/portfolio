@@ -29,6 +29,16 @@ export const program_languages = [
         ]
     },
     {
+        name: "Tailwind",
+        image: "postman.svg",
+        
+    },
+    {
+        name: "Appian",
+        image: "appian.svg",
+        
+    },
+    {
         name: "JavaScript",
         image: "javascript.svg",
         description: [

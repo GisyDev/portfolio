@@ -3,7 +3,7 @@ import { social_media } from '../data/about';
 import TitleName from '../components/TitleName';
 const Footer = () => {
   return (
-    <footer className='bg-black  flex flex-col items-center mt-25 text-sm py-10 w-full'>
+    <footer className='bg-black flex flex-col gap-1 items-center mt-25 text-sm pt-8 pb-4 w-full'>
       <div className="px-x sm:max-w-page w-full">
         <div className="flex justify-between w-full flex-col gap-10 sm:flex-row">
           <div className='space-y-8'>
@@ -45,7 +45,10 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className='text-primary-text flex flex-col sm:flex-row gap-3 justify-between m-auto text-xs px-x items-center mt-10 sm:max-w-page w-full'>
+      <div className='w-full h-10 flex items-center'>
+        <span className='w-full border-t  border-zinc-800'></span>
+      </div>
+      <div className='text-primary-text flex flex-col sm:flex-row gap-3 justify-between m-auto text-xs px-x items-center  sm:max-w-page w-full'>
         <p>© 2026 Gisela Estévez Moleiro</p>
         <p>Hecho con Vite + React + Tailwind</p>
       </div>

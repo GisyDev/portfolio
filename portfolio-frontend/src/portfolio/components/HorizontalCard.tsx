@@ -15,7 +15,7 @@ const HorizontalCard = ({ children, onClick }: HorizontalCardType) => {
                 transition-all duration-300 ease-out
                 hover:bg-gray-700/[0.07] hover:border-primary/50
                 hover:shadow-[0_0_25px_-8px] hover:shadow-primary/40
-                ${onClick ? 'cursor-pointer active:scale-[0.99]' : ''}
+                
             `}
             onClick={onClick}
         >

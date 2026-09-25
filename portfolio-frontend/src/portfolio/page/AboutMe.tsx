@@ -17,7 +17,7 @@ const AboutMe = () => {
             <div className='space-y-10'>
                 <div className='space-y-2'>
                     <div className='flex flex-col justify-between gap-3'>
-                        <button className='flex gap-1 items-center text-sm cursor-pointer text-terceary hover:text-terceary/90 tracking-wide font-medium transition-all' onClick={() => navigate("/portfolio")}>
+                        <button className='flex gap-1 items-center text-sm cursor-pointer text-secondary hover:text-secondary/90 tracking-wide font-medium transition-all' onClick={() => navigate("/portfolio")}>
                             <i className="fa-solid fa-arrow-left"></i>
                             <a className=''>Volver al inicio</a>
                         </button>
