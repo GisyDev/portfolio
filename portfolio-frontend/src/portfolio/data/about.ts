@@ -1,7 +1,7 @@
 export const about_me = {
     name: "Gisela Estévez Moleiro",
     profile: "Desarrolladora Fullstack",
-    description: "Especializada en la creación y mantenimiento de aplicaciones web, programando tanto en la parte Frotnend como en Backend",
+    description: "Especializada en la creación y mantenimiento de aplicaciones web, programando tanto en la parte Frontend como en Backend",
     full_description: [
         "Soy Gisela (o simplemente Gisy, como me llaman desde niña). A esa misma edad mis padres me regalaron mi primer ordenador y, jugando con él, me dio curiosidad por saber cómo funcionaban por dentro las aplicaciones que usaba a diario. Por eso decidí elegir la programación y cursar dos ciclos superiores para especializarme.",
         "En mi experiencia profesional he aprendido que desarrollar es solo una parte: la otra es gestionar grandes proyectos, tratar con clientes y traducir sus necesidades reales en código.",

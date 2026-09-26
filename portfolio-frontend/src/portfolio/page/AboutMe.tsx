@@ -37,12 +37,12 @@ const AboutMe = () => {
 
 
                 <div className='space-y-4'>
-                    <h3 className='text-lg font-semibold'>Aptitudes</h3>
-                    <ul className='flex gap-5 mt-2 flex-wrap'>
+                    <h3 className='font-medium'>Aptitudes</h3>
+                    <ul className='flex gap-3 mt-2 flex-wrap'>
                         {
                             soft_skills.map((skill) => {
 
-                                return <li>
+                                return <li className='text-sm'>
                                     <MiniButton>
                                         <i className={`${skill.icon}`}></i>
                                         <p>{skill.name}</p>
@@ -54,15 +54,15 @@ const AboutMe = () => {
                 </div>
 
                 <div>
-                    <h3 className='text-lg font-semibold'>Más información</h3>
-                    <ul className='flex gap-5 mt-2 flex-wrap'>
+                    <h3 className='font-medium'>Más información</h3>
+                    <ul className='flex gap-3 mt-2 flex-wrap'>
                         {
                             more_information.map((skill) => {
-                                return <li className=''>
+                                return <li className='text-sm'>
 
                                     <MiniButton>
                                         <i className={`${skill.icon}`}></i>
-                                        <div className='flex gap-2'>
+                                        <div className='flex gap-1'>
                                             <p>{skill.label}</p>
                                             <p>{skill.value}</p>
                                         </div>

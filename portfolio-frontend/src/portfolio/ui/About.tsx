@@ -8,6 +8,8 @@ import { sectionsNav } from '../data/nav'
 import { useNavigate } from 'react-router-dom';
 import MiniButton from '../components/MiniButton';
 import { useState } from 'react';
+import PDF from "../../public/documents/CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf"
+
 
 const About = () => {
 
@@ -44,14 +46,17 @@ const About = () => {
                         </div>
 
                         <div className='flex items-center gap-3 animate-fade-in animate-delay-200 mt-2'>
-                            <PrimaryButton className='bg-primary hover:bg-primary-hover'>
-                                {/* fa-lg */}
-                                <p className=''>Descargar CV</p>
-                                <i className="fa-solid fa-download"></i>
-                            </PrimaryButton>
+                            <a href={PDF}
+                                download="CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf">
+                                <PrimaryButton className='bg-primary hover:bg-primary-hover'>
+                                    {/* fa-lg */}
+                                    <p className=''>Descargar CV</p>
+                                    <i className="fa-solid fa-download"></i>
+                                </PrimaryButton>
+                            </a>
 
                             <PrimaryButton className='group border-[1px] border-primary/60 hover:bg-primary/10 hover:border-primary ' onClick={() => navigate("SobreMi")}>
-                               Más información
+                                Más información
                                 <i className="fa-solid fa-chevron-right text-primary group-hover:translate-x-0.5 text-xs transition-all"></i>
                             </PrimaryButton>
                         </div>
@@ -61,13 +66,13 @@ const About = () => {
                         <div className='flex gap-3 flex-wrap animate-fade-in animate-delay-300 text-xs'>
                             {social_media.map((social) => {
                                 return (
-                                    <a 
-                                    
-                                    className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all text-zinc-300 border border-zinc-600/60 py-2 px-2 hover:border-primary hover:text-primary" href={social.link} target="blank">
+                                    <a
+
+                                        className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all text-zinc-300 border border-zinc-600/60 py-2 px-2 hover:border-primary hover:text-primary" href={social.link} target="blank">
                                         <i className={`${social.icon} fa-xl`}></i>
                                         {/* fa-xl */}
                                         <p className='text-zinc-300 group-hover:text-white transition-all'>{social.name}</p>
-                                        
+
                                         {/* <i className="text-gray-500 font-extralight fa-solid fa-up-right-from-square"></i> */}
                                         {/* <i className="text-[10px]  font-extralight fa-solid fa-up-right-from-square"></i> */}
                                     </a>
