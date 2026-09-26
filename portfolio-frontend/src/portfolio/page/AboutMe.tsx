@@ -1,13 +1,12 @@
 import { about_me } from '../data/about'
 import Paragraph from '../components/Paragraph'
 import MiniButton from '../components/MiniButton';
-import { useMatch, useNavigate } from 'react-router-dom'
-import { p } from 'motion/react-client';
+import { useNavigate } from 'react-router-dom'
 
 
 const AboutMe = () => {
 
-    const { profile, full_description, soft_skills, languajes, more_information } = about_me
+    const { profile, full_description, soft_skills, more_information } = about_me
 
     const navigate = useNavigate()
 

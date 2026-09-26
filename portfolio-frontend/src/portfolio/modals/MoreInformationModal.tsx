@@ -1,4 +1,3 @@
-import { div } from 'motion/react-client'
 import { about_me } from '../data/about'
 import Paragraph from '../components/Paragraph'
 import MiniButton from '../components/MiniButton'
@@ -10,7 +9,7 @@ type MoreInformationModalType = {
 
 const MoreInformationModal = ({ setMoreInfoEnable }: MoreInformationModalType) => {
 
-    const { profile, full_description, soft_skills, languajes, more_information } = about_me
+    const { profile, full_description, soft_skills, more_information } = about_me
 
     return (
         <div className='fixed top-0 w-screen h-screen bg-black/30 z-50'>
