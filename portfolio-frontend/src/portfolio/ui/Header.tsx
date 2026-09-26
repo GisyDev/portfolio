@@ -29,7 +29,7 @@ const Header = () => {
   const navigate = useNavigate()
 
   const reDirection = () => {
-    if (location.pathname != "/portfolio") navigate('/portfolio', { replace: true })
+    if (location.pathname != "/") navigate('/', { replace: true })
   }
 
   const [hiddenNavMovile, setHiddenNavMovile] = useState(false);

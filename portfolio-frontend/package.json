@@ -15,6 +15,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "gh-pages": "^6.3.0",
     "motion": "^13.2.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
