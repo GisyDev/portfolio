@@ -1,1 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
+
+@theme {
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    --color-primary-background: #0F0810;
+    --color-secondary-background: #1F1220;
+
+    --color-primary: #e85f9d;
+    --color-primary-hover: #bd427a;
+    --color-secondary: #e6519a;
+    --color-terceary: #cd9cdb;
+
+    --color-primary-text: #d9d0d5;
+
+    --color-gray: #374151;
+
+
+    --color-bg-app: #09090b;
+    --color-bg-card: #18181b;
+    --color-bg-card-hover: #27272a;
+
+    --container-page: 55rem;
+
+    --color-primary-sucess: #9DE09D;
+    --color-secondary-sucess: #2D912D;
+    --spacing-x: 21px;
+
+
+    --animate-fade-in: anim-fade-in 0.5s ease-out both;
+
+    @keyframes anim-fade-in {
+        0% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 100;
+        }
+    }
+}
+
+@utility animate-delay-* {
+    --animate-delay: --value(integer)ms;
+    --animate-delay: --value([time]);
+    animation-delay: var(--animate-delay);
+}
+
+
+html,
+body,
+#root {
+    @apply bg-zinc-900 h-full;
+    /* @apply bg-black h-full; */
+    @apply scroll-smooth;
+    @apply text-white;
+}
