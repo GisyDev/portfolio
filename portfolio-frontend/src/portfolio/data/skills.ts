@@ -30,14 +30,14 @@ export const program_languages = [
     },
     {
         name: "Tailwind",
-        image: "postman.svg",
+        image: "tailwind.svg",
         
     },
-    {
-        name: "Appian",
-        image: "appian.svg",
+    // {
+    //     name: "Appian",
+    //     image: "appian.svg",
         
-    },
+    // },
     {
         name: "JavaScript",
         image: "javascript.svg",
@@ -120,18 +120,18 @@ export const program_languages = [
             "Transacciones para garantizar la integridad de los datos"
         ]
     },
-    {
-        name: "MySQL",
-        image: "mysql.svg",
-        description: [
-            "Diseño y normalización de bases de datos relacionales",
-            "Consultas SQL: SELECT, JOIN, GROUP BY, subconsultas",
-            "Restricciones de integridad: claves foráneas y únicas",
-            "Gestión de usuarios y permisos",
-            "Procedimientos almacenados y triggers sencillos",
-            "Optimización de consultas con índices"
-        ]
-    },
+    // {
+    //     name: "MySQL",
+    //     image: "mysql.svg",
+    //     description: [
+    //         "Diseño y normalización de bases de datos relacionales",
+    //         "Consultas SQL: SELECT, JOIN, GROUP BY, subconsultas",
+    //         "Restricciones de integridad: claves foráneas y únicas",
+    //         "Gestión de usuarios y permisos",
+    //         "Procedimientos almacenados y triggers sencillos",
+    //         "Optimización de consultas con índices"
+    //     ]
+    // },
     // Herramientas
     {
         name: "Git",

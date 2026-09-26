@@ -7,12 +7,14 @@ import AccentButton from '../components/AccentButton'
 import { sectionsNav } from '../data/nav'
 import { useNavigate } from 'react-router-dom';
 import MiniButton from '../components/MiniButton';
+import { useState } from 'react';
 
 const About = () => {
 
     const { name, profile, description } = about_me
 
     const navigate = useNavigate()
+
 
     return (
         <section className='flex items-center scroll-m-30' id={sectionsNav.about.id} data-section={sectionsNav.about.id}>
@@ -43,28 +45,31 @@ const About = () => {
 
                         <div className='flex items-center gap-3 animate-fade-in animate-delay-200 mt-2'>
                             <PrimaryButton className='bg-primary hover:bg-primary-hover'>
-                                <i className="fa-solid fa-download"></i>
                                 {/* fa-lg */}
                                 <p className=''>Descargar CV</p>
+                                <i className="fa-solid fa-download"></i>
                             </PrimaryButton>
 
-                            <PrimaryButton className='border-[1px] border-primary/60 hover:bg-primary/10 hover:border-primary' onClick={() => navigate("SobreMi")}>
-                                <p className=''>Más información</p>
-                                <i className="fa-solid fa-arrow-right-long"></i>
+                            <PrimaryButton className='group border-[1px] border-primary/60 hover:bg-primary/10 hover:border-primary ' onClick={() => navigate("SobreMi")}>
+                               Más información
+                                <i className="fa-solid fa-chevron-right text-primary group-hover:translate-x-0.5 text-xs transition-all"></i>
                             </PrimaryButton>
                         </div>
 
 
 
-                        <div className='flex gap-5 flex-wrap animate-fade-in animate-delay-300 text-xs'>
+                        <div className='flex gap-3 flex-wrap animate-fade-in animate-delay-300 text-xs'>
                             {social_media.map((social) => {
                                 return (
-                                    <a className="flex gap-2 items-center justify-center rounded-full cursor-pointer transition-all  bg-gray-700/50 hover:bg-gray/90 px-3 py-2" href={social.link} target="blank">
-                                        <i className={`${social.icon} fa-lg`}></i>
+                                    <a 
+                                    
+                                    className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all text-zinc-300 border border-zinc-600/60 py-2 px-2 hover:border-primary hover:text-primary" href={social.link} target="blank">
+                                        <i className={`${social.icon} fa-xl`}></i>
                                         {/* fa-xl */}
-                                        {social.name}
+                                        <p className='text-zinc-300 group-hover:text-white transition-all'>{social.name}</p>
+                                        
                                         {/* <i className="text-gray-500 font-extralight fa-solid fa-up-right-from-square"></i> */}
-                                        <i className="text-[10px] text-gray-500 font-extralight fa-solid fa-up-right-from-square"></i>
+                                        {/* <i className="text-[10px]  font-extralight fa-solid fa-up-right-from-square"></i> */}
                                     </a>
                                 );
                             })}
@@ -76,13 +81,12 @@ const About = () => {
                     <div className='flex md:flex-col justify-center gap-4 items-center sm:gap-8'>
                         <img src={cara} alt="Yo" className='rounded-full text-primary-button ring-offset-2 ring-offset-black ring-2 ring-primary object-cover size-28 sm:size-35 md:size-56' />
                         <div>
-                            <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/10 backdrop-blur-sm  hover:border-primary transition-all duration-300 ">
+                            <AccentButton text={'Disponible para trabajar'}>
                                 <span className="relative flex size-2">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-95"></span>
                                     <span className="relative inline-flex rounded-full size-2 bg-primary"></span>
                                 </span>
-                                <p className="font-medium tracking-wide">Disponible para trabajar</p>
-                            </button>
+                            </AccentButton>
                         </div>
                     </div>
                 </div>

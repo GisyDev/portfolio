@@ -35,7 +35,7 @@ export const social_media = [
     },
     {
         name: "gisyestevez@gmail.com",
-        icon: "fa-solid fa-envelope",
+        icon: "fa-regular fa-envelope",
         link: "mailto:gisyestevez@gmail.com"
     }
 ]

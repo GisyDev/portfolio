@@ -6,9 +6,9 @@ const Footer = () => {
     <footer className='bg-black flex flex-col gap-1 items-center mt-25 text-sm pt-8 pb-4 w-full'>
       <div className="px-x sm:max-w-page w-full">
         <div className="flex justify-between w-full flex-col gap-10 sm:flex-row">
-          <div className='space-y-8'>
+          <div className='space-y-4'>
             <TitleName />
-            <p className=' text-primary-text'>Desarrolladora Fullstack</p>
+            <p className=' text-primary-text text-xs'>Desarrolladora Fullstack</p>
           </div>
           <div className='flex justify-between sm:w-3/5'>
             <div className=''>
