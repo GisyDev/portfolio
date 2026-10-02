@@ -67,7 +67,7 @@ const About = () => {
                             {social_media.map((social) => {
                                 return (
                                     <a
-
+                                        key={social.name}
                                         className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all text-zinc-300 border border-zinc-600/60 py-2 px-2 hover:border-primary hover:text-primary" href={social.link} target="blank">
                                         <i className={`${social.icon} fa-xl`}></i>
                                         {/* fa-xl */}

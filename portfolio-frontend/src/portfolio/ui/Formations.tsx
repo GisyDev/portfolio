@@ -70,7 +70,7 @@ const Education = () => {
                                 {program_languages.map((skill) => {
                                     return (
                                         <div
-                                            className="me-5 transform-gpu grow-0 shrink-0 basis-[12%] min-w-0 flex flex-col items-center justify-center border border-zinc-600/70 rounded-2xl gap-2 bg-black py-2"
+                                            className="me-5 transform-gpu grow-0 shrink-0 w-24 min-w-0 flex flex-col items-center justify-center border border-zinc-600/35 rounded-lg gap-2 bg-black py-2"
                                             key={skill.name}
                                         >
                                             <div>
@@ -94,7 +94,7 @@ const Education = () => {
                         <div className='flex flex-col gap-3'>
                             {
                                 education.map((educ) => {
-                                    return <HorizontalCard>
+                                    return <HorizontalCard key={educ.date}>
                                         <div className='flex gap-5 items-center w-full'>
                                             <img className='rounded-lg w-15' src={getImage(folderImage, educ.icon)} alt={educ.name} />
                                             <div className='space-y-1 w-full'>
@@ -117,7 +117,7 @@ const Education = () => {
                         <div className='flex flex-row gap-3 w-full sm:flex-col'>
                             {
                                 languajes.map((lang) => {
-                                    return <HorizontalCard>
+                                    return <HorizontalCard key={lang.lang}>
                                         <div className='space-y-2'>
                                             <h1 className='text-lg font-semibold'>{lang.lang}</h1>
                                             <p className='text-primary-text'>{lang.nivel}</p>

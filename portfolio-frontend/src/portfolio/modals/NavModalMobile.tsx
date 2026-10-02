@@ -16,7 +16,7 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection }: NavModalMobileTypeHidd
             <ul className='flex flex-col gap-5 '>
                 {
                     sectionsNavArray.map((element) => {
-                        return <li className='font-semibold' onClick={() => reDirection()} >
+                        return <li className='font-semibold' onClick={() => reDirection()} key={element.id}>
                             <a
                                 className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""}`} href={`${element.enlace}`}
                                 id={element.enlace}

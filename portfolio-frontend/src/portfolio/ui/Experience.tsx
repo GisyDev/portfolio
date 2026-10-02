@@ -87,7 +87,7 @@ const Experience = () => {
 
                         {
                             experieceState.map((exp, index) => {
-                                return <div>
+                                return <div key={exp.id}>
                                     <div className='absolute'>
                                         <div className={`${index === 0 && "animate-ping"} relative right-[31px] top-[42px] bg-primary w-3 h-3 rounded-full`}></div>
                                         <div className={`absolute right-[31px] top-[42px] bg-primary w-3 h-3 rounded-full`}></div>
@@ -123,7 +123,7 @@ const Experience = () => {
                                             </div>
                                             <a className='group-hover:text-primary cursor-pointer flex items-center gap-1 text-xs text-zinc-400 font-medium' onClick={() => setHidden(exp.id)}>
                                                 <p className=''>{exp.hidden ? "Ver más" : "Ver menos"}</p>
-                                                <i className={`fa-solid fa-chevron-down duration-300 ${exp.hidden ? "rotate-0" : " -rotate-180"}`}></i>
+                                                <i className={`fa-solid fa-chevron-down ${exp.hidden ? "rotate-0" : " -rotate-180"}`}></i>
                                             </a>
                                         </div>
 

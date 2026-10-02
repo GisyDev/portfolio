@@ -11,7 +11,7 @@ const HorizontalCard = ({ children, onClick }: HorizontalCardType) => {
             className={`
                 group relative w-full p-5 space-y-4 rounded-2xl
                 bg-black backdrop-blur-sm
-                border border-zinc-700/80
+                border border-zinc-600/35
                 transition-all duration-300 ease-out
                  hover:border-primary/50
                 ${onClick ? "cursor-pointer" : ""}
