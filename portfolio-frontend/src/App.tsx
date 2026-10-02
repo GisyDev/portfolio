@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './portfolio/page/Home'
 import LanguageModal from './portfolio/modals/LanguajeModal'
@@ -9,7 +9,7 @@ import AboutMe from './portfolio/page/AboutMe'
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
 
         {/* Portafolio */}
@@ -28,7 +28,7 @@ function App() {
         <Route path="/account" element={<Dashboard />} /> */}
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
