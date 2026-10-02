@@ -1,4 +1,4 @@
-import { redirect, useLocation, useNavigate } from 'react-router-dom';
+import { Link, redirect, useLocation, useNavigate } from 'react-router-dom';
 import TitleName from '../components/TitleName';
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
@@ -7,34 +7,15 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
 
-  // useEffect(() => {
-  //   document.addEventListener("scroll", (event) => {
-  //     const lastKnownScrollPosition = Math.round(window.scrollY)
-  //     const navId = document.getElementById("nav")
-
-  //     if (navId) {
-  //       if (lastKnownScrollPosition > 80) {
-  //         navId.classList.add("border-2")
-  //       } else {
-  //         navId.classList.remove("border-2")
-  //       }
-  //     }
-  //   });
-  // }, []);
-
-
+  const [hiddenNavMovile, setHiddenNavMovile] = useState(false);
   const activeNav = useNavInterceptionObserver()
 
   const location = useLocation()
   const navigate = useNavigate()
 
   const reDirection = () => {
-    if (location.pathname != "/") navigate('/', { replace: true })
+    if (location.pathname != "/") navigate('/ ', { replace: true })
   }
-
-  const [hiddenNavMovile, setHiddenNavMovile] = useState(false);
-
-
 
   return (
     <header className='fixed w-full top-3 z-40 px-x'>
@@ -56,14 +37,17 @@ const Header = () => {
           <ul className='flex flex-row gap-10 '>
             {
               sectionsNavArray.map((element) => {
-                return <li className='font-semibold' onClick={() => reDirection()} >
-                  <a
-                    className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""}`} href={`${element.enlace} `}
+                return <li className='font-semibold' onClick={() => reDirection()} key={element.id}>
+                  <button
+                    className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""} cursor-pointer`} 
                     id={element.enlace}
-
+                    
+                    onClick={() => {
+                      document.getElementById(element.id)?.scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
                     {element.text}
-                  </a>
+                  </button>
                 </li>
               })
             }

@@ -16,10 +16,13 @@ const Footer = () => {
               <ul className='flex flex-col gap-2 text-xs'>
                 {
                   sectionsNavArray.map((nav) => {
-                    return <li className='text-primary-text'>
-                      <a href={nav.enlace} className='hover:text-primary transition-all'>
+                    return <li className='text-primary-text' key={nav.id}>
+                      <button  
+                      className='hover:text-primary transition-all cursor-pointer'
+                      onClick={() => document?.getElementById(nav.id)?.scrollIntoView({ behavior: "smooth" })}
+                      >
                         {nav.text}
-                      </a>
+                      </button>
                     </li>
                   })
                 }
@@ -30,7 +33,7 @@ const Footer = () => {
               <ul className='flex flex-col gap-2 text-xs'>
                 {
                   social_media.map((social) => {
-                    return <li className=''>
+                    return <li key={social.name}>
                       <a href={social.link} className='flex items-center gap-2 hover:text-primary transition-all' target="blank">
                         <i className={`${social.icon}`}></i>
                         {social.name}
