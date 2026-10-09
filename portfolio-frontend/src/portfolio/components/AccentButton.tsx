@@ -1,14 +1,15 @@
 import React from 'react'
 
 type AccentButtonType = {
-    children: React.ReactNode
-    className: string
+    children?: React.ReactNode
+    text: string
 }
 
-const AccentButton = ({ children, className }: AccentButtonType) => {
+const AccentButton = ({ children, text }: AccentButtonType) => {
     return (
-        <button className={`flex items-center gap-2 ${className} py-1 px-3 rounded-2xl border-2 text-xs`}>
+        <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/10 backdrop-blur-sm  hover:border-primary transition-all duration-300 ">
             {children}
+            <p className="font-medium tracking-wide">{text}</p>
         </button>
     )
 }

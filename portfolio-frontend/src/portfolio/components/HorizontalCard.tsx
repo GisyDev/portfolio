@@ -8,7 +8,14 @@ type HorizontalCardType = {
 const HorizontalCard = ({ children, onClick }: HorizontalCardType) => {
     return (
         <div
-            className='bg-white/10 p-5 rounded-2xl border-2 border-zinc-700/50 space-y-4 w-full cursor-pointer hover:bg-white/15 hover:border-primary transition-all'
+            className={`
+                group relative w-full p-5 space-y-4 rounded-2xl
+                bg-black backdrop-blur-sm
+                border border-zinc-600/35
+                transition-all duration-300 ease-out
+                 hover:border-primary/50
+                ${onClick ? "cursor-pointer" : ""}
+            `}
             onClick={onClick}
         >
             {children}

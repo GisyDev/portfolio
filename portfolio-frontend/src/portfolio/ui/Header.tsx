@@ -1,50 +1,66 @@
+<<<<<<< HEAD
 import { redirect, useLocation, useNavigate } from 'react-router-dom';
 import TitleName from '@/components/TitleName';
+=======
+import { Link, redirect, useLocation, useNavigate } from 'react-router-dom';
+import TitleName from '../components/TitleName';
+>>>>>>> 46175bfa0d9301df2f7602a081db73d23308daf7
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
+import NavModalMobile from '../modals/NavModalMobile';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
 
+  const [hiddenNavMovile, setHiddenNavMovile] = useState(false);
   const activeNav = useNavInterceptionObserver()
 
   const location = useLocation()
   const navigate = useNavigate()
 
-
   const reDirection = () => {
-    if (location.pathname != "/portfolio") navigate('/portfolio', { replace: true })
+    if (location.pathname != "/") navigate('/ ', { replace: true })
   }
 
   return (
-    <header className='fixed w-full top-3 z-40'>
+    <header className='fixed w-full top-3 z-40 px-x'>
 
-      <nav className="mx-auto max-w-page rounded-4xl py-6 px-8 flex justify-between items-center bg-black/5 backdrop-blur-xl">
+      <nav id="nav" className={`border-[1px] border-zinc-700/60 mx-auto max-w-page rounded-2xl py-4 px-8 flex justify-between items-center bg-black/30 backdrop-blur-xl transition-all`}>
         <div className='flex gap-10 '>
           <TitleName />
         </div>
         <div>
-          <ul className='flex flex-row gap-10'>
+          <button onClick={() => setHiddenNavMovile(!hiddenNavMovile)} className='sm:hidden'>
+            {
+              hiddenNavMovile
+                ? <i className="fa-solid fa-x"></i>
+                : <i className="fa-solid fa-bars"></i>
+            }
+          </button>
+        </div>
+        <div className='hidden sm:block'>
+          <ul className='flex flex-row gap-10 '>
             {
               sectionsNavArray.map((element) => {
-                return <li className='font-semibold' onClick={() => reDirection()} >
-                  <a
-                    className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""}`} href={`${element.enlace} `}
+                return <li className='font-semibold' onClick={() => reDirection()} key={element.id}>
+                  <button
+                    className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""} cursor-pointer`} 
                     id={element.enlace}
-
+                    
+                    onClick={() => {
+                      document.getElementById(element.id)?.scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
                     {element.text}
-                  </a>
+                  </button>
                 </li>
               })
             }
           </ul>
         </div>
+        <NavModalMobile hiddenNavMovile={hiddenNavMovile} reDirection={reDirection} />
 
-        <div>
-
-        </div>
       </nav>
-
 
     </header>
   )
