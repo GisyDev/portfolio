@@ -10,7 +10,7 @@ type TitleSectionType = {
 const TitleSection = ({ title, icon, description }: TitleSectionType) => {
     return (
         <div className='flex'>
-            <div className='flex gap-3 items-center mb-8'>
+            <div className='flex gap-3 items-center mb-5'>
                 <i className={`fa-solid ${icon} text-primary text-3xl`}></i>
                 <h1 className='font-bold text-2xl'>{title}</h1>
             </div>

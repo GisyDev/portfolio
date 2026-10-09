@@ -70,11 +70,11 @@ const Education = () => {
                                 {program_languages.map((skill) => {
                                     return (
                                         <div
-                                            className="me-5 transform-gpu grow-0 shrink-0 w-24 min-w-0 flex flex-col items-center justify-center border border-zinc-600/35 rounded-lg gap-2 bg-black py-2"
+                                            className="me-5 transform-gpu grow-0 shrink-0 min-w-0 flex items-center justify-center border border-zinc-600/35 rounded-lg gap-2 bg-black py-1 px-3"
                                             key={skill.name}
                                         >
                                             <div>
-                                                <img className="w-12 m-auto p-1 object-cover" src={getImage(folderImages, skill.image)} alt="" />
+                                                <img className="w-10 m-auto p-2 object-cover" src={getImage(folderImages, skill.image)} alt="" />
                                             </div>
                                             <div>
                                                 <p className="p-1 text-xs text-mute">{skill.name}</p>
