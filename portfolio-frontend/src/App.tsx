@@ -18,8 +18,8 @@ function App() {
           <Route path='/portfolio' element={<Home />}>
             <Route path='lenguaje/:lang' element={<LanguageModal />} />
           </Route >
-            <Route path='/portfolio/SobreMi' element={<AboutMe />} />
-            
+          <Route path='/portfolio/SobreMi' element={<AboutMe />} />
+
         </Route>
 
 

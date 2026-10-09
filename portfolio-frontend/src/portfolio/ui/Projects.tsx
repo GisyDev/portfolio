@@ -1,5 +1,5 @@
 import React from 'react'
-import TitleSection from '../components/TitleSection'
+import TitleSection from '@/components/TitleSection'
 
 const Projects = () => {
     return (

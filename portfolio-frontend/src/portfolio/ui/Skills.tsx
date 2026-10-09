@@ -2,8 +2,8 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { program_languages } from '../data/skills';
 import { getImage } from '../../lib/getImage';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import Section from '../components/Section';
-import MiniButton from '../components/MiniButton';
+import Section from '@/components/Section';
+import MiniButton from '@/components/MiniButton';
 import { Link } from 'react-router-dom';
 import { sectionsNav } from '../data/nav';
 

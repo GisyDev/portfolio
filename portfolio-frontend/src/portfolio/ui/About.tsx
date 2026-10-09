@@ -1,9 +1,9 @@
 import { about_me, social_media } from '../data/about'
 import cara from "../../assets/images/yo.jpeg"
-import PrimaryButton from '../components/PrimaryButton';
-import SecondaryButton from '../components/SecondaryButton'
-import Paragraph from '../components/Paragraph'
-import AccentButton from '../components/AccentButton'
+import PrimaryButton from '@/components/PrimaryButton';
+import SecondaryButton from '@/components/SecondaryButton'
+import Paragraph from '@/components/Paragraph'
+import AccentButton from '@/components/AccentButton'
 import { sectionsNav } from '../data/nav'
 import { useNavigate } from 'react-router-dom';
 

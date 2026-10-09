@@ -1,5 +1,5 @@
 import { redirect, useLocation, useNavigate } from 'react-router-dom';
-import TitleName from '../components/TitleName';
+import TitleName from '@/components/TitleName';
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
 

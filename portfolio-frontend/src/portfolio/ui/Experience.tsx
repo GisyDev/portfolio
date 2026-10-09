@@ -1,10 +1,10 @@
 import 'react-vertical-timeline-component/style.min.css';
 import { getImage } from '../../lib/getImage';
 import { useState } from 'react';
-import Section from '../components/Section';
-import Paragraph from '../components/Paragraph';
+import Section from '@/components/Section';
+import Paragraph from '@/components/Paragraph';
 import { sectionsNav } from '../data/nav';
-import HorizontalCard from '../components/HorizontalCard';
+import HorizontalCard from '@/components/HorizontalCard';
 
 const experiences = [
     {

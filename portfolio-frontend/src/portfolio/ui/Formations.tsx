@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { getImage } from '../../lib/getImage';
-import MiniButton from '../components/MiniButton';
-import Section from '../components/Section';
-import TitleSection from '../components/TitleSection';
+import MiniButton from '@/components/MiniButton';
+import Section from '@/components/Section';
+import TitleSection from '@/components/TitleSection';
 import { education, languajes } from '../data/education';
 import { sectionsNav } from '../data/nav';
 import { program_languages } from '../data/skills';
-import HorizontalCard from '../components/HorizontalCard';
+import HorizontalCard from '@/components/HorizontalCard';
 
 const Education = () => {
 

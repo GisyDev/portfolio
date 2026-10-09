@@ -1,7 +1,7 @@
 import { div } from 'motion/react-client'
 import { about_me } from '../data/about'
-import Paragraph from '../components/Paragraph'
-import MiniButton from '../components/MiniButton'
+import Paragraph from '@/components/Paragraph'
+import MiniButton from '@/components/MiniButton'
 
 
 type MoreInformationModalType = {

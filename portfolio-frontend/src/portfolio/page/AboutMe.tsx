@@ -1,6 +1,6 @@
 import { about_me } from '../data/about'
-import Paragraph from '../components/Paragraph'
-import MiniButton from '../components/MiniButton';
+import Paragraph from '@/components/Paragraph'
+import MiniButton from '@/components/MiniButton';
 import { useNavigate } from 'react-router-dom'
 
 

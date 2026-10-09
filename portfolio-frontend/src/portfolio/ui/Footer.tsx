@@ -1,6 +1,6 @@
 import { sectionsNavArray } from '../data/nav';
 import { social_media } from '../data/about';
-import TitleName from '../components/TitleName';
+import TitleName from '@/components/TitleName';
 const Footer = () => {
   return (
     <footer className='w-full bg-white/5 h-80 flex flex-col mt-30'>
