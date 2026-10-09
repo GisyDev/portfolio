@@ -54,8 +54,8 @@
 html,
 body,
 #root {
-    @apply bg-zinc-900 h-full;
+    @apply bg-black h-full;
     /* @apply bg-black h-full; */
     @apply scroll-smooth;
-    @apply text-white;
+    @apply text-gray-50;
 }

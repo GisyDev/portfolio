@@ -1,10 +1,10 @@
 import 'react-vertical-timeline-component/style.min.css';
-import { getImage } from '../../lib/getImage';
 import { useState } from 'react';
-import Section from '@/components/Section';
-import Paragraph from '@/components/Paragraph';
-import { sectionsNav } from '../data/nav';
-import HorizontalCard from '@/components/HorizontalCard';
+import { sectionsNav, } from '../data/nav';
+import TitleSection from '../components/TitleSection';
+import Timeline from '../components/Timeline';
+import TimelineSection from '../components/TimelineSection';
+import { education } from '../data/education';
 
 const experiences = [
     {
@@ -14,10 +14,9 @@ const experiences = [
         date: "mar - sept 2026",
         resume: "Desarrollo, mantenimiento y resolucion de incidencias en la aplicación corporativa de MAPFRE",
         description: [
-            "Desarrollo y mantenimiento de nuevas funcionalidades, escribiendo código limpio y mantenible, entendiendo los requisitos del cliente y creando documentación técnica de dichos evolutivos.",
-            "Diseño y desarrollo de interfaces responsivas, mejorando su legibilidad y formato.",
-            "Realización de pruebas y validaciones para el despliegue a producción, así como diagnóstico y corrección de bugs, coordinando la resolución con otros equipos para la subida a producción.",
-            "Análisis, gestión y resolución de incidencias creadas por usuarios, utilizando la aplicación corporativa llamada Service Manager de MAPFRE."
+            "Desarrollé y mantuve funcionalidades de una aplicación.",
+            "Diseñé interfaces responsivas y mejoré su usabilidad.",
+            "Gestioné incidencias, resolví errores y validé despliegues a producción."
         ],
         icon: "pwc_espana_logo.jpg",
         hidden: true,
@@ -59,87 +58,58 @@ const experiences = [
 
 const Experience = () => {
 
-    const [experieceState, setExperieceState] = useState(experiences)
-
-    const setHidden = (id: number) => {
-
-        const experieceModif = experieceState.map((exp) => {
-            if (exp.id === id) {
-                return {
-                    ...exp,
-                    hidden: !exp.hidden
-                }
-            }
-            return exp
-        })
-
-        setExperieceState(experieceModif)
-    }
-
-
-    const folderImage = "company_icons"
+    const folderImageExperience = "company_icons"
+    const folderImageEducation = "school_icons"
     return (
-        <Section title={sectionsNav.experience.text} icon="fa-briefcase" reference={sectionsNav.experience.id}>
-            <div className='flex gap-6'>
-                <article className='flex gap-6 w-full '>
-                    <span className="w-0.5 max-h-full bg-[linear-gradient(180deg,transparent_0%,var(--color-zinc-800)_10%,var(--color-zinc-800)_85%,transparent_100%)]"></span>
-                    <div className='space-y-8 w-full'>
+        <section>
+            <div className='flex gap-24'>
 
+
+                <article className='flex flex-col w-full '>
+                    <TitleSection title={sectionsNav.experience.text} icon={sectionsNav.experience.icon} />
+
+                    <Timeline>
                         {
-                            experieceState.map((exp, index) => {
-                                return <div key={exp.id}>
-                                    <div className='absolute'>
-                                        <div className={`${index === 0 && "animate-ping"} relative right-[31px] top-[42px] bg-primary w-3 h-3 rounded-full`}></div>
-                                        <div className={`absolute right-[31px] top-[42px] bg-primary w-3 h-3 rounded-full`}></div>
-                                    </div>
-                                    <HorizontalCard onClick={() => setHidden(exp.id)}>
+                            experiences.map((exp, index) => {
 
-                                        <div className='flex gap-5 items-center w-full'>
-                                            <img src={getImage(folderImage, exp.icon)} alt="" className='rounded-lg w-14' />
-                                            <div className='flex items-center space-y-1 justify-between  w-full'>
-                                                <div className='w-full space-y-1'>
-                                                    <div className='flex gap-1 flex-col-reverse justify-between sm:flex-row'>
-                                                        <h1 className='text-sm font-semibold sm:text-base'>{exp.profile}</h1>
-                                                        <p className='text-xs text-primary-text font-semibold '>{exp.date}</p>
-                                                    </div>
-                                                    <h3 className='text-xs sm:text-sm text-primary-text '>{exp.company}</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <Paragraph className='text-[13px]'>{exp.resume}</Paragraph>
-                                        <div
-                                            className={`grid transition-[grid-template-rows] duration-300 ease-in-out
-                                            ${exp.hidden ? "grid-rows-[0fr]" : "grid-rows-[1fr]"}`}
-                                        >
+                                const data = {
+                                    title: exp.profile,
+                                    subtitle: exp.company,
+                                    date: exp.date,
+                                    resume: exp.resume,
+                                    description: exp.description,
+                                    image: exp.icon
+                                }
 
-                                            <div className="overflow-hidden pl-5 ">
-                                                <ul className="list-disc px-3 text-primary-text space-y-2 mb-2">
-                                                    {exp.description.map((desc) => (
-                                                        <li key={desc} className=''> 
-                                                            <p className="text-[13px]">{desc}</p>
-                                                        </li>
-                                                    ))} 
-                                                </ul>
-                                            </div>
-                                            <a className='group-hover:text-primary cursor-pointer flex items-center gap-1 text-xs text-zinc-400 font-medium' onClick={() => setHidden(exp.id)}>
-                                                <p className=''>{exp.hidden ? "Ver más" : "Ver menos"}</p>
-                                                <i className={`fa-solid fa-chevron-down ${exp.hidden ? "rotate-0" : " -rotate-180"}`}></i>
-                                            </a>
-                                        </div>
-
-                                    </HorizontalCard>
-                                </div>
-
-
+                                return <TimelineSection key={exp.id} data={data} index={index} folderImage={folderImageExperience} />
                             })
                         }
-                    </div>
 
+                    </Timeline>
+                </article>
+
+                <article className='flex flex-col w-full '>
+                    <TitleSection title={sectionsNav.education.text} icon={sectionsNav.education.icon} />
+
+                    <Timeline>
+                        {
+                            education.map((educ, index) => {
+
+                                const data = {
+                                    title: educ.title,
+                                    subtitle: educ.name,
+                                    date: educ.date,
+                                    image: educ.icon
+                                }
+
+                                return <TimelineSection key={educ.name} data={data} index={index} folderImage={folderImageEducation} />
+                            })
+                        }
+
+                    </Timeline>
                 </article>
             </div>
-
-
-        </Section>
+        </section>
     )
 }
 
