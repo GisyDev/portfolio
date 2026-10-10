@@ -30,8 +30,8 @@ const TimelineSection = ({ data, index }: TimelineSectionType) => {
                         <div className='w-full space-y-1'>
                             <div className='flex gap-1 flex-col-reverse justify-between sm:flex-row'>
                                 <div>
-                                    <h1 className='text-sm font-semibold '>{data.title}</h1>
-                                    <h3 className='text-xs sm:text-sm'>{data.subtitle}</h3>
+                                    <h1 className='text-sm font-semibold text-title-text'>{data.title}</h1>
+                                    <h3 className='text-xs sm:text-sm text-primary-text'>{data.subtitle}</h3>
                                 </div>
 
                                 {data.date && <p className='text-xs font-semibold text-primary-text'>{data.date}</p>}

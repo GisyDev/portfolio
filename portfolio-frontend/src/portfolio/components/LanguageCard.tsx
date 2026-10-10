@@ -17,7 +17,7 @@ const LanguageCard = ({ skill }: { skill: {} }) => {
                 src={`/images/${skill.image}`}
                 alt=""
             />
-            <p className="text-xs font-medium text-white whitespace-nowrap">
+            <p className="text-xs font-medium text-title-text whitespace-nowrap">
                 {skill.name}
             </p>
         </div>
