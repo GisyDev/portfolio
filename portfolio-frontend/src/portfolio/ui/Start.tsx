@@ -1,11 +1,10 @@
 import { about_me, social_media } from '../data/about'
-import cara from "../../assets/images/yo.jpeg"
 import PrimaryButton from '../components/PrimaryButton';
 import Paragraph from '../components/Paragraph'
 import AccentButton from '../components/AccentButton'
 import { sectionsNav } from '../data/nav'
 import { useNavigate } from 'react-router-dom';
-import PDF from "../../public/documents/CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf"
+import PDF from "../../../public/documents/CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf"
 
 
 const About = () => {
@@ -13,15 +12,13 @@ const About = () => {
     const { name, surname, profile, description } = about_me
 
     const navigate = useNavigate()
-
-
+    
     return (
-        <section className='flex items-center scroll-m-30' id={sectionsNav.about.id} data-section={sectionsNav.about.id}>
+        <section className='flex items-center scroll-m-30' id={sectionsNav.inicio.id} data-section={sectionsNav.inicio.id}>
             <article className='flex flex-col-reverse justify-between gap-12 md:flex-row '>
                 <div className='flex justify-between md:w-2/4 flex-row'>
                     <div className='flex flex-col space-y-5 '>
                         <div className=' space-y-3'>
-                            
                             <div className='space-y-2'>
                                 <h1 className='animate-fade-in animate-delay-25 text-sm flex flex-col space-y-2'>
                                     <div className='flex flex-col font-bold text-3xl sm:text-5xl md:text-5xl/tight '>
@@ -74,7 +71,7 @@ const About = () => {
                 </div>
                 <div className='flex animate-fade-in animate-delay-150 '>
                     <div className='flex md:flex-col justify-center gap-4 items-center sm:gap-8'>
-                        <img src={cara} alt="Yo" className='rounded-full text-primary-button ring-offset-2 ring-offset-black ring-4 ring-primary object-cover size-36 sm:size-42 md:size-64' />
+                        <img src={"/images/yo1.png"} alt="Yo" className='rounded-full text-primary-button ring-offset-2 ring-offset-black ring-4 ring-primary object-cover size-36 sm:size-42 md:size-64' />
                         <div>
                             <AccentButton text={'Disponible para trabajar'}>
                                 <span className="relative flex size-2">

@@ -3,7 +3,7 @@ import { sectionsNav, sectionsNavArray } from '../data/nav';
 import { useLocation } from 'react-router-dom';
 
 const useNavInterceptionObserver = () => {
-    const [activeNav, setActiveNav] = useState<string | "sobre-mi">(sectionsNav.about.id);
+    const [activeNav, setActiveNav] = useState<string | "sobre-mi">(sectionsNav.inicio.id);
 
     const location = useLocation()
 

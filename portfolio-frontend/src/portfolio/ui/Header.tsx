@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { redirect, useLocation, useNavigate } from 'react-router-dom';
-import TitleName from '@/components/TitleName';
-=======
 import { Link, redirect, useLocation, useNavigate } from 'react-router-dom';
 import TitleName from '../components/TitleName';
->>>>>>> 46175bfa0d9301df2f7602a081db73d23308daf7
 import { sectionsNavArray } from '../data/nav';
 import useNavInterceptionObserver from '../hooks/useNavInterceptionObserver';
 import NavModalMobile from '../modals/NavModalMobile';

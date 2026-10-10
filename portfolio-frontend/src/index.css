@@ -19,10 +19,12 @@
 
 
     --color-bg-app: #09090b;
-    --color-bg-card: #18181b;
+
+    --color-bg-card: #15131D;
+    --color-border-card: #2A2736;
     --color-bg-card-hover: #27272a;
 
-    --container-page: 55rem;
+    --container-page: 60rem;
 
     --color-primary-sucess: #9DE09D;
     --color-secondary-sucess: #2D912D;

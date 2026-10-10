@@ -1,5 +1,4 @@
-import React, { useState, type ReactNode } from 'react'
-import HorizontalCard from './HorizontalCard'
+import React, { type ReactNode } from 'react'
 
 const Timeline = ({ children }: { children: ReactNode }) => {
 

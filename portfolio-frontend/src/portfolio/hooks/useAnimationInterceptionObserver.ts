@@ -7,7 +7,7 @@ const useAnimationInterceptionObserver = () => {
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(element => {
-                if(element.isIntersecting && element.target.id !== sectionsNav.about.id) {
+                if(element.isIntersecting && element.target.id !== sectionsNav.inicio.id) {
                     element.target.classList.add("animate-fade-in")
                     element.target.classList.remove("opacity-0")
                 }

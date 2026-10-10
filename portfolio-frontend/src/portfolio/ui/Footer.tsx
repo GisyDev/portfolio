@@ -1,11 +1,11 @@
 import { sectionsNavArray } from '../data/nav';
 import { social_media } from '../data/about';
-import TitleName from '@/components/TitleName';
+import TitleName from '../components/TitleName';
 const Footer = () => {
   return (
-    <footer className='bg-black flex flex-col gap-1 items-center mt-25 text-sm pt-8 pb-4 w-full'>
+    <footer className='bg-bg-card/40 flex flex-col gap-1 items-center mt-35 text-sm pt-15 pb-5 w-full backdrop-blur-2xl'>
       <div className="px-x sm:max-w-page w-full">
-        <div className="flex justify-between w-full flex-col gap-10 sm:flex-row">
+        <div className="flex justify-between w-full flex-col gap-10 sm:flex-row mb-5">
           <div className='space-y-4'>
             <TitleName />
             <p className=' text-primary-text text-xs'>Desarrolladora Fullstack</p>
@@ -34,7 +34,7 @@ const Footer = () => {
                 {
                   social_media.map((social) => {
                     return <li key={social.name}>
-                      <a href={social.link} className='flex items-center gap-2 hover:text-primary transition-all' target="blank">
+                      <a href={social.link} className='flex text-primary-text items-center gap-2 hover:text-primary transition-all' target="blank">
                         <i className={`${social.icon}`}></i>
                         {social.name}
                       </a>

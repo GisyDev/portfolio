@@ -1,8 +1,8 @@
 export const sectionsNav = {
-    about: {
-        id: 'SobreMi',
-        text: 'Sobre mí',
-        enlace: "#SobreMi"
+    inicio: {
+        id: 'Inicio',
+        text: 'Inicio',
+        enlace: "#Inicio"
     },
     experience: {
         id: 'Experiencia',
@@ -10,11 +10,11 @@ export const sectionsNav = {
         icon: "fa-briefcase",
         enlace: "#Experiencia"
     },
-    education: {
-        id: 'Formacion',
-        text: 'Formacion',
+    sobreMi: {
+        id: 'SobreMi',
+        text: 'Sobre mí',
         icon: "fa-graduation-cap",
-        enlace: "#Formacion"
+        enlace: "#SobreMi"
     }
 } as const
 

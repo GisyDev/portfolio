@@ -13,18 +13,10 @@ function App() {
 
       
         <Route element={<PortfolioLayout />}>
-<<<<<<< HEAD
-          <Route path='/portfolio' element={<Home />}>
-            <Route path='lenguaje/:lang' element={<LanguageModal />} />
-          </Route >
-          <Route path='/portfolio/SobreMi' element={<AboutMe />} />
-
-=======
           <Route path='/' element={<Home />}/>
             {/* <Route path='lenguaje/:lang' element={<LanguageModal />} /> */}
        
             <Route path='/SobreMi' element={<AboutMe />} /> 
->>>>>>> 46175bfa0d9301df2f7602a081db73d23308daf7
         </Route>
 
 

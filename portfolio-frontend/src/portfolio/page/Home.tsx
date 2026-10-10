@@ -1,7 +1,9 @@
-import About from '../ui/About'
+import About from '../ui/Start'
 import Experience from '../ui/Experience';
 import Formation from '../ui/Formations';
 import useAnimationInterceptionObserver from '../hooks/useAnimationInterceptionObserver';
+import AboutMe from '../ui/AboutMe';
+import PageBackground from '../components/PageBackground';
 
 const Home = () => {
 
@@ -9,13 +11,14 @@ const Home = () => {
 
   return (
     <>
-      {/* <Background />  */}
-      <About/>
-      <Experience />
-      {/* <Projects/> */}
-      {/* <Skills /> */}
-      <Formation/>
-      
+  
+        {/* <Background />  */}
+        <About />
+        <Experience />
+        {/* <Projects/> */}
+        {/* <Skills /> */}
+        {/* <Formation/> */}
+        <AboutMe />
     </>
 
   )
