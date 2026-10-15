@@ -73,7 +73,7 @@ const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
             }}
           />
           <motion.div
-            className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-fuchsia-600 rounded-full filter blur-3xl opacity-23 -z-20"
+            className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-fuchsia-600 rounded-full filter blur-3xl opacity-10 -z-20"
             animate={{
               x: [50, -50, 50],
               y: [20, -20, 20],

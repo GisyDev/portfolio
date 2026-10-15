@@ -65,10 +65,9 @@ const Experience = () => {
     const folderImageEducation = "school_icons"
     return (
         <section id={sectionsNav.experience.id} data-section={sectionsNav.experience.id} className='scroll-m-32'>
-            <div className='flex gap-18'>
+            <div className='flex flex-col md:flex-row gap-18'>
                 <article className='flex flex-col w-full '>
                     <TitleSection title={sectionsNav.experience.text} icon={sectionsNav.experience.icon} />
-
                     <Timeline>
                         {
                             experiences.map((exp, index) => {

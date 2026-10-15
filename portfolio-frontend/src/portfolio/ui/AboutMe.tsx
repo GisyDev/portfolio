@@ -13,7 +13,7 @@ export default function AboutMe() {
       className="mx-auto flex max-w-page items-center gap-20  text-[#F4F1F7] scroll-m-32 opacity-0"
     >
       {/* Foto */}
-      <div className="flex w-2/5">
+      <div className="flex w-2/5 hidden md:inline">
         <div className="relative h-[480px] w-full max-w-[400px]">
           <div className="absolute -bottom-5 -right-5 left-5 top-5 rounded-[32px] border-2 border-[#F0609E]" />
           <img
@@ -29,7 +29,7 @@ export default function AboutMe() {
       </div>
 
       {/* Texto */}
-      <div className="flex flex-col gap-6 w-3/4">
+      <div className="flex flex-col gap-6 w-full md:w-max-4/5">
 
         <h2 className="font-display text-[44px] font-bold leading-[1.1] tracking-tight">
           Me gusta cuidar tanto lo que se ve como lo que hay detrás.

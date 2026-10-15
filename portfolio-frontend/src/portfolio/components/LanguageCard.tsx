@@ -7,7 +7,7 @@ const LanguageCard = ({ skill }: { skill: {} }) => {
     return (
         <div
             key={skill.name}
-            className="me-3 transform-gpu grow-0 shrink-0 min-w-0 flex items-center justify-center gap-3 rounded-full px-4 py-2"
+            className={`me-3 transform-gpu grow-0 shrink-0 min-w-0 flex items-center justify-center gap-3 rounded-full px-4 py-2`}
             style={{
                 background: `color-mix(in srgb, ${skill.color} 25%, #000)`,
             }}
