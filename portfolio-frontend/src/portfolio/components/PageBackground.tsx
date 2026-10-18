@@ -59,7 +59,7 @@ const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <motion.div
-            className="absolute top-10 -right-10 w-1/3 h-1/3 bg-primary/50 rounded-full filter blur-3xl opacity-30"
+            className="absolute top-10 -right-10 w-1/3 h-1/3 bg-primary/50 rounded-full filter blur-3xl opacity-10"
             animate={{
               x: [-50, 50, -50],
               y: [-20, 20, -20],

@@ -15,15 +15,14 @@ const About = () => {
     
     return (
         <section className='flex items-center scroll-m-30' id={sectionsNav.inicio.id} data-section={sectionsNav.inicio.id}>
-            <article className='flex flex-col-reverse justify-between gap-12 md:flex-row '>
+            <article className='flex flex-col-reverse justify-between gap-5 md:flex-row '>
                 <div className='flex justify-between md:w-2/4 flex-row'>
-                    <div className='flex flex-col space-y-5 '>
+                    <div className='flex flex-col space-y-5'>
                         <div className='space-y-3'>
                             <div className='space-y-2'>
                                 <h1 className='animate-fade-in animate-delay-25 text-sm flex flex-col space-y-2'>
                                     <div className='flex flex-col font-bold text-3xl sm:text-5xl md:text-5xl/tight text-title-text'>
-                                        <span className=''> {name}</span>
-                                        <span className=''> {surname}</span>
+                                        <span className=''> {name} {surname}</span>
                                     </div>
                                 </h1>
                                 <h3 className='animate-fade-in animate-delay-85 flex gap-5 text-lg text-primary font-semibold sm:text-xl'>{profile}</h3>

@@ -19,13 +19,13 @@
     --color-gray: #374151;
 
 
-    --color-bg-app: #09090b;
+    --color-bg-app: #121212;
 
     --color-bg-card: #15131D;
     --color-border-card: #2A2736;
     --color-bg-card-hover: #27272a;
 
-    --container-page: 60rem;
+    --container-page: 66rem;
 
     --color-primary-sucess: #9DE09D;
     --color-secondary-sucess: #2D912D;
@@ -53,12 +53,3 @@
     animation-delay: var(--animate-delay);
 }
 
-
-html,
-body,
-#root {
-    @apply bg-black h-full;
-    /* @apply bg-black h-full; */
-    @apply scroll-smooth;
-    @apply text-gray-50;
-}
