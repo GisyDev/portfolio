@@ -4,6 +4,7 @@ import Formation from '../ui/Formations';
 import useAnimationInterceptionObserver from '../hooks/useAnimationInterceptionObserver';
 import AboutMe from '../ui/AboutMe';
 import PageBackground from '../components/PageBackground';
+import Projects from '../ui/Projects';
 
 const Home = () => {
 
@@ -19,6 +20,7 @@ const Home = () => {
         {/* <Skills /> */}
         {/* <Formation/> */}
         <AboutMe />
+        <Projects/>
     </>
 
   )

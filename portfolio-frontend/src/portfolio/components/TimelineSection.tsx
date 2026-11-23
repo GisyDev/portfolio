@@ -26,15 +26,30 @@ const TimelineSection = ({ data, index }: TimelineSectionType) => {
             <HorizontalCard>
                 <div className='flex gap-5 items-center w-full'>
                     <img src={`/images/${data.image}`} alt="" className='rounded-lg w-14' />
-                    <div className='flex items-center space-y-1 justify-between  w-full'>
+                    <div className='flex items-center space-y-1 justify-between w-full'>
                         <div className='w-full space-y-1'>
                             <div className='flex gap-1 flex-col-reverse justify-between sm:flex-row'>
                                 <div>
-                                    <h1 className='text-sm font-semibold text-title-text'>{data.title}</h1>
-                                    <h3 className='text-xs sm:text-sm text-primary-text'>{data.subtitle}</h3>
+                                    <h1
+                                        className='text-sm font-semibold'
+                                        style={{ color: "var(--theme-title-text)" }}
+                                    >
+                                        {data.title}
+                                    </h1>
+                                    <h3
+                                        className='text-xs sm:text-sm'
+                                        style={{ color: "var(--theme-primary-text)" }}
+                                    >
+                                        {data.subtitle}
+                                    </h3>
                                 </div>
 
-                                {data.date && <p className='text-xs font-semibold text-primary-text'>{data.date}</p>}
+                                {data.date && <p
+                                    className='text-xs font-semibold'
+                                    style={{ color: "var(--theme-primary-text)" }}
+                                >
+                                    {data.date}
+                                </p>}
 
                             </div>
 
@@ -42,16 +57,13 @@ const TimelineSection = ({ data, index }: TimelineSectionType) => {
                     </div>
                 </div>
 
-                {/* {
-                    data.description 
-                    && <Paragraph className='text-xs'>{data.resume}</Paragraph>
-                    
-                } */}
-
                 {
                     data.description && <div>
-                        <div className="overflow-hidden pl-5 ">
-                            <ul className="list-disc  text-primary-text space-y-3 mb-2">
+                        <div className="overflow-hidden pl-5">
+                            <ul
+                                className="list-disc space-y-3 mb-2"
+                                style={{ color: "var(--theme-primary-text)" }}
+                            >
                                 {data.description?.map((desc) => (
                                     <li key={desc} className=''>
                                         <p className="text-sm">{desc}</p>

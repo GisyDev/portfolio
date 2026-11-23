@@ -4,7 +4,12 @@ const Timeline = ({ children }: { children: ReactNode }) => {
 
     return (
         <div className='flex'>
-            <span className="w-0.5 max-h-full bg-[linear-gradient(180deg,transparent_0%,var(--color-zinc-800)_10%,var(--color-zinc-800)_85%,transparent_100%)]  me-6"></span>
+            <span
+                className="w-0.5 max-h-full me-6"
+                style={{
+                    background: "linear-gradient(180deg, transparent 0%, var(--theme-timeline-line) 10%, var(--theme-timeline-line) 85%, transparent 100%)"
+                }}
+            ></span>
             <div className='space-y-8 w-full'>
                 {children}
             </div>

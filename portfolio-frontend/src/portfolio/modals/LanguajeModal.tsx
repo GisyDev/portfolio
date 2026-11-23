@@ -12,7 +12,6 @@ const LanguageModal = ({ modal, setModal }: LanguageModalType) => {
 
     const visibilityModal = visibility ? "opacity-100" : "opacity-0 pointer-events-none"
 
-    console.log(language != null)
 
     return (
         <div className={`${visibilityModal} fixed top-0 w-screen h-screen bg-black/30 transition-all z-50`}>

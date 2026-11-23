@@ -7,7 +7,10 @@ type ParagraphType = {
 
 const Paragraph = ({ children, className }: ParagraphType) => {
     return (
-        <p className={`text-lg text-primary-text leading-[1.7] ${className && className}`}>
+        <p
+            className={`text-lg leading-[1.7] ${className && className}`}
+            style={{ color: "var(--theme-primary-text)" }}
+        >
             {children}
         </p>
     )

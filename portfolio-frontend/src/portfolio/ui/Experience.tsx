@@ -90,7 +90,6 @@ const Experience = () => {
 
                 <article className='flex flex-col w-3/4'>
                     <TitleSection title={"Educación"} icon={"fa-graduation-cap"} />
-
                     <Timeline>
                         {
                             education.map((educ, index) => {

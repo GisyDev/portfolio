@@ -13,6 +13,7 @@ const useNavInterceptionObserver = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(element => {
                 const getDataSection = element.target.getAttribute("data-section")
+
                 if (element.isIntersecting && getDataSection) {
                     setActiveNav(getDataSection)
                 }

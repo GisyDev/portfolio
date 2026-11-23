@@ -3,6 +3,7 @@ import './App.css'
 import Home from './portfolio/page/Home'
 import PortfolioLayout from './portfolio/layout/PortfolioLayout'
 import AboutMe from './portfolio/page/AboutMe'
+import ProjectDetails from './portfolio/components/Projects/ProjectDetails'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             {/* <Route path='lenguaje/:lang' element={<LanguageModal />} /> */}
        
             <Route path='/SobreMi' element={<AboutMe />} /> 
+            <Route path='/Proyecto/:id' element={<ProjectDetails/>} /> 
         </Route>
 
 

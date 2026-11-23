@@ -15,6 +15,12 @@ export const sectionsNav = {
         text: 'Sobre mí',
         icon: "fa-graduation-cap",
         enlace: "#SobreMi"
+    },
+    projects: {
+        id: "Proyecto",
+        text: "Proyectos",
+        icon: "fa-solid fa-layer-group",
+        enlace: "#Project"
     }
 } as const
 
