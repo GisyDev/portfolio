@@ -13,7 +13,7 @@ const Projects = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-page">
                 {projects.map(project => (
-                    <ProjectCard project={project} />
+                    <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
 
