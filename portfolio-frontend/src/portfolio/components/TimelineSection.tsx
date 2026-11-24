@@ -18,7 +18,7 @@ type TimelineSectionType = {
 const TimelineSection = ({ data, index }: TimelineSectionType) => {
 
     return (
-        <div>
+        <div className=''>
             <div className='absolute'>
                 <div className={`${index === 0 && "animate-ping"} relative right-[31px] top-[46px] bg-primary w-3 h-3 rounded-full`}></div>
                 <div className={`absolute right-[31px] top-[46px] bg-primary w-3 h-3 rounded-full`}></div>

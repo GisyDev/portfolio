@@ -6,6 +6,7 @@ import TitleSection from "../TitleSection";
 import LanguageCard from "../LanguageCard";
 import GoBack from '../GoBack';
 import { sectionsNav } from "../../data/nav";
+import SecondaryButton from "../SecondaryButton";
 
 export default function ProjectDetail() {
     const { id: idName } = useParams();
@@ -33,12 +34,21 @@ export default function ProjectDetail() {
                 </Link>
             </section>
         );
-    }   
+    }
+
+    const MAX_ROWS = 4;
+    const rows = Math.min(gallery.length, MAX_ROWS);
+
+    const columns = [
+        gallery.slice(0, MAX_ROWS),
+        gallery.slice(MAX_ROWS),
+    ].filter((col) => col.length > 0);
 
     return (
-        <section className="w-full space-y-4 z-10 animate-fade-in">
-            <GoBack backLabel={"Proyectos"}/>
-            
+        <section className="w-full space-y-4 z-10 animate-fade-in max-w-page m-auto"
+        >
+            <GoBack backLabel={"Proyectos"} />
+
 
             <div className="space-y-3">
                 <h1 className="text-4xl font-semibold">{project.name}</h1>
@@ -48,42 +58,54 @@ export default function ProjectDetail() {
             <hr />
 
             <div className="space-y-10">
-                <div className="flex flex-col lg:flex-row justify-between gap-4 w-full">
-                    <div className="">
+                <div className="flex flex-col lg:flex-row gap-4 w-full">
+                    <div className="lg:flex-1">
                         <img
                             src={imageSelected}
                             alt={`Vista previa del proyecto ${project.name}`}
-                            className="w-full max-w-8xl object-fill rounded-xl"
+                            className="w-full rounded-xl"
                             loading="lazy"
                         />
                     </div>
 
-
                     {gallery.length > 1 && (
-                        <div className="grid grid-cols-2 justify-center mx-auto w-2/4 ">
-                            {gallery.map((image, index) => (
-                                <button
-                                    key={image}
-                                    type="button"
-                                    className="w-28 cursor-pointer rounded-lg z-50"
-                                    onMouseEnter={() => setSelected(image)}
-                                    onClick={() => setSelected(image)}
-                                    aria-label={`Ver imagen ${index + 1}`}
-                                >
-                                    <img
-                                        src={image}
-                                        alt={`Miniatura ${index + 1} de ${project.name}`}
-                                        className={`aspect-video w-full object-cover rounded-lg border-4 border-transparent hover:ring-2 hover:ring-primary 
-                                            ${imageSelected === image
-                                                ? "ring-2 ring-primary"
-                                                : ""
-                                            }`}
-                                    />
-                                </button>
+                        <div className="flex gap-2 lg:w-[20rem]">
+                            {columns.map((col, c) => (
+                                <div key={c} className="flex flex-1 flex-col gap-2">
+                                    {col.map((image) => {
+                                        const index = gallery.indexOf(image);
+                                        return (
+                                            <button
+                                                key={image}
+                                                type="button"
+                                                onMouseEnter={() => setSelected(image)}
+                                                onClick={() => setSelected(image)}
+                                                aria-label={`Ver imagen ${index + 1}`}
+                                                className={`relative aspect-video  lg:min-h-0 lg:flex-1
+                                                cursor-pointer overflow-hidden rounded-lg
+                                                hover:ring-2 hover:ring-primary
+                                                ${imageSelected === image ? "ring-2 ring-primary" : ""}`}
+                                            >
+                                                <img
+                                                    src={image}
+                                                    alt={`Miniatura ${index + 1} de ${project.name}`}
+                                                    className="absolute inset-0 h-full w-full object-cover"
+                                                />
+                                            </button>
+                                        );
+                                    })}
+
+                                    {Array.from({ length: rows - col.length }).map((_, i) => (
+                                        <div key={`empty-${i}`} className="hidden lg:block lg:flex-1" />
+                                    ))}
+                                </div>
                             ))}
                         </div>
                     )}
                 </div>
+
+
+
 
                 <div className="flex flex-col md:flex-row justify-between gap-15">
                     <div className="w-full space-y-3">
@@ -103,19 +125,26 @@ export default function ProjectDetail() {
                             </a>
                         )}
 
-                        <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=" flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all border py-2 px-2 hover:border-primary! hover:text-primary! bg-white"
-                            style={{
-                                color: "var(--theme-social-text)",
-                                borderColor: "var(--theme-social-border)",
-                            }}
-                        >
-                            <i className="fa-brands fa-github"></i>
-                            Código
-                        </a>
+                        <div className="w-full">
+                            <SecondaryButton className={"w-full"}>
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="space-x-2"
+                                    style={{
+                                        color: "var(--theme-social-text)",
+                                        borderColor: "var(--theme-social-border)",
+                                    }}
+                                >
+                                    <i className="fa-brands fa-github"></i>
+                                    <span>Código</span>
+                                </a>
+                            </SecondaryButton>
+                        </div>
+
+
+
                     </div>
                     <div className="space-y-4">
                         <Paragraph>

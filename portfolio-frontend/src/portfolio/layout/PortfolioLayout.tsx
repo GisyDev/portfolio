@@ -8,7 +8,7 @@ const PortfolioLayout = () => {
         <>
             <PageBackground>
                 <Header />
-                <main className='max-w-page m-auto mt-25 md:mt-30 flex flex-col gap-30 px-x'>
+                <main className='mt-25 md:mt-25 flex flex-col gap-20 '>
                     <Outlet />
                 </main>
                 <Footer />

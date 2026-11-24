@@ -2,6 +2,7 @@ import type { ProjectType } from '../../data/projects'
 import LanguageCard from '../LanguageCard'
 import AccentButton from '../AccentButton';
 import { useNavigate } from 'react-router-dom';
+import SecondaryButton from '../SecondaryButton';
 
 
 type ProjectCardType = {
@@ -54,7 +55,7 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
 
 
-                <div className="flex flex-wrap g mb-6 items-center">
+                <div className="flex flex-wrap gap-2 mb-6 items-center">
                     {project.tec.slice(0, 3).map(tech => (
                         <LanguageCard skill={tech} />
                     ))}
@@ -67,7 +68,7 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
                 <hr />
 
-                <div className='flex items-center '>
+                <div className='flex flex-col sm:flex-row gap-3 items-center '>
                     <div>
                         <AccentButton onClickFunction={() => detailsFunction(project.name)}>
                             <p className="font-medium tracking-wide">{"Detalles"}</p>
@@ -76,19 +77,22 @@ const ProjectCard = ({ project }: ProjectCardType) => {
                     </div>
                     <div className="w-full flex items-center justify-end gap-5">
 
-                        <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=" flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all border py-2 px-2 hover:border-primary! hover:text-primary!"
-                            style={{
-                                color: "var(--theme-social-text)",
-                                borderColor: "var(--theme-social-border)",
-                            }}
-                        >
-                            <i className="fa-brands fa-github"></i>
-                            Código
-                        </a>
+                        <SecondaryButton>
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=" flex gap-2 items-center justify-center"
+                                style={{
+                                    color: "var(--theme-social-text)",
+                                    borderColor: "var(--theme-social-border)",
+                                }}
+                            >
+                                <i className="fa-brands fa-github"></i>
+                                Código
+                            </a>
+                        </SecondaryButton>
+
 
                         {/* <button
                         onClick={() => openProject(project)}

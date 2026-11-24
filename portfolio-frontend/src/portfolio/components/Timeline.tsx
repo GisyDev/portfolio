@@ -3,7 +3,7 @@ import React, { type ReactNode } from 'react'
 const Timeline = ({ children }: { children: ReactNode }) => {
 
     return (
-        <div className='flex'>
+        <div className='flex  w-full'>
             <span
                 className="w-0.5 max-h-full me-6"
                 style={{

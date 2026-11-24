@@ -22,12 +22,12 @@ export const sectionsNav = {
         icon: "fa-solid fa-layer-group",
         enlace: "#Training"
     },
-    sobreMi: {
-        id: 'SobreMi',
-        text: 'Sobre mí',
-        icon: "fa-graduation-cap",
-        enlace: "#SobreMi"
-    },
+    // sobreMi: {
+    //     id: 'SobreMi',
+    //     text: 'Sobre mí',
+    //     icon: "fa-graduation-cap",
+    //     enlace: "#SobreMi"
+    // },
 } as const
 
 

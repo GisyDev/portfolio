@@ -1,11 +1,9 @@
-import About from '../ui/Start'
+import About from '../ui/AboutMe'
 import Experience from '../ui/Experience';
-import Formation from '../ui/Formations';
 import useAnimationInterceptionObserver from '../hooks/useAnimationInterceptionObserver';
-import AboutMe from '../ui/AboutMe';
-import PageBackground from '../components/PageBackground';
 import Projects from '../ui/Projects';
 import ComplementaryTraining from '../ui/ComplementaryTraining';
+import LanguagesCarrusel from '../ui/LanguagesCarrusel';
 
 const Home = () => {
 
@@ -13,16 +11,11 @@ const Home = () => {
 
   return (
     <>
-  
-        {/* <Background />  */}
         <About />
+        <LanguagesCarrusel/>
         <Experience />
-        {/* <Projects/> */}
-        {/* <Skills /> */}
-        {/* <Formation/> */}
         <Projects/>
         <ComplementaryTraining/>
-        <AboutMe />
     </>
 
   )

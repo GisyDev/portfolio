@@ -52,7 +52,7 @@ export default function GoBack({ backLabel, backTo = "/", items, rootLabel = "Po
                     {crumbs.map((crumb, index) => (
                         <Fragment key={`${crumb.label}-${index}`}>
                             {index > 0 && (
-                                <li aria-hidden="true" className="text-neutral-400">
+                                <li aria-hidden="true"  style={{ color: "var(--theme-primary-text)" }}>
                                     /
                                 </li>
                             )}
@@ -61,11 +61,13 @@ export default function GoBack({ backLabel, backTo = "/", items, rootLabel = "Po
                                     <Link
                                         to={crumb.to}
                                         className="hover:text-primary hover:underline"
+                                        style={{ color: "var(--theme-primary-text)" }}
                                     >
                                         {crumb.label}
                                     </Link>
                                 ) : (
-                                    <span aria-current="page" className="text-neutral-900">
+                                    <span aria-current="page" className="text-primary"
+                                    >
                                         {crumb.label}
                                     </span>
                                 )}

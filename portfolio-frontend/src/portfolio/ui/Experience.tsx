@@ -64,7 +64,7 @@ const Experience = () => {
     const folderImageExperience = "company_icons"
     const folderImageEducation = "school_icons"
     return (
-        <section id={sectionsNav.experience.id} data-section={sectionsNav.experience.id} className='scroll-m-32'>
+        <section id={sectionsNav.experience.id} data-section={sectionsNav.experience.id} className='max-w-page mx-auto scroll-m-32 px-x'>
             <div className='flex flex-col md:flex-row gap-18'>
                 <article className='flex flex-col w-full '>
                     <TitleSection title={sectionsNav.experience.text} icon={sectionsNav.experience.icon} />
@@ -88,7 +88,7 @@ const Experience = () => {
                     </Timeline>
                 </article>
 
-                <article className='flex flex-col w-3/4'>
+                <article className='flex flex-col '>
                     <TitleSection title={"Educación"} icon={"fa-graduation-cap"} />
                     <Timeline>
                         {

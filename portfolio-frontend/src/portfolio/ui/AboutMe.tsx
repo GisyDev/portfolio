@@ -1,72 +1,104 @@
+import { about_me, social_media } from '../data/about'
+import PrimaryButton from '../components/PrimaryButton';
+import Paragraph from '../components/Paragraph'
+import AccentButton from '../components/AccentButton'
+import { sectionsNav } from '../data/nav'
+import PDF from "../../../public/documents/CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf"
+import StatusBarProfile from '../components/AboutMe/StatusBarProfile';
 
 
-import LanguageCard from "../components/LanguageCard";
-import Paragraph from "../components/Paragraph";
-import { sectionsNav } from '../data/nav';
-import { program_languages } from "../data/skills";
+const About = () => {
 
+    const { name, surname, profile, description } = about_me
 
-export default function AboutMe() {
-  return (
-    <section
-      id={sectionsNav.sobreMi.id}
-      data-section={sectionsNav.sobreMi.id}
-      className="mx-auto flex max-w-page items-center gap-20 scroll-m-32 opacity-0"
-      style={{ color: "var(--theme-title-text)" }}
-    >
-      {/* Foto */}
-      <div className="flex w-2/4 hidden md:inline">
-        <div className="relative h-[480px] w-full max-w-[600px]">
-          <div
-            className="absolute -bottom-5 -right-5 left-5 top-5 rounded-[32px] border-2 border-primary"
-          />
-          <img
-            src={"images/yo2.jpeg"}
-            alt="Gisela Estévez Moleiro"
-            className="absolute inset-0 h-full w-full rounded-[32px] object-cover"
-            style={{ backgroundColor: "var(--theme-bg-card)" }}
-          />
-          <div
-            className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-[15px] font-bold"
-            style={{
-              backgroundColor: "var(--theme-bg-card)",
-              borderColor: "var(--theme-border-card)",
-              color: "var(--theme-title-text)",
+    return (
+        <section className='mx-auto relative flex flex-col items-center scroll-m-30 w-full px-x' id={sectionsNav.inicio.id} data-section={sectionsNav.inicio.id}>
+            <article className='flex flex-col-reverse justify-between md:flex-row max-w-page bg-white shadow-lg rounded-lg p-10'
+             style={{
+                backgroundColor: "var(--theme-bg-card)",
+                borderColor: "var(--theme-border-card)",
             }}
-          >
-            Tenerife, Canarias
-          </div>
-        </div>
-      </div>
+            >
+                <div className='flex flex-col space-y-5 md:w-3/5 justify-center '>
+                    <div className='space-y-3 w-full lg:w-4/5'>
+                        <div className='space-y-2'>
+                            <h1 className='animate-fade-in animate-delay-25 text-sm flex flex-col space-y-2'>
+                                <div className='flex flex-col font-bold text-3xl sm:text-4xl lg:text-5xl' style={{ color: "var(--theme-title-text)" }}>
+                                    <span className=''> {name} {surname}</span>
+                                </div>
+                            </h1>
+                            <h3 className='animate-fade-in animate-delay-85 flex gap-5 text-xl md:text-2xl text-primary font-semibold '>{profile}</h3>
+                        </div>
 
-      {/* Texto */}
-      <div className="flex flex-col gap-6 w-full md:w-max-3/4">
+                        <Paragraph className='animate-fade-in animate-delay-120'> {description} </Paragraph>
+                    </div>
 
-        <h2
-          className="font-display text-[44px] font-bold leading-[1.1] tracking-tight"
-          style={{ color: "var(--theme-title-text)" }}
-        >
-          Me gusta cuidar tanto lo que se ve como lo que hay detrás.
-        </h2>
+                    <div className='flex flex-col lg:flex-row gap-3 animate-fade-in animate-delay-200 mt-2 w-full'>
 
-        <Paragraph>
-          Soy desarrolladora fullstack y trabajo en el frontend y en el backend
-          de aplicaciones web. Me he formado en desarrollo web, multiplataforma
-          y redes, lo que me da una visión completa de cómo se construye y se
-          despliega un proyecto.
-        </Paragraph>
+                        <div className='flex gap-2'>
+                            <a href={PDF}
+                                download="CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf">
+                                <PrimaryButton className='bg-primary hover:bg-primary-hover text-white'>
+                                    <p className=''>Descargar CV</p>
+                                    <i className="fa-solid fa-download"></i>
+                                </PrimaryButton>
 
-        {/* Stack */}
-        <div>
-          <p className="mb-3 text-sm" style={{ color: "var(--theme-primary-text)" }}>Tecnologias que domino:</p>
-          <div className="mt-1 flex flex-wrap gap-2.5">
-            {program_languages.map((tech) => (
-              <LanguageCard skill={tech} />
-            ))}
-          </div>
+                            </a>
+                        </div>
 
-        </div>
-      </div>
-    </section>
-  );
+
+                        <div className='flex gap-3 flex-wrap animate-fade-in animate-delay-300 text-xs'>
+                            {social_media.map((social) => {
+                                return (
+                                    <a
+                                        key={social.name}
+                                        className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all border py-2 px-2 hover:border-primary! hover:text-primary!"
+                                        style={{
+                                            color: "var(--theme-social-text)",
+                                            borderColor: "var(--theme-social-border)",
+                                        }}
+                                        href={social.link}
+                                        target="blank"
+                                    >
+                                        <i className={`${social.icon} fa-xl`}></i>
+                                        <p className='transition-all' >{social.name}</p>
+                                    </a>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+                <div className='flex animate-fade-in animate-delay-150 '>
+                    <div className='flex md:flex-col justify-center gap-4 items-center sm:gap-8'>
+                        <img
+                            src={"/images/yo1.png"}
+                            alt="Yo"
+                            className='rounded-full text-primary-button object-cover size-36 sm:size-42 md:size-60 lg:size-64 xl:size-72 mb-5 lg:mb-0'
+                            style={{
+                                outline: "4px solid var(--color-primary)",
+                                outlineOffset: "5px",
+                            }}
+                        />
+                        <div className='hidden sm:block'>
+                            <AccentButton>
+                                <p className="font-medium tracking-wide">{"Disponible para trabajar"}</p>
+                                <span className="relative flex size-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-95"></span>
+                                    <span className="relative inline-flex rounded-full size-2 bg-primary"></span>
+                                </span>
+                            </AccentButton>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <StatusBarProfile/>
+
+        </section>
+    )
 }
+
+
+
+
+export default About

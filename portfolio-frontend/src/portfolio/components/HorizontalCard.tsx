@@ -14,7 +14,6 @@ const HorizontalCard = ({ children, onClick }: HorizontalCardType) => {
                 border
                 transition-all duration-300 ease-out
                 hover:border-primary/50
-                
                 ${onClick ? "cursor-pointer" : ""}
             `}
             style={{
