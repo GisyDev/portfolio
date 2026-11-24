@@ -57,7 +57,7 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
                 <div className="flex flex-wrap gap-2 mb-6 items-center">
                     {project.tec.slice(0, 3).map(tech => (
-                        <LanguageCard skill={tech} />
+                        <LanguageCard key={tech.name} skill={tech} />
                     ))}
 
                     {(project.tec.length - 1) > 3 &&

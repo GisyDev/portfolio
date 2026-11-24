@@ -100,7 +100,7 @@ const Experience = () => {
                                     image: educ.icon
                                 }
 
-                                return <TimelineSection key={educ.name} data={data} folderImage={folderImageEducation} />
+                                return <TimelineSection key={educ.id} data={data} folderImage={folderImageEducation} />
                             })
                         }
                     </Timeline>
