@@ -31,7 +31,7 @@ const About = () => {
                             <Paragraph className='animate-fade-in animate-delay-120'> {description} </Paragraph>
                         </div>
 
-                        <div className='flex items-center gap-3 animate-fade-in animate-delay-200 mt-2'>
+                        <div className='flex flex-col lg:flex-row gap-3 animate-fade-in animate-delay-200 mt-2 w-full'>
                             <a href={PDF}
                                 download="CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf">
                                 <PrimaryButton className='bg-primary hover:bg-primary-hover text-white'>
@@ -76,7 +76,7 @@ const About = () => {
                         <img
                             src={"/images/yo1.png"}
                             alt="Yo"
-                            className='rounded-full text-primary-button object-cover size-36 sm:size-42 md:size-64'
+                            className='rounded-full text-primary-button object-cover size-36 sm:size-42 md:size-64 mb-5 lg:mb-0'
                             style={{
                                 outline: "4px solid var(--color-primary)",
                                 outlineOffset: "2px",

@@ -5,6 +5,7 @@ import Paragraph from '../Paragraph';
 import TitleSection from "../TitleSection";
 import LanguageCard from "../LanguageCard";
 import GoBack from '../GoBack';
+import { sectionsNav } from "../../data/nav";
 
 export default function ProjectDetail() {
     const { id: idName } = useParams();
@@ -32,12 +33,12 @@ export default function ProjectDetail() {
                 </Link>
             </section>
         );
-    }
+    }   
 
     return (
-        <section className="w-full space-y-4 z-10">
-            <GoBack/>
-            {/* <GoBack title={"Ir a la página principal"} link={"/"}/> */}
+        <section className="w-full space-y-4 z-10 animate-fade-in">
+            <GoBack backLabel={"Proyectos"}/>
+            
 
             <div className="space-y-3">
                 <h1 className="text-4xl font-semibold">{project.name}</h1>
@@ -47,12 +48,13 @@ export default function ProjectDetail() {
             <hr />
 
             <div className="space-y-10">
-                <div className="flex justify-between flex-col lg:flex-row gap-4 w-full">
+                <div className="flex flex-col lg:flex-row justify-between gap-4 w-full">
                     <div className="">
                         <img
                             src={imageSelected}
                             alt={`Vista previa del proyecto ${project.name}`}
                             className="w-full max-w-8xl object-fill rounded-xl"
+                            loading="lazy"
                         />
                     </div>
 
@@ -83,7 +85,7 @@ export default function ProjectDetail() {
                     )}
                 </div>
 
-                <div className="flex justify-between gap-15">
+                <div className="flex flex-col md:flex-row justify-between gap-15">
                     <div className="w-full space-y-3">
 
                         {project.web && (

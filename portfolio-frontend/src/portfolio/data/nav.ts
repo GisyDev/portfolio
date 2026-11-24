@@ -10,18 +10,24 @@ export const sectionsNav = {
         icon: "fa-briefcase",
         enlace: "#Experiencia"
     },
+    projects: {
+        id: "Proyecto",
+        text: "Proyectos",
+        icon: "fa-solid fa-layer-group",
+        enlace: "#Project"
+    },
+    complementaryTraining: {
+        id: "FormacionComplementaria",
+        text: "Formación Complementaria",
+        icon: "fa-solid fa-layer-group",
+        enlace: "#Training"
+    },
     sobreMi: {
         id: 'SobreMi',
         text: 'Sobre mí',
         icon: "fa-graduation-cap",
         enlace: "#SobreMi"
     },
-    projects: {
-        id: "Proyecto",
-        text: "Proyectos",
-        icon: "fa-solid fa-layer-group",
-        enlace: "#Project"
-    }
 } as const
 
 

@@ -12,6 +12,7 @@ type ProjectTopBarProps = {
     backTo?: string;
     items?: Crumb[];
     rootLabel?: string;
+    func?: () => void
 };
 
 function crumbsFromPath(pathname: string, rootLabel: string): Crumb[] {
@@ -30,7 +31,7 @@ function crumbsFromPath(pathname: string, rootLabel: string): Crumb[] {
     return crumbs;
 }
 
-export default function GoBack({ backLabel = "Proyectos", backTo = "/", items, rootLabel = "Portafolio" }: ProjectTopBarProps) {
+export default function GoBack({ backLabel, backTo = "/", items, rootLabel = "Portafolio", func}: ProjectTopBarProps) {
     const { pathname } = useLocation();
     const crumbs = items ?? crumbsFromPath(pathname, rootLabel);
 
@@ -41,7 +42,7 @@ export default function GoBack({ backLabel = "Proyectos", backTo = "/", items, r
             <Link to={backTo}>
                 <AccentButton>
                     <i className="fa-solid fa-arrow-left transition-all group-hover:-translate-x-1"></i>
-                    <p className="font-medium tracking-wide">{"Detalles"}</p>
+                    <p className="font-medium tracking-wide">{backLabel}</p>
                 </AccentButton>
             </Link>
 

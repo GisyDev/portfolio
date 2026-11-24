@@ -20,8 +20,8 @@ const TimelineSection = ({ data, index }: TimelineSectionType) => {
     return (
         <div>
             <div className='absolute'>
-                <div className={`${index === 0 && "animate-ping"} relative right-[38px] top-[46px] bg-primary w-3 h-3 rounded-full`}></div>
-                <div className={`absolute right-[38px] top-[46px] bg-primary w-3 h-3 rounded-full`}></div>
+                <div className={`${index === 0 && "animate-ping"} relative right-[31px] top-[46px] bg-primary w-3 h-3 rounded-full`}></div>
+                <div className={`absolute right-[31px] top-[46px] bg-primary w-3 h-3 rounded-full`}></div>
             </div>
             <HorizontalCard>
                 <div className='flex gap-5 items-center w-full'>

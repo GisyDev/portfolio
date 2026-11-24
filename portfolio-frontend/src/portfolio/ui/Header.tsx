@@ -49,8 +49,8 @@ const Header = () => {
         </div>
 
         {
-          hiddenNavMovile && <div className='flex items-center gap-4 '>
-            <button onClick={() => setHiddenNavMovile(!hiddenNavMovile)} className='sm:hidden' style={{ color: "var(--theme-title-text)" }}>
+           <div className='flex lg:hidden items-center gap-4 '>
+            <button onClick={() => setHiddenNavMovile(!hiddenNavMovile)} className='' style={{ color: "var(--theme-title-text)" }}>
               {
                 hiddenNavMovile
                   ? <i className="fa-solid fa-x"></i>
@@ -60,7 +60,7 @@ const Header = () => {
           </div>
         }
 
-        <div className='hidden sm:flex items-center gap-6 '>
+        <div className='hidden lg:flex items-center gap-6 '>
           <ul className='flex flex-row gap-10'>
             {
               sectionsNavArray.map((element) => {
@@ -85,7 +85,7 @@ const Header = () => {
         <button
           onClick={toggle}
           aria-label={theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'}
-          className='w-9 h-9 flex items-center justify-center rounded-xl border transition-all duration-300 cursor-pointer hover:border-primary/60 hover:text-primary'
+          className='hidden w-9 h-9 lg:flex items-center justify-center rounded-xl border transition-all duration-300 cursor-pointer hover:border-primary/60 hover:text-primary'
           style={{
             border: "1px solid var(--theme-nav-border)",
             color: "var(--theme-primary-text)",

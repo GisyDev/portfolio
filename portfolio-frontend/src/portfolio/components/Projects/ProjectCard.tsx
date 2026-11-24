@@ -13,6 +13,11 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
     const navigate = useNavigate()
 
+    const detailsFunction = (projectName: string) => {
+        navigate(`Proyecto/${projectName}`)
+        window.scrollTo(0, 0)
+    }
+
     return (
         <article
             key={project.id}
@@ -22,7 +27,7 @@ const ProjectCard = ({ project }: ProjectCardType) => {
                 borderColor: "var(--theme-border-card)",
             }}
         >
-            
+
             <div className="relative overflow-hidden group">
                 <img
                     src={project.image_preview}
@@ -64,7 +69,7 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
                 <div className='flex items-center '>
                     <div>
-                        <AccentButton onClickFunction={() => navigate(`Proyecto/${project.name}`)}>
+                        <AccentButton onClickFunction={() => detailsFunction(project.name)}>
                             <p className="font-medium tracking-wide">{"Detalles"}</p>
                             <i className="fa-solid fa-arrow-right transition-all group-hover:translate-x-1"></i>
                         </AccentButton>

@@ -15,7 +15,7 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
     const classIsHidden = hiddenNavMovile ? "opacity-100" : "opacity-0 pointer-events-none"
     return (
         <div
-            className={`${classIsHidden} fixed right-5 top-16 p-5 backdrop-blur-3xl rounded-lg transition-all duration-80 z-50`}
+            className={`${classIsHidden} fixed right-5 top-10 p-5 backdrop-blur-3xl rounded-lg transition-all duration-80 z-50`}
             style={{
                 backgroundColor: "var(--theme-mobile-nav-bg)",
                 border: "2px solid var(--theme-nav-border)",
@@ -37,7 +37,6 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
                         </li>
                     })
                 }
-                {/* Theme toggle inside mobile menu */}
                 <li>
                     <button
                         onClick={toggle}

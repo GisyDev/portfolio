@@ -5,6 +5,7 @@ import useAnimationInterceptionObserver from '../hooks/useAnimationInterceptionO
 import AboutMe from '../ui/AboutMe';
 import PageBackground from '../components/PageBackground';
 import Projects from '../ui/Projects';
+import ComplementaryTraining from '../ui/ComplementaryTraining';
 
 const Home = () => {
 
@@ -19,8 +20,9 @@ const Home = () => {
         {/* <Projects/> */}
         {/* <Skills /> */}
         {/* <Formation/> */}
-        <AboutMe />
         <Projects/>
+        <ComplementaryTraining/>
+        <AboutMe />
     </>
 
   )
