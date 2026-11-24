@@ -1,8 +1,8 @@
 export const sectionsNav = {
-    about: {
-        id: 'SobreMi',
-        text: 'Sobre mí',
-        enlace: "#SobreMi"
+    inicio: {
+        id: 'Inicio',
+        text: 'Inicio',
+        enlace: "#Inicio"
     },
     experience: {
         id: 'Experiencia',
@@ -10,12 +10,24 @@ export const sectionsNav = {
         icon: "fa-briefcase",
         enlace: "#Experiencia"
     },
-    education: {
-        id: 'Formacion',
-        text: 'Formacion',
-        icon: "fa-graduation-cap",
-        enlace: "#Formacion"
-    }
+    projects: {
+        id: "Proyecto",
+        text: "Proyectos",
+        icon: "fa-solid fa-layer-group",
+        enlace: "#Project"
+    },
+    complementaryTraining: {
+        id: "FormacionComplementaria",
+        text: "Formación Complementaria",
+        icon: "fa-solid fa-layer-group",
+        enlace: "#Training"
+    },
+    // sobreMi: {
+    //     id: 'SobreMi',
+    //     text: 'Sobre mí',
+    //     icon: "fa-graduation-cap",
+    //     enlace: "#SobreMi"
+    // },
 } as const
 
 

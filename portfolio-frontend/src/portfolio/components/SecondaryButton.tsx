@@ -9,9 +9,14 @@ type SecondaryButtonType = {
 
 const SecondaryButton = ({ className, children, onClick }: SecondaryButtonType) => {
     return (
-        <button className='p-4 rounded-full size-12 sm:rounded-2xl border-2 border-primary/60 hover:border-primary text-center cursor-pointer transition-all'>
+        <button className={`${className} flex gap-2 items-center justify-center rounded-md cursor-pointer transition-all border text-sm py-2 px-4  hover:border-primary! hover:text-primary!`}
+            style={{
+                color: "var(--theme-social-text)",
+                borderColor: "var(--theme-social-border)",
+            }}>
             {children}
         </button>
+
     )
 }
 

@@ -5,10 +5,15 @@ export type programLanguagesType = {
 }
 
 
+const folder = "language_icons"
+
+
+
 export const program_languages = [
     {
         name: "HTML5",
-        image: "html.svg",
+        image: `${folder}/html.svg`,
+        color: "#E34F26",
         description: [
             "Etiquetas semánticas (header, main, section, article, nav, footer) para estructurar el contenido",
             "Formularios con validación nativa (required, pattern, type=\"email\")",
@@ -19,7 +24,8 @@ export const program_languages = [
     },
     {
         name: "CSS",
-        image: "css.svg",
+        image: `${folder}/css.svg`,
+        color: "#2D8CE0",
         description: [
             "Maquetación responsive con Flexbox y Grid",
             "Media queries y unidades relativas (rem, %, vw/vh)",
@@ -30,17 +36,20 @@ export const program_languages = [
     },
     {
         name: "Tailwind",
-        image: "tailwind.svg",
-        
+        image: `${folder}/tailwind.svg`,
+        color: "#38BDF8",
+
     },
     // {
     //     name: "Appian",
     //     image: "appian.svg",
-        
+    //     color: "#0D8AC4",
+
     // },
     {
         name: "JavaScript",
-        image: "javascript.svg",
+        image: `${folder}/javascript.svg`,
+        color: "#F7DF1E",
         description: [
             "Closures, scope, hoisting y funcionamiento de this",
             "Asincronía: promesas, async/await y event loop",
@@ -52,7 +61,8 @@ export const program_languages = [
     },
     {
         name: "TypeScript",
-        image: "typescript.svg",
+        image: `${folder}/typescript.svg`,
+        color: "#3178C6",
         description: [
             "Tipado de variables, funciones, objetos y componentes",
             "Interfaces, types, genéricos y tipos unión/intersección",
@@ -63,7 +73,8 @@ export const program_languages = [
     },
     {
         name: "React",
-        image: "react.svg",
+        image: `${folder}/react.svg`,
+        color: "#61DAFB",
         description: [
             "Componentes reutilizables y flujo de datos unidireccional",
             "Hooks: useState, useEffect, useContext, useMemo, useCallback",
@@ -76,7 +87,8 @@ export const program_languages = [
     // Backend
     {
         name: "Java",
-        image: "java.svg",
+        image: `${folder}/java.svg`,
+        color: "#F89820",
         description: [
             "Programación orientada a objetos: herencia, polimorfismo, interfaces, clases abstractas",
             "Colecciones: List, Map, Set",
@@ -88,7 +100,8 @@ export const program_languages = [
     },
     {
         name: "Spring Boot",
-        image: "spring.svg",
+        image: `${folder}/spring.svg`,
+        color: "#6DB33F",
         description: [
             "Arquitectura en capas: controlador, servicio, repositorio",
             "Anotaciones @RestController, @Service, @Autowired para inyección de dependencias",
@@ -100,7 +113,8 @@ export const program_languages = [
     },
     {
         name: "Node.js",
-        image: "nodejs.svg",
+        image: `${folder}/nodejs.svg`,
+        color: "#3FA34D",
         description: [
             "Modelo asíncrono y no bloqueante basado en el event loop",
             "Rutas, middlewares y controladores con Express",
@@ -111,7 +125,8 @@ export const program_languages = [
     },
     {
         name: "PostgreSQL",
-        image: "postgresql.svg",
+        image: `${folder}/postgresql.svg`,
+        color: "#4F8FC0",
         description: [
             "Diseño de esquemas relacionales normalizados",
             "Claves primarias y foráneas",
@@ -123,6 +138,7 @@ export const program_languages = [
     // {
     //     name: "MySQL",
     //     image: "mysql.svg",
+    //     color: "#00758F",
     //     description: [
     //         "Diseño y normalización de bases de datos relacionales",
     //         "Consultas SQL: SELECT, JOIN, GROUP BY, subconsultas",
@@ -135,7 +151,8 @@ export const program_languages = [
     // Herramientas
     {
         name: "Git",
-        image: "git.svg",
+        image: `${folder}/git.svg`,
+        color: "#F05032",
         description: [
             "Ramas, merges, rebase y resolución de conflictos",
             "Buenas prácticas de commits",
@@ -146,7 +163,8 @@ export const program_languages = [
     },
     {
         name: "Postman",
-        image: "postman.svg",
+        image: `${folder}/postman.svg`,
+        color: "#FF6C37",
         description: [
             "Diseño y prueba de endpoints REST",
             "Colecciones organizadas por proyecto",

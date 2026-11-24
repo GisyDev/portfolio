@@ -1,31 +1,21 @@
-import Header from '../ui/Header'
-import About from '../ui/About'
+import About from '../ui/AboutMe'
 import Experience from '../ui/Experience';
-import Formation from '../ui/Formations';
-import Footer from '../ui/Footer';
-import { Outlet } from 'react-router-dom';
 import useAnimationInterceptionObserver from '../hooks/useAnimationInterceptionObserver';
-import LanguageModal from '../modals/LanguajeModal';
-import { useState } from 'react';
-
-
+import Projects from '../ui/Projects';
+import ComplementaryTraining from '../ui/ComplementaryTraining';
+import LanguagesCarrusel from '../ui/LanguagesCarrusel';
 
 const Home = () => {
 
   useAnimationInterceptionObserver()
 
-
-
-
   return (
     <>
-      {/* <Background />  */}
-      <About/>
-      <Experience />
-      {/* <Projects/> */}
-      {/* <Skills /> */}
-      <Formation/>
-      
+        <About />
+        <LanguagesCarrusel/>
+        <Experience />
+        <Projects/>
+        <ComplementaryTraining/>
     </>
 
   )

@@ -2,14 +2,16 @@ import React from 'react'
 
 type AccentButtonType = {
     children?: React.ReactNode
-    text: string
+    onClickFunction?: () => void
 }
 
-const AccentButton = ({ children, text }: AccentButtonType) => {
+const AccentButton = ({ children, onClickFunction }: AccentButtonType) => {
     return (
-        <button className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white border border-primary/50 bg-primary/10 backdrop-blur-sm  hover:border-primary transition-all duration-300 ">
+        <button
+            className="group flex items-center gap-2 text-xs px-4 py-2 rounded-full bg-primary/10 border border-transparent backdrop-blur-sm font-bold text-primary  hover:border-primary! transition-all duration-300 cursor-pointer"
+            onClick={() => onClickFunction && onClickFunction()}
+        >
             {children}
-            <p className="font-medium tracking-wide">{text}</p>
         </button>
     )
 }
