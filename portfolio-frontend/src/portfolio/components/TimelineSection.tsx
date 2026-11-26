@@ -1,4 +1,5 @@
 import HorizontalCard from './HorizontalCard'
+import { assetUrl } from '../../lib/assetUrl'
 
 type TimelineSectionType = {
     data: {
@@ -25,7 +26,7 @@ const TimelineSection = ({ data, index }: TimelineSectionType) => {
             </div>
             <HorizontalCard>
                 <div className='flex gap-5 items-center w-full'>
-                    <img src={`/images/${data.image}`} alt="" className='rounded-lg w-14' />
+                    <img src={assetUrl(`/images/${data.image}`)} alt="" className='rounded-lg w-14' />
                     <div className='flex items-center space-y-1 justify-between w-full'>
                         <div className='w-full space-y-1'>
                             <div className='flex gap-1 flex-col-reverse justify-between sm:flex-row'>

@@ -5,6 +5,7 @@ import AccentButton from '../components/AccentButton'
 import { sectionsNav } from '../data/nav'
 import PDF from "../../../public/documents/CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf"
 import StatusBarProfile from '../components/AboutMe/StatusBarProfile';
+import { assetUrl } from '../../lib/assetUrl';
 
 
 const About = () => {
@@ -71,7 +72,7 @@ const About = () => {
                 <div className='flex animate-fade-in animate-delay-150 '>
                     <div className='flex md:flex-col justify-center gap-4 items-center sm:gap-8'>
                         <img
-                            src={"/images/yo1.png"}
+                            src={assetUrl("/images/yo1.png")}
                             alt="Yo"
                             className='rounded-full text-primary-button object-cover size-36 sm:size-42 md:size-60 lg:size-64 xl:size-72 mb-5 lg:mb-0'
                             style={{

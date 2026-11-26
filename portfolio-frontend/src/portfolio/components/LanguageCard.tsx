@@ -1,4 +1,4 @@
-
+import { assetUrl } from '../../lib/assetUrl'
 
 const LanguageCard = ({ skill }: { skill: any }) => {
 
@@ -14,7 +14,7 @@ const LanguageCard = ({ skill }: { skill: any }) => {
         >
             <img
                 className="size-4 object-contain"
-                src={`/images/${skill.image}`}
+                src={assetUrl(`/images/${skill.image}`)}
                 alt=""
             />
             <p

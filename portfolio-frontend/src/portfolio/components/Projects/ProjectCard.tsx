@@ -3,6 +3,7 @@ import LanguageCard from '../LanguageCard'
 import AccentButton from '../AccentButton';
 import { useNavigate } from 'react-router-dom';
 import SecondaryButton from '../SecondaryButton';
+import { assetUrl } from '../../../lib/assetUrl';
 
 
 type ProjectCardType = {
@@ -31,7 +32,7 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
             <div className="relative overflow-hidden group">
                 <img
-                    src={project.image_preview}
+                    src={assetUrl(project.image_preview)}
                     alt={project.name}
                     className=" group-hover:scale-105 transition-transform duration-500"
                 />

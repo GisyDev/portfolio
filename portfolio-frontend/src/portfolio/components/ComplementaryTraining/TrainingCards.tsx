@@ -3,14 +3,13 @@ import type { ComplementaryTrainingType } from '../../data/complementary-trainin
 import Paragraph from '../Paragraph';
 import AccentButton from '../AccentButton';
 import PrimaryButton from '../PrimaryButton';
+import { assetUrl } from '../../../lib/assetUrl';
 
 
 type TrainingCardType = {
     training: ComplementaryTrainingType
 }
 
-
-const assetSrc = (path: string) => (path.startsWith("/") ? path : `/${path}`);
 
 const TrainingCard = ({ training }: TrainingCardType) => {
 
@@ -42,7 +41,7 @@ const TrainingCard = ({ training }: TrainingCardType) => {
 
 
                     <img
-                        src={image}
+                        src={assetUrl(image)}
                         alt=""
                         loading="lazy"
                         className="h-full w-full object-cover shadow-2xl"
@@ -84,7 +83,7 @@ const TrainingCard = ({ training }: TrainingCardType) => {
                                         style={{ borderColor: `${tec.color}66` }}
                                     >
                                         <img
-                                            src={assetSrc(tec.image)}
+                                            src={assetUrl(`/images/${tec.image}`)}
                                             alt=""
                                             className="h-3.5 w-3.5 object-contain"
                                         />
@@ -98,7 +97,7 @@ const TrainingCard = ({ training }: TrainingCardType) => {
                             <div className='flex justify-between'>
 
                                 <div className='flex items-center gap-2'>
-                                    <img className='w-8 rounded-lg' src={plataform.icon} alt="" />
+                                    <img className='w-8 rounded-lg' src={assetUrl(plataform.icon)} alt="" />
                                     <p>{plataform.name}</p>
                                 </div>
 

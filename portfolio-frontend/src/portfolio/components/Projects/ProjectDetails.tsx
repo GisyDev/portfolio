@@ -7,6 +7,8 @@ import LanguageCard from "../LanguageCard";
 import GoBack from '../GoBack';
 import { sectionsNav } from "../../data/nav";
 import SecondaryButton from "../SecondaryButton";
+import { assetUrl } from "../../../lib/assetUrl";
+
 
 export default function ProjectDetail() {
     const { id: idName } = useParams();
@@ -61,7 +63,7 @@ export default function ProjectDetail() {
                 <div className="flex flex-col lg:flex-row gap-4 w-full">
                     <div className="lg:flex-1">
                         <img
-                            src={imageSelected}
+                            src={assetUrl(imageSelected)}
                             alt={`Vista previa del proyecto ${project.name}`}
                             className="w-full rounded-xl"
                             loading="lazy"
@@ -87,7 +89,7 @@ export default function ProjectDetail() {
                                                 ${imageSelected === image ? "ring-2 ring-primary" : ""}`}
                                             >
                                                 <img
-                                                    src={image}
+                                                    src={assetUrl(image)}
                                                     alt={`Miniatura ${index + 1} de ${project.name}`}
                                                     className="absolute inset-0 h-full w-full object-cover"
                                                 />
