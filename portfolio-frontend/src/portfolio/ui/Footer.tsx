@@ -39,7 +39,7 @@ const Footer = () => {
             aria-label="Navegación del pie"
             className="sm:border-l sm:border-slate-200 sm:pl-10"
           >
-            <h2 className="mb-5 text-lg font-semibold text-secondary">
+            <h2 className="mb-5 text-lg font-semibold text-[var(--theme-title-text)]">
               Navegación
               <span className="mt-2 block h-1 w-12 rounded-full bg-primary" />
             </h2>
@@ -65,7 +65,7 @@ const Footer = () => {
                     }
                   >
                     <i
-                      className={`fa-solid ${nav.icon} text-xs text-secondary
+                      className={`fa-solid ${nav.icon} text-xs text-[var(--theme-footer-accent)]
                       transition-colors duration-200
                     group-hover:text-primary`}
                       aria-hidden="true"
@@ -82,7 +82,7 @@ const Footer = () => {
           {/* Contacto */}
           <div className="sm:border-l sm:border-slate-200 sm:pl-10">
 
-            <h2 className="mb-5 text-lg font-semibold text-secondary">
+            <h2 className="mb-5 text-lg font-semibold text-[var(--theme-title-text)]">
               Contactos
               <span className="mt-2 block h-1 w-12 rounded-full bg-primary" />
             </h2>
@@ -98,7 +98,7 @@ const Footer = () => {
                     transition-colors duration-200
                   hover:text-primary"
                   >
-                    <span className="flex shrink-0 items-center justify-center rounded-xl text-secondary transition-colors group-hover:text-primary">
+                    <span className="flex shrink-0 items-center justify-center rounded-xl text-[var(--theme-footer-accent)] transition-colors group-hover:text-primary">
                       <i className={social.icon} aria-hidden="true" />
                     </span>
 

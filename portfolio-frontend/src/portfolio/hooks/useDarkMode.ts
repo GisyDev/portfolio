@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react'
 
 type Theme = 'dark' | 'light'
 
-const STORAGE_KEY = 'portfolio-theme'
+const STORAGE_KEY = 'portfolio-theme-v2'
 
 const getInitialTheme = (): Theme => {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null
     if (stored === 'dark' || stored === 'light') return stored
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return 'light'
 }
 
 const useDarkMode = () => {
@@ -15,7 +15,7 @@ const useDarkMode = () => {
         try {
             return getInitialTheme()
         } catch {
-            return 'dark'
+            return 'light'
         }
     })
 

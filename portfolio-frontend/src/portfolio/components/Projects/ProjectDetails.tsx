@@ -136,13 +136,14 @@ export default function ProjectDetail() {
 
                         <div className="w-full">
                             <a
-                                className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all border py-2 px-2 hover:border-primary! hover:text-primary! bg-white"
+                                className="group flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border bg-[var(--theme-bg-card)] px-4 py-2 transition-all hover:border-primary! hover:bg-[var(--theme-bg-card-hover)] hover:text-primary! focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
                                 style={{
                                     color: "var(--theme-social-text)",
                                     borderColor: "var(--theme-social-border)",
                                 }}
                                 href={project.github}
-                                target="blank"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <i className="fa-brands fa-github"></i>
                                 <span>Código</span>

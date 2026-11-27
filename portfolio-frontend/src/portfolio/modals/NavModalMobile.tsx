@@ -29,14 +29,14 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
                                 className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""}`}
                                 style={{ color: activeNav === element.id ? undefined : "var(--theme-primary-text)" }}
                                 id={element.enlace}
-                                onClick={() => document.getElementById(element.id)?.scrollBy({behavior: "smooth"})}
+                                onClick={() => document.getElementById(element.id)?.scrollIntoView({ behavior: "smooth" })}
                             >
                                 {element.text}
                             </button>
                         </li>
                     })
                 }
-                {/* <li>
+                <li>
                     <button
                         onClick={toggle}
                         className='flex items-center gap-2 hover:text-primary transition-all cursor-pointer font-semibold'
@@ -47,7 +47,7 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
                             : <><i className="fa-solid fa-moon text-sm"></i><span>Modo oscuro</span></>
                         }
                     </button>
-                </li> */}
+                </li>
             </ul>
         </div>
     )

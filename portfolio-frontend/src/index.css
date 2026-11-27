@@ -73,8 +73,7 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* ─── Dark theme (default) ────────────────────────────────────────────── */
-    :root,
+    /* ─── Dark theme ──────────────────────────────────────────────────────── */
     [data-theme="dark"] {
         --theme-bg-app: #121212;
         --theme-bg-primary: #0F0810;
@@ -99,6 +98,7 @@
 
         --theme-social-text: #d4d4d8;
         --theme-social-border: rgba(82, 82, 91, 0.60);
+        --theme-footer-accent: #78cbd8;
 
         --theme-star-opacity: 1;
         --theme-blob-1: rgba(232, 95, 157, 0.50);
@@ -109,7 +109,8 @@
         --theme-skill-bg-mix: #000;
     }
 
-    /* ─── Light theme ─────────────────────────────────────────────────────── */
+    /* ─── Light theme (default) ───────────────────────────────────────────── */
+    :root:not([data-theme]),
     [data-theme="light"] {
         --theme-bg-app: #F9E8DE;
         --theme-bg-primary: #F2EEF7;
@@ -134,6 +135,7 @@
 
         --theme-social-text: #4B3D5E;
         --theme-social-border: rgba(180, 160, 210, 0.60);
+        --theme-footer-accent: #4A8C9B;
 
         --theme-star-opacity: 0;
         --theme-blob-1: rgba(232, 95, 157, 0.12);
