@@ -18,7 +18,6 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
             className={`${classIsHidden} fixed right-5 top-10 p-5 backdrop-blur-3xl rounded-lg transition-all duration-80 z-50`}
             style={{
                 backgroundColor: "var(--theme-mobile-nav-bg)",
-                border: "2px solid var(--theme-nav-border)",
                 color: "var(--theme-title-text)",
             }}
         >
@@ -26,18 +25,18 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
                 {
                     sectionsNavArray.map((element) => {
                         return <li className='font-semibold' onClick={() => reDirection()} key={element.id}>
-                            <a
+                            <button
                                 className={`hover:text-primary transition-all ${activeNav === element.id ? "text-primary" : ""}`}
                                 style={{ color: activeNav === element.id ? undefined : "var(--theme-primary-text)" }}
-                                href={`${element.enlace}`}
                                 id={element.enlace}
+                                onClick={() => document.getElementById(element.id)?.scrollBy({behavior: "smooth"})}
                             >
                                 {element.text}
-                            </a>
+                            </button>
                         </li>
                     })
                 }
-                <li>
+                {/* <li>
                     <button
                         onClick={toggle}
                         className='flex items-center gap-2 hover:text-primary transition-all cursor-pointer font-semibold'
@@ -48,7 +47,7 @@ const NavModalMobile = ({ hiddenNavMovile, reDirection, toggle, theme }: NavModa
                             : <><i className="fa-solid fa-moon text-sm"></i><span>Modo oscuro</span></>
                         }
                     </button>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

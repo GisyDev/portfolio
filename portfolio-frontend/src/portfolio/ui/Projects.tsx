@@ -11,7 +11,7 @@ const Projects = () => {
 
         <Section title={sectionsNav.projects.text} description={sectionsNav.projects.description} icon={sectionsNav.projects.icon} reference={sectionsNav.projects.id}>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-page">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-page w-full">
                 {projects.map(project => (
                     <ProjectCard key={project.id} project={project} />
                 ))}

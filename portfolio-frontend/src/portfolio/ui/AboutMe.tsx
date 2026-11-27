@@ -14,7 +14,7 @@ const About = () => {
 
     return (
         <section className='mx-auto relative flex flex-col items-center scroll-m-30 w-full px-x' id={sectionsNav.inicio.id} data-section={sectionsNav.inicio.id}>
-            <article className='flex flex-col-reverse justify-center md:flex-row md:max-w-page  rounded-lg py-6'
+            <article className='flex flex-col-reverse justify-center md:flex-row md:max-w-page rounded-lg px-5 py-5'
                 style={{
                     backgroundColor: "var(--theme-bg-card)",
                     borderColor: "var(--theme-border-card)",
@@ -76,7 +76,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='flex animate-fade-in animate-delay-150 '>
-                    <div className='flex md:flex-col justify-center gap-3 items-center sm:gap-8 px-3 py-3'>
+                    <div className='flex md:flex-col justify-center gap-6 items-center sm:gap-8 px-3 py-3'>
                         <img
                             src={assetUrl("/images/yo2.jpeg")}
                             alt="Yo"
@@ -86,7 +86,7 @@ const About = () => {
                                 outlineOffset: "5px",
                             }}
                         />
-                        <div className='hidden sm:block'>
+                        <div className=''>
                             <AccentButton>
                                 <p className="font-medium tracking-wide">{"Disponible para trabajar"}</p>
                                 <span className="relative flex size-2">

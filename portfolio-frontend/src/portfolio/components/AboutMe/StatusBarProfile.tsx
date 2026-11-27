@@ -10,7 +10,7 @@ const defaultStats = [
 export default function StatsBar({ items = defaultStats }) {
     return (
         
-        <article className="w-full block mt-5 sm:absolute sm:mt-0 top-[95%] sm:top-[95%] lg:top-[90%] max-w-md rounded-3xl 
+        <article className="w-full block mt-5 sm:absolute sm:mt-0 top-[95%] sm:top-[98%] md:top-[95%] lg:top-[90%] max-w-md rounded-3xl 
         animate-fade-in animate-delay-30 px-6 py-3 shadow sm:rounded-full sm:px-10"
             style={{
                 backgroundColor: "var(--theme-bg-card)",

@@ -47,7 +47,7 @@ export default function ProjectDetail() {
     ].filter((col) => col.length > 0);
 
     return (
-        <section className="w-full space-y-4 z-10 animate-fade-in max-w-page m-auto"
+        <section className="w-full space-y-4 z-10 animate-fade-in max-w-page m-auto px-x"
         >
             <GoBack backLabel={"Proyectos"} />
 
@@ -60,51 +60,58 @@ export default function ProjectDetail() {
             <hr />
 
             <div className="space-y-10">
+
                 <div className="flex flex-col lg:flex-row gap-4 w-full">
-                    <div className="lg:flex-1">
+
+                    <div className="w-full min-w-0 flex-1 overflow-hidden rounded-xl">
                         <img
                             src={assetUrl(imageSelected)}
                             alt={`Vista previa del proyecto ${project.name}`}
-                            className="w-full rounded-xl"
+                            className="block w-full h-auto max-h-[600px] object-contain rounded-xl bg-slate-100"
                             loading="lazy"
                         />
                     </div>
 
+                    {/* Galería de miniaturas */}
                     {gallery.length > 1 && (
-                        <div className="flex gap-2 lg:w-[20rem]">
-                            {columns.map((col, c) => (
-                                <div key={c} className="flex flex-1 flex-col gap-2">
-                                    {col.map((image) => {
-                                        const index = gallery.indexOf(image);
-                                        return (
-                                            <button
-                                                key={image}
-                                                type="button"
-                                                onMouseEnter={() => setSelected(image)}
-                                                onClick={() => setSelected(image)}
-                                                aria-label={`Ver imagen ${index + 1}`}
-                                                className={`relative aspect-video  lg:min-h-0 lg:flex-1
-                                                cursor-pointer overflow-hidden rounded-lg
-                                                hover:ring-2 hover:ring-primary
-                                                ${imageSelected === image ? "ring-2 ring-primary" : ""}`}
-                                            >
-                                                <img
-                                                    src={assetUrl(image)}
-                                                    alt={`Miniatura ${index + 1} de ${project.name}`}
-                                                    className="absolute inset-0 h-full w-full object-cover"
-                                                />
-                                            </button>
-                                        );
-                                    })}
-
-                                    {Array.from({ length: rows - col.length }).map((_, i) => (
-                                        <div key={`empty-${i}`} className="hidden lg:block lg:flex-1" />
-                                    ))}
-                                </div>
+                        <div className=" flex gap-4 overflow-x-auto pb-2
+                        lg:w-36 lg:shrink-0 lg:flex-col
+                        lg:overflow-x-hidden lg:overflow-y-auto
+                        lg:pb-0 p-2
+                        md:p-3
+                        scrollbar-hide
+                        ">
+                            {gallery.map((image, index) => (
+                                <button
+                                    key={image}
+                                    type="button"
+                                    onClick={() => setSelected(image)}
+                                    onMouseEnter={() => setSelected(image)}
+                                    aria-label={`Ver imagen ${index + 1}`}
+                                    aria-pressed={imageSelected === image}
+                                    className={`
+                        relative aspect-video shrink-0 overflow-hidden
+                        rounded-lg cursor-pointer transition-all
+                        w-28 sm:w-36 lg:w-full
+                        ${imageSelected === image
+                                            ? "ring-2 ring-primary ring-offset-2"
+                                            : "opacity-75 hover:opacity-100 hover:ring-2 hover:ring-primary"
+                                        }
+                    `}
+                                >
+                                    <img
+                                        src={assetUrl(image)}
+                                        alt={`Miniatura ${index + 1} de ${project.name}`}
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </button>
                             ))}
                         </div>
                     )}
+
                 </div>
+
 
 
 
@@ -128,21 +135,18 @@ export default function ProjectDetail() {
                         )}
 
                         <div className="w-full">
-                            <SecondaryButton className={"w-full"}>
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="space-x-2"
-                                    style={{
-                                        color: "var(--theme-social-text)",
-                                        borderColor: "var(--theme-social-border)",
-                                    }}
-                                >
-                                    <i className="fa-brands fa-github"></i>
-                                    <span>Código</span>
-                                </a>
-                            </SecondaryButton>
+                            <a
+                                className="group flex gap-2 items-center justify-center rounded-lg cursor-pointer transition-all border py-2 px-2 hover:border-primary! hover:text-primary! bg-white"
+                                style={{
+                                    color: "var(--theme-social-text)",
+                                    borderColor: "var(--theme-social-border)",
+                                }}
+                                href={project.github}
+                                target="blank"
+                            >
+                                <i className="fa-brands fa-github"></i>
+                                <span>Código</span>
+                            </a>
                         </div>
 
 

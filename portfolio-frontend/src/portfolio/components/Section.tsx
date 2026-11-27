@@ -12,8 +12,12 @@ type SectionType = {
 
 const Section = ({ children, title, description, icon, reference }: SectionType) => {
     return (
-        <section className='max-w-page mx-auto scroll-mt-32 opacity-0 animate-fade-in animate-delay-200 px-x' id={reference} data-section={reference}>
-            <TitleSection title={title} description={description} icon={icon}/>
+        <section
+            className="mx-auto w-full max-w-page scroll-mt-32 px-x opacity-0 animate-fade-in animate-delay-200"
+            id={reference}
+            data-section={reference}
+        >
+            <TitleSection title={title} description={description} icon={icon} />
             {children}
         </section>
     )

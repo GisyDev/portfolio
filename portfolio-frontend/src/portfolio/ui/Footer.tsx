@@ -27,7 +27,7 @@ const Footer = () => {
               <TitleName />
             </div>
 
-            <p className="text-sm" style={{color: "var(--theme-primary-text)"}}>
+            <p className="text-sm" style={{ color: "var(--theme-primary-text)" }}>
               Desarrolladora Fullstack
             </p>
 
@@ -47,24 +47,33 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               {sectionsNavArray.map((nav) => (
                 <li key={nav.id}>
+
                   <button
                     type="button"
-                    className={` flex items-center gap-3 text-sm text-slate-600 ${linkClass} cursor-pointer`}
+                    className={`
+    group flex items-center gap-3 text-sm
+    text-[var(--theme-primary-text)]
+    transition-colors duration-200
+    hover:text-primary
+    cursor-pointer
+    ${linkClass}
+  `}
                     onClick={() =>
                       document
                         .getElementById(nav.id)
                         ?.scrollIntoView({ behavior: 'smooth' })
                     }
-                    style={{color: "var(--theme-primary-text)"}}
                   >
                     <i
-                      className={`fa-solid ${nav.icon} text-xs
-                      text-secondary transition-transform
-                      `}
+                      className={`fa-solid ${nav.icon} text-xs text-secondary
+                      transition-colors duration-200
+                    group-hover:text-primary`}
                       aria-hidden="true"
                     />
+
                     {nav.text}
                   </button>
+
                 </li>
               ))}
             </ul>
@@ -85,17 +94,11 @@ const Footer = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex items-center gap-3 text-sm text-slate-600 ${linkClass}`}
-                    style={{color: "var(--theme-primary-text)"}}
+                    className="group flex items-center gap-3 text-sm text-[var(--theme-primary-text)]
+                    transition-colors duration-200
+                  hover:text-primary"
                   >
-                    <span
-                      className="
-                        flex shrink-0 items-center justify-center
-                        rounded-xl  text-secondary
-                        transition-all duration-200
-                         
-                      "
-                    >
+                    <span className="flex shrink-0 items-center justify-center rounded-xl text-secondary transition-colors group-hover:text-primary">
                       <i className={social.icon} aria-hidden="true" />
                     </span>
 
@@ -119,16 +122,16 @@ const Footer = () => {
             sm:flex-row
           "
         >
-          <p style={{color: "var(--theme-primary-text)"}}>
+          <p style={{ color: "var(--theme-primary-text)" }}>
             © 2026 <span className="font-semibold"
-            style={{color: "var(--theme-primary-text)"}}
+              style={{ color: "var(--theme-primary-text)" }}
             >
               Gisela Estévez Moleiro
             </span>
           </p>
 
           <p className="flex items-center gap-1"
-          style={{color: "var(--theme-primary-text)"}}
+            style={{ color: "var(--theme-primary-text)" }}
           >
             Hecho con usando Vite + React + Tailwind
           </p>
