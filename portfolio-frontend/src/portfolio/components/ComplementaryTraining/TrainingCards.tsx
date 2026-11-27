@@ -22,7 +22,7 @@ const TrainingCard = ({ training }: TrainingCardType) => {
 
     return (
         <div
-            className="border border-white/10 rounded-xl overflow-hidden hover:border-primary/50! transition-all duration-300"
+            className=" rounded-xl overflow-hidden  transition-all duration-300"
             style={{
                 backgroundColor: "var(--theme-bg-card)",
                 borderColor: "var(--theme-border-card)",
@@ -49,7 +49,7 @@ const TrainingCard = ({ training }: TrainingCardType) => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5 ">
-                        <p className="text-xs font-semibold  text-white text-wrap  w-full">
+                        <p className="text-sm font-semibold  text-white text-wrap  w-full">
                             {name}
                         </p>
 

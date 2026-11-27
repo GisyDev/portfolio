@@ -65,9 +65,9 @@ const Experience = () => {
     const folderImageEducation = "school_icons"
     return (
         <section id={sectionsNav.experience.id} data-section={sectionsNav.experience.id} className='max-w-page mx-auto scroll-m-32 px-x'>
-            <div className='flex flex-col md:flex-row gap-18'>
+            <div className='flex flex-col lg:flex-row gap-18'>
                 <article className='flex flex-col w-full '>
-                    <TitleSection title={sectionsNav.experience.text} icon={sectionsNav.experience.icon} />
+                    <TitleSection title={sectionsNav.experience.text} description={sectionsNav.experience.description} icon={sectionsNav.experience.icon} />
                     <Timeline>
                         {
                             experiences.map((exp, index) => {
@@ -88,8 +88,8 @@ const Experience = () => {
                     </Timeline>
                 </article>
 
-                <article className='flex flex-col '>
-                    <TitleSection title={"Educación"} icon={"fa-graduation-cap"} />
+                <article className='flex flex-col lg:w-2/4'>
+                    <TitleSection title={"Educación"} description='Un recorrido por mis estudios, desde las bases de la informática hasta el desarrollo de aplicaciones.' icon={"fa-graduation-cap"} />
                     <Timeline>
                         {
                             education.map((educ, index) => {

@@ -14,11 +14,11 @@ const About = () => {
 
     return (
         <section className='mx-auto relative flex flex-col items-center scroll-m-30 w-full px-x' id={sectionsNav.inicio.id} data-section={sectionsNav.inicio.id}>
-            <article className='flex flex-col-reverse justify-between md:flex-row max-w-page bg-white shadow-lg rounded-lg p-10'
-             style={{
-                backgroundColor: "var(--theme-bg-card)",
-                borderColor: "var(--theme-border-card)",
-            }}
+            <article className='flex flex-col-reverse justify-center md:flex-row md:max-w-page  rounded-lg py-6'
+                style={{
+                    backgroundColor: "var(--theme-bg-card)",
+                    borderColor: "var(--theme-border-card)",
+                }}
             >
                 <div className='flex flex-col space-y-5 md:w-3/5 justify-center '>
                     <div className='space-y-3 w-full lg:w-4/5'>
@@ -28,23 +28,29 @@ const About = () => {
                                     <span className=''> {name} {surname}</span>
                                 </div>
                             </h1>
-                            <h3 className='animate-fade-in animate-delay-85 flex gap-5 text-xl md:text-2xl text-primary font-semibold '>{profile}</h3>
+                            <h3 className='animate-fade-in animate-delay-85 text-xl md:text-2xl text-primary font-semibold '>{profile}</h3>
                         </div>
 
                         <Paragraph className='animate-fade-in animate-delay-120'> {description} </Paragraph>
                     </div>
 
-                    <div className='flex flex-col lg:flex-row gap-3 animate-fade-in animate-delay-200 mt-2 w-full'>
+                    <div className='flex flex-col gap-3 animate-fade-in animate-delay-200 mt-2 w-full'>
 
-                        <div className='flex gap-2'>
+                        <div className='flex gap-3'>
                             <a href={PDF}
                                 download="CV_Gisela_Estévez_Moleiro_Desarrolladora_Fullstack.pdf">
                                 <PrimaryButton className='bg-primary hover:bg-primary-hover text-white'>
-                                    <p className=''>Descargar CV</p>
                                     <i className="fa-solid fa-download"></i>
+                                    <p className=''>Descargar CV</p>
                                 </PrimaryButton>
-
                             </a>
+
+                            <PrimaryButton className='bg-secondary hover:bg-secondary-hover text-white' 
+                            onClick={() => document.getElementById(sectionsNav.projects.id)?.scrollIntoView({behavior: 'smooth'})}
+                            >
+                                <i className={`fa-solid ${sectionsNav.projects.icon}`}></i>
+                                <p className=''>Proyectos</p>
+                            </PrimaryButton>
                         </div>
 
 
@@ -70,11 +76,11 @@ const About = () => {
                     </div>
                 </div>
                 <div className='flex animate-fade-in animate-delay-150 '>
-                    <div className='flex md:flex-col justify-center gap-4 items-center sm:gap-8'>
+                    <div className='flex md:flex-col justify-center gap-3 items-center sm:gap-8 px-3 py-3'>
                         <img
-                            src={assetUrl("/images/yo1.png")}
+                            src={assetUrl("/images/yo2.jpeg")}
                             alt="Yo"
-                            className='rounded-full text-primary-button object-cover size-36 sm:size-42 md:size-60 lg:size-64 xl:size-72 mb-5 lg:mb-0'
+                            className='rounded-full text-primary-button object-cover size-32 sm:size-42 md:size-60 lg:size-64 xl:size-72 mb-5 lg:mb-0'
                             style={{
                                 outline: "4px solid var(--color-primary)",
                                 outlineOffset: "5px",
@@ -93,7 +99,7 @@ const About = () => {
                 </div>
             </article>
 
-            <StatusBarProfile/>
+            <StatusBarProfile />
 
         </section>
     )

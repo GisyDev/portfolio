@@ -1,76 +1,142 @@
+
 import { sectionsNavArray } from '../data/nav';
 import { social_media } from '../data/about';
 import TitleName from '../components/TitleName';
 
 const Footer = () => {
+  const linkClass =
+    'transition-colors duration-200 hover:text-primary focus-visible:text-primary focus-visible:outline-none';
+
   return (
-    <footer
-      className='flex flex-col gap-1 items-center mt-35 text-sm pt-15 pb-5 w-full backdrop-blur-2xl'
-      style={{ backgroundColor: "var(--theme-footer-bg)" }}
+    <footer className="mt-35 w-full  z-50"
+      style={{
+        backgroundColor: "var(--theme-bg-card)",
+        borderColor: "var(--theme-border-card)",
+      }}
     >
-      <div className="px-x sm:max-w-page w-full">
-        <div className="flex justify-between w-full flex-col gap-10 sm:flex-row mb-5">
-          <div className='space-y-4'>
-            <TitleName />
-            <p className='text-xs' style={{ color: "var(--theme-primary-text)" }}>Desarrolladora Fullstack</p>
+
+      {/* Contenido principal */}
+      <div className="mx-auto w-full max-w-page px-x py-14">
+
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-8">
+
+          {/* Marca */}
+          <div className="flex flex-col items-start gap-5">
+
+            <div className="text-2xl">
+              <TitleName />
+            </div>
+
+            <p className="text-sm" style={{color: "var(--theme-primary-text)"}}>
+              Desarrolladora Fullstack
+            </p>
+
+
           </div>
-          <div className='flex justify-between sm:w-3/5'>
-            <div className=''>
-              <h1 className='font-semibold mb-4 text-sm' style={{ color: "var(--theme-title-text)" }}>Navegación</h1>
-              <ul className='flex flex-col gap-2 text-xs'>
-                {
-                  sectionsNavArray.map((nav) => {
-                    return <li key={nav.id} style={{ color: "var(--theme-primary-text)" }}>
-                      <button
-                        className='hover:text-primary transition-all cursor-pointer'
-                        onClick={() => document?.getElementById(nav.id)?.scrollIntoView({ behavior: "smooth" })}
-                      >
-                        {nav.text}
-                      </button>
-                    </li>
-                  })
-                }
-              </ul>
-            </div>
-            <div className=''>
-              <h1 className='font-semibold mb-4' style={{ color: "var(--theme-title-text)" }}>Contactos</h1>
-              <ul className='flex flex-col gap-2 text-xs'>
-                {
-                  social_media.map((social) => {
-                    return <li key={social.name}>
-                      <a
-                        href={social.link}
-                        className='flex items-center gap-2 hover:text-primary transition-all'
-                        style={{ color: "var(--theme-primary-text)" }}
-                        target="blank"
-                      >
-                        <i className={`${social.icon}`}></i>
-                        {social.name}
-                      </a>
-                    </li>
-                  })
-                }
-              </ul>
-            </div>
+
+          {/* Navegación */}
+          <nav
+            aria-label="Navegación del pie"
+            className="sm:border-l sm:border-slate-200 sm:pl-10"
+          >
+            <h2 className="mb-5 text-lg font-semibold text-secondary">
+              Navegación
+              <span className="mt-2 block h-1 w-12 rounded-full bg-primary" />
+            </h2>
+
+            <ul className="flex flex-col gap-3">
+              {sectionsNavArray.map((nav) => (
+                <li key={nav.id}>
+                  <button
+                    type="button"
+                    className={` flex items-center gap-3 text-sm text-slate-600 ${linkClass} cursor-pointer`}
+                    onClick={() =>
+                      document
+                        .getElementById(nav.id)
+                        ?.scrollIntoView({ behavior: 'smooth' })
+                    }
+                    style={{color: "var(--theme-primary-text)"}}
+                  >
+                    <i
+                      className={`fa-solid ${nav.icon} text-xs
+                      text-secondary transition-transform
+                      `}
+                      aria-hidden="true"
+                    />
+                    {nav.text}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Contacto */}
+          <div className="sm:border-l sm:border-slate-200 sm:pl-10">
+
+            <h2 className="mb-5 text-lg font-semibold text-secondary">
+              Contactos
+              <span className="mt-2 block h-1 w-12 rounded-full bg-primary" />
+            </h2>
+
+            <ul className="flex flex-col gap-4">
+              {social_media.map((social) => (
+                <li key={social.name}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group flex items-center gap-3 text-sm text-slate-600 ${linkClass}`}
+                    style={{color: "var(--theme-primary-text)"}}
+                  >
+                    <span
+                      className="
+                        flex shrink-0 items-center justify-center
+                        rounded-xl  text-secondary
+                        transition-all duration-200
+                         
+                      "
+                    >
+                      <i className={social.icon} aria-hidden="true" />
+                    </span>
+
+                    {social.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
           </div>
 
         </div>
       </div>
-      <div className='w-full h-10 flex items-center'>
-        <span
-          className='w-full border-t'
-          style={{ borderColor: "var(--theme-footer-border)" }}
-        ></span>
-      </div>
-      <div
-        className='flex flex-col sm:flex-row gap-3 justify-between m-auto text-xs px-x items-center sm:max-w-page w-full'
-        style={{ color: "var(--theme-primary-text)" }}
-      >
-        <p>© 2026 Gisela Estévez Moleiro</p>
-        <p>Hecho con Vite + React + Tailwind</p>
-      </div>
-    </footer>
-  )
-}
 
-export default Footer
+      {/* Copyright */}
+      <div className="border-t border-slate-200">
+        <div
+          className="
+            mx-auto flex w-full max-w-page flex-col items-center
+            justify-between gap-3 px-x py-5 text-xs text-slate-500
+            sm:flex-row
+          "
+        >
+          <p style={{color: "var(--theme-primary-text)"}}>
+            © 2026 <span className="font-semibold"
+            style={{color: "var(--theme-primary-text)"}}
+            >
+              Gisela Estévez Moleiro
+            </span>
+          </p>
+
+          <p className="flex items-center gap-1"
+          style={{color: "var(--theme-primary-text)"}}
+          >
+            Hecho con usando Vite + React + Tailwind
+          </p>
+        </div>
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;

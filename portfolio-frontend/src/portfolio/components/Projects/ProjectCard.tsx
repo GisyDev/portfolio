@@ -4,6 +4,7 @@ import AccentButton from '../AccentButton';
 import { useNavigate } from 'react-router-dom';
 import SecondaryButton from '../SecondaryButton';
 import { assetUrl } from '../../../lib/assetUrl';
+import PrimaryButton from '../PrimaryButton';
 
 
 type ProjectCardType = {
@@ -23,10 +24,9 @@ const ProjectCard = ({ project }: ProjectCardType) => {
     return (
         <article
             key={project.id}
-            className=" border border-white/10 rounded-xl overflow-hidden hover:border-primary/50! transition-all duration-300"
+            className=" rounded-xl overflow-hidden  transition-all duration-300"
             style={{
                 backgroundColor: "var(--theme-bg-card)",
-                borderColor: "var(--theme-border-card)",
             }}
         >
 
@@ -69,14 +69,17 @@ const ProjectCard = ({ project }: ProjectCardType) => {
 
                 <hr />
 
-                <div className='flex flex-col sm:flex-row gap-3 items-center '>
+                <div className='flex flex-col sm:flex-row gap-3 items-center w-full '>
                     <div>
-                        <AccentButton onClickFunction={() => detailsFunction(project.name)}>
+
+                        <PrimaryButton className='bg-secondary hover:bg-secondary-hover text-white group'
+                            onClick={() => detailsFunction(project.name)}
+                        >
                             <p className="font-medium tracking-wide">{"Detalles"}</p>
                             <i className="fa-solid fa-arrow-right transition-all group-hover:translate-x-1"></i>
-                        </AccentButton>
+                        </PrimaryButton>
                     </div>
-                    <div className="w-full flex items-center justify-end gap-5">
+                    <div className="w-full flex items-center sm:justify-end justify-between gap-5">
 
                         <SecondaryButton>
                             <a

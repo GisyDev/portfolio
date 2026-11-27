@@ -82,7 +82,7 @@ const Header = () => {
 
 
         </div>
-        <button
+        {/* <button
           onClick={toggle}
           aria-label={theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'}
           className='hidden w-9 h-9 lg:flex items-center justify-center rounded-xl border transition-all duration-300 cursor-pointer hover:border-primary/60 hover:text-primary'
@@ -96,7 +96,7 @@ const Header = () => {
             ? <i className="fa-solid fa-sun text-sm"></i>
             : <i className="fa-solid fa-moon text-sm"></i>
           }
-        </button>
+        </button> */}
         <NavModalMobile hiddenNavMovile={hiddenNavMovile} reDirection={reDirection} toggle={toggle} theme={theme} />
       </nav>
 

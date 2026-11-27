@@ -6,7 +6,7 @@ import { sectionsNav } from '../data/nav'
 
 const ComplementaryTraining = () => {
   return (
-    <Section title={sectionsNav.complementaryTraining.text} icon={"fa-solid fa-book-open"} reference={sectionsNav.complementaryTraining.id}>
+    <Section title={sectionsNav.complementaryTraining.text} description={sectionsNav.complementaryTraining.description} icon={"fa-solid fa-book-open"} reference={sectionsNav.complementaryTraining.id}>
        <article className='grid items-start gap-8 sm:grid-cols-2 lg:grid-cols-3'>
             {
                 complementary_training.map((training) => <TrainingCard key={training.id} training={training}/> )

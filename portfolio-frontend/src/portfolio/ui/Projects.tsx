@@ -9,7 +9,7 @@ const Projects = () => {
 
     return (
 
-        <Section title='Proyectos' icon={sectionsNav.projects.icon} reference={sectionsNav.projects.id}>
+        <Section title={sectionsNav.projects.text} description={sectionsNav.projects.description} icon={sectionsNav.projects.icon} reference={sectionsNav.projects.id}>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-page">
                 {projects.map(project => (

@@ -3,7 +3,7 @@ import { sectionsNav } from "../../data/nav";
 import { CountUp } from 'use-count-up'
 
 const defaultStats = [
-    { value: 1, valueLabel: "año", label: "Experiencia laboral", icon: "fa-users" },
+    { value: 1, valueLabel: "­ año", label: "Experiencia laboral", icon: "fa-users" },
     { value: 20, valueLabel: "+", label: "Proyectos", icon: sectionsNav.projects.icon },
 ];
 
@@ -11,8 +11,7 @@ export default function StatsBar({ items = defaultStats }) {
     return (
         
         <article className="w-full block mt-5 sm:absolute sm:mt-0 top-[95%] sm:top-[95%] lg:top-[90%] max-w-md rounded-3xl 
-        animate-fade-in animate-delay-30
-        px-6 py-3 shadow-lg sm:rounded-full sm:px-10"
+        animate-fade-in animate-delay-30 px-6 py-3 shadow sm:rounded-full sm:px-10"
             style={{
                 backgroundColor: "var(--theme-bg-card)",
                 borderColor: "var(--theme-border-card)",
@@ -25,7 +24,10 @@ export default function StatsBar({ items = defaultStats }) {
                         {i > 0 && (
                             <li
                                 aria-hidden="true"
-                                className="hidden h-12 w-px bg-gray-200 sm:block"
+                                className="hidden h-12 w-px sm:block"
+                                style={{
+                                    backgroundColor: "var(--theme-border-card)",
+                                }}
                             />
                         )}
                         <li className="flex items-center gap-6">
