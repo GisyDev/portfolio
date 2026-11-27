@@ -1,18 +1,18 @@
 # Portfolio de Gisela Estévez Moleiro
 
-Portfolio web personal de **Gisela Estévez Moleiro**, desarrolladora full stack. Presenta su trayectoria profesional, formación, tecnologías y proyectos, junto con enlaces de contacto y acceso a su currículum.
+Este es mi portfolio web personal. Soy **Gisela Estévez Moleiro**, desarrolladora full stack, y aquí comparto mi trayectoria profesional, mi formación, las tecnologías con las que trabajo y algunos de mis proyectos. También puedes encontrar mis datos de contacto y descargar mi currículum.
 
-![Vista previa del portfolio](portfolio-frontend/docs/images/readme-banner-navegador.png)
+![Vista previa de mi portfolio](portfolio-frontend/docs/images/readme-banner-navegador.png)
 
 ## Contenido
 
-- **Sobre mí:** perfil profesional, disponibilidad y formas de contacto.
-- **Tecnologías:** carrusel con herramientas y lenguajes de desarrollo.
-- **Experiencia y educación:** recorrido profesional y académico.
-- **Proyectos:** fichas con capturas, tecnologías utilizadas y enlaces a demos o repositorios.
-- **Formación complementaria:** cursos y certificaciones.
+- **Sobre mí:** cuento quién soy, mi disponibilidad y cómo puedes contactar conmigo.
+- **Tecnologías:** muestro algunos de los lenguajes y herramientas que utilizo.
+- **Experiencia y educación:** comparto mi recorrido profesional y académico.
+- **Proyectos:** presento algunos trabajos con capturas, tecnologías y enlaces a demos o repositorios.
+- **Formación complementaria:** incluyo cursos y certificaciones que he realizado.
 
-Entre los proyectos destacados están **TransferLog**, una aplicación para la gestión de empleados y turnos; **Quiosco Next**, una aplicación de pedidos con panel de administración; y **Weather App**, una aplicación meteorológica con previsiones y gráficos interactivos.
+Entre los proyectos que presento están **TransferLog**, una aplicación para gestionar empleados y turnos; **Quiosco Next**, una aplicación de pedidos con panel de administración; y **Weather App**, una aplicación meteorológica con previsiones y gráficos interactivos.
 
 ## Tecnologías
 
@@ -30,7 +30,7 @@ Entre los proyectos destacados están **TransferLog**, una aplicación para la g
 
 ## Desarrollo local
 
-La aplicación se encuentra dentro de `portfolio-frontend`:
+Para ejecutar mi portfolio en local, entra en la carpeta `portfolio-frontend` e instala sus dependencias:
 
 ```bash
 cd portfolio-frontend
@@ -38,11 +38,11 @@ npm install
 npm run dev
 ```
 
-Vite mostrará en la terminal la dirección local para abrir el portfolio en el navegador.
+Después, Vite mostrará en la terminal la dirección local donde puedes abrirlo en el navegador.
 
 ## Comandos disponibles
 
-Ejecuta estos comandos desde `portfolio-frontend`:
+Desde `portfolio-frontend`, puedes utilizar estos comandos:
 
 | Comando | Descripción |
 | --- | --- |
@@ -53,7 +53,7 @@ Ejecuta estos comandos desde `portfolio-frontend`:
 
 ## Despliegue
 
-El repositorio incluye un flujo de GitHub Actions que construye el sitio y lo publica en GitHub Pages al actualizar la rama `main`. Vite configura la ruta base `/portfolio/` para la versión de producción.
+He configurado un flujo de GitHub Actions para construir y publicar mi portfolio en GitHub Pages cada vez que actualizo la rama `main`. Para producción, Vite utiliza la ruta base `/portfolio/`.
 
 ## Estructura
 
